@@ -6,14 +6,14 @@ Build a Content Management System using:
 
 - __Backend__
     - **Express** as the application server
-    - **Postgres** as the database server
+    - **PostgreSQL** as the database server
     - **Sequelize.js** as the ORM
     - **passport.js** for Authentication and Authorization
 
 - __Frontend__
 	- **React.js** or **AngularJS** as FE framework
 	- **Sass** for styling
-	- **Webpack** for bundling	
+	- **Webpack** for bundling, provided by FE generator.
 - __Stretch Add-ons__
 	
 	Some stretch and polish goals will use additional technologies.
@@ -25,6 +25,8 @@ Your team will be building a minimal CMS to allow users to list personal items f
 The application will allow unauthorized users to browse the listed products. To post an Item for sale, a User account will be required. The backend should provide RESTful api endpoints. The frontend should be a SPA (Single Page App) that provides a smooth user experience.
 
 You will need to work as a team to complete this project. To facilitate team communication you will be using [Trello](https://trello.com/) to track tasks and stay on track.
+
+The instructors will provide a tech lead role, and will need to approve design and implementation decisions. Data modeling will need to be done by the team, but approved by the tech leads.
 
 
 ## Business Requirements
