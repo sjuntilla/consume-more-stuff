@@ -22,7 +22,7 @@ Build a Content Management System using:
 	- **mailgun** or **sendgrid** for sending email
 	
 Your team will be building a minimal CMS to allow users to list personal items for sale.
-The application will allow unauthorized users to browse the listed products. To post an Item for sale, a User account will be required. The backend should provide Restful api endpoints. The frontend should be a SPA that provides a smooth user experience.
+The application will allow unauthorized users to browse the listed products. To post an Item for sale, a User account will be required. The backend should provide RESTful api endpoints. The frontend should be a SPA (Single Page App) that provides a smooth user experience.
 
 You will need to work as a team to complete this project. To facilitate team communication you will be using [Trello](https://trello.com/) to track tasks and stay on track.
 
@@ -32,7 +32,7 @@ You will need to work as a team to complete this project. To facilitate team com
 ### MVP
 
 #### Unauthenticated user
-- Home page should list top viewed `Items` by `Category`.
+- Home page should list **x** number of random `Items` by `Category`.
 - Home page should provide a way to view **all** `Items`.
 - Home page should provide a view of `Items` by `Category`.
 - Home page should show a subset of key details of the `Items`, along with one image.
@@ -55,17 +55,15 @@ You will need to work as a team to complete this project. To facilitate team com
 	- A way to add new `Items`.
 	- A way to logout.
 	- display the current `Users` name
-	- List of `Items` currently published for sale.
-	- List of `Items` pending publishing.
-		- Should provide a quick way to publish the `Item`.
-	- List of `Items` in other state, (sold, archived)
+	- List view of **published** `Items`.
+	- List view of **sold** `Items`.
 - Add new `Item` should present the `User` with a form to add all `Item` details.
-	- A newly added `Item` should have a status of _Unpublished_ when created.
+	- A newly added `Item` should have a status of **published** when created.
 	- The form should provide validation and feedback if inputs in omitted or invalid.
 	- Should be able to select an image and upload it for the `Item`.
 - `Item` detail owned by `User`:
 	- Should be able to modify all inputs.
-	- Change the _Status_ of the `Item`.
+	- Change the _Status_ of the `Item`. **published** or **sold**
 	- Should be able to replace the image associated with the `Item`.
 - When an `Item` is published it should record the **publish** date and time.
 - When an `Item` is modified it should record the **update** date and time.
@@ -75,9 +73,10 @@ You will need to work as a team to complete this project. To facilitate team com
 - The application should display a logo.
 - Mobile friendly application. Styles should work from phone up to desktop.
 - Clicking on an `Item` in any list, should display the detail view of that `Item`.
-- When `Item` details are viewed by anyone other than the owner, it should count the view, to track what `Items` are most popular.
 - `Items` should not be able to be deleted, but should have a status option that is equivalent.
 - Should have a registration page to allow the creation of new `Users`.
+	- `Users` should register using __email__.
+	- Any information that can identify a user should not be available to any other `User`.
 
 ---
 
@@ -89,6 +88,11 @@ You will need to work as a team to complete this project. To facilitate team com
 - Home page should have at least one filter. To filter out `Items` from the view.
 
 #### Authenticated User
+- Add home view option to show **featured*** `Items`, based on how many views the `Item` has had.
+- List of `Items` currently published for sale.
+- List of `Items` pending publishing.
+	- Should provide a quick way to publish the `Item`.
+- List of `Items` in other state, (sold, archived)
 - Should have access to a `Messages` view that allows anonymous communication between authenticated `Users` based on a published `Item`.
 - The `Item` **detail** view should provide a way for the `User` to send a message to the `User` who published the `Item`.
 - Should see a count of how may times the `Item` has been viewed and if the `Item` is currently **featured**.
@@ -105,9 +109,11 @@ You will need to work as a team to complete this project. To facilitate team com
 - Add Role table. Set application access based on role.
 
 #### Features
+- Add more states for `Item`. Pending, Published, Sold, Archived, Pulled.
 - Add **unit** tests
 - `Messages` will only be allowed by originating from an `Item`
 - Admin `User`
+- When `Item` details are viewed by anyone other than the owner, it should count the view, to track what `Items` are most popular.
 
 ---
 
@@ -122,7 +128,7 @@ You will need to work as a team to complete this project. To facilitate team com
 - images should be stored in S3
 - should be able to contact seller through
     - email
-- can send email to **600a8cd20d@c99.team-one.consumemorestuff.com** will forward to registered user
+- can send email to a hashed email (eg. **600a8cd20d@c99.team-one.consumemorestuff.com** ) that will forward to registered user
 - should be able to see generalized area for the item (geo-location)
 
 #### Admin User
