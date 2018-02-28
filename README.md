@@ -7,7 +7,7 @@ Build a Content Management System using:
 - __Backend__
     - **Express** as the application server
     - **PostgreSQL** as the database server
-    - **Sequelize.js** as the ORM
+    - **Bookshelf.js** as the ORM
     - **passport.js** for Authentication and Authorization
 
 - __Frontend__
