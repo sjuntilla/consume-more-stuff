@@ -1,5 +1,5 @@
 // Update with your config settings.
-require("dotenv").config();
+require("dotenv").config({ path: "../.env" });
 
 module.exports = {
   client: "pg",
@@ -20,5 +20,6 @@ module.exports = {
   },
   seeds: {
     directory: "./server/database/seeds"
-  }
+  },
+  debug: process.env.APP_ENV === "development"
 };
