@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2572,100 +2572,79 @@ const Layout = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createEleme
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/itemPosting.js":
+/*!******************************!*\
+  !*** ./pages/itemPosting.js ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/myLayout */ "./pages/components/myLayout.js");
-var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_myLayout_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/myLayout.js */ "./pages/components/myLayout.js");
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/itemPosting.js";
+
+// import { withRouter } from 'next/router'
+// import Layout from './components/myLayout.js'
+// const Page = withRouter(props => (
+//     <Layout>
+//         <h1>{props.router.query.title}</h1>
+//         <p>This is the item post content.</p>
+//     </Layout>
+// ))
+// export default Page
 
 
-
-
-const PostLink = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+const Content = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 18
   },
   __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: `/post?title=${props.title}`,
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 19
   },
   __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+}, props.router.query.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 20
   },
   __self: undefined
-}, props.title)));
+}, "holy shit man")));
 
-function Blog() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_myLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, "My Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
-    title: "Hello Next.js",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
-    title: "Learn Next.js is awesome",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
-    title: "Deploy apps with Zeit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  })));
-}
+const Page = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_myLayout_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (Page);
 
 /***/ }),
 
-/***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 6:
+/*!************************************!*\
+  !*** multi ./pages/itemPosting.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/itemPosting.js */"./pages/itemPosting.js");
 
 
 /***/ }),
@@ -2737,4 +2716,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=itemPosting.js.map
