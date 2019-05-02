@@ -8493,10 +8493,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./pages/comps/header.js":
-/*!*******************************!*\
-  !*** ./pages/comps/header.js ***!
-  \*******************************/
+/***/ "./pages/components/header.js":
+/*!************************************!*\
+  !*** ./pages/components/header.js ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8506,7 +8506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/comps/header.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/header.js";
 
 
 const linkStyle = {
@@ -8553,6 +8553,46 @@ const Header = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
 
 /***/ }),
 
+/***/ "./pages/components/myLayout.js":
+/*!**************************************!*\
+  !*** ./pages/components/myLayout.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./pages/components/header.js");
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/myLayout.js";
+
+
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+const Layout = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  style: layoutStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}), props.children);
+
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -8562,31 +8602,25 @@ const Header = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _comps_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comps/header */ "./pages/comps/header.js");
+/* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/myLayout */ "./pages/components/myLayout.js");
 var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js";
 
 
 
 
-const Index = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_comps_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+const PostLink = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/items",
-  title: "Items Page",
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: `/post?title=${props.title}`,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
@@ -8598,19 +8632,54 @@ const Index = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("
     lineNumber: 8
   },
   __self: undefined
-}, "Items Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Hello Next.js"));
+}, props.title)));
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+function Blog() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_myLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "My Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+    title: "Hello Next.js",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+    title: "Learn Next.js is awesome",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+    title: "Deploy apps with Zeit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  })));
+}
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************************/
@@ -8633,5 +8702,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

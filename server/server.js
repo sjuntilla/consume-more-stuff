@@ -1,11 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const decorator = require('./database/decorator')
+const express = require("express");
+const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const PORT = process.env.PORT;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 
-if (!PORT) { console.log('No Port Found'); }
+if (!PORT) {
+    console.log("No Port Found");
+}
+
+const app = express();
 
 app.use(bodyParser.json());
 
