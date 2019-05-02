@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const
 
 const PORT = process.env.PORT;
-const REDIS_HOSTNAME = process.env.REDUS_HOSTNAME;
+const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 
 if (!PORT) { console.log('No Port Found'); }
 
