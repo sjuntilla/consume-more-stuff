@@ -9,6 +9,7 @@ if (!PORT) { console.log('No Port Found'); }
 
 app.use(bodyParser.json());
 
+// start server
 app.listen(PORT, () => {
     console.log(`Server stated on port: ${PORT}`);
 });
