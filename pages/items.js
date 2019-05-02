@@ -1,10 +1,9 @@
-import Header from './components/header';
+import Layout from './components/MyLayout.js'
 
 export default function Items() {
     return (
-        <div>
-            <Header />
-            <p>THIS IS WHERE OUR ITEMS WILL PROBABLY GO</p>
-        </div>
+        <Layout>
+            <p>This is the items page</p>
+        </Layout>
     )
 }

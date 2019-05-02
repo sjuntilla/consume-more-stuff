@@ -1,15 +1,8 @@
 import Link from 'next/link';
 import Header from './components/header';
+import Layout from './components/myLayout';
+import withLayout from './components/myLayout';
 
-const Index = () => (
-  <div>
-    <Header />
-    <Link href="/items" title="Items Page">
-      <a>Items Page</a>
-    </Link>
+const Page = () => <p>Hello Next.js</p>
 
-    <p>Hello Next.js</p>
-  </div>
-)
-
-export default Index
+export default withLayout(Page);
