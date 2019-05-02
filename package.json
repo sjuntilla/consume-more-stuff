@@ -3,7 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "next": "^8.1.0",
+=======
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bookshelf": "^0.14.2",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "nodemon": "^1.19.0",
+    "passport": "^0.4.0",
+    "pg": "^7.10.0",
+>>>>>>> 8d0fb970f0007b4c40fdee4480c032e17c5abc3c
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
