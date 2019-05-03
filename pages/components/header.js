@@ -1,43 +1,27 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import { Heading, Grommet, Anchor } from 'grommet';
+import { dark } from 'grommet/themes';
+
 
 const linkStyle = {
     marginRight: 15
 }
 
 const Header = () => (
-    <div>
-        <Link href="/">
-            <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/items">
-            <a style={linkStyle}>items</a>
-        </Link>
+    <Grommet theme={dark}>
+        <div>
+
+            <Link href="/">
+                <Anchor style={linkStyle}>Home</Anchor>
+            </Link>
+
+            <Link href="/items">
+                <Anchor style={linkStyle}>Items</Anchor>
+            </Link>
 
 
-        {/* component styling */}
-        <style jsx>{
-            `@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-        div {
-            display: flex;
-            flex-flow: row nowrap;
-            font-size: 25px;
-            background-color: #ccc;
-            width: 100%;
-            font-family: 'Roboto', sans-serif;
-            opacity: 0.4;
-        };
-         a {
-             font-family: 'Roboto', sans-serif;
-                text-decoration: none;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-    `}
-        </style>
-    </div>
-
+        </div>
+    </Grommet>
 
 )
 

@@ -1,9 +1,9 @@
 import Header from './header'
+import { dark } from 'grommet/themes';
 
 const layoutStyle = {
     margin: 20,
     padding: 20,
-    border: '1px solid #DDD'
 };
 
 const wrapperStyle = {

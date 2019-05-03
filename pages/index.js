@@ -1,6 +1,7 @@
 import Layout from './components/layout';
 import Link from 'next/link';
-import '../index.css'
+import { Grommet, Heading } from 'grommet';
+import { dark } from 'grommet/themes';
 
 const PostLink = props => (
   <li>
@@ -11,16 +12,17 @@ const PostLink = props => (
 
 export default function Items() {
   return (
-    <Layout>
-      <h1>My Items</h1>
-      <ul>
-        <PostLink id="lady-tech-gear" title="Lady Tech Gear" />
-        <PostLink id="tech-bling" title="Tech Bling" />
-        <PostLink id="tech-accessories" title="Tech Accessories" />
-      </ul>
+    <Grommet theme={dark}>
+      <Layout>
+        <Heading>Some shit</Heading>
+        <ul>
+          <PostLink id="lady-tech-gear" title="Lady Tech Gear" />
+          <PostLink id="tech-bling" title="Tech Bling" />
+          <PostLink id="tech-accessories" title="Tech Accessories" />
+        </ul>
 
-      <style jsx>{
-        `@import url('https://fonts.googleapis.com/css?family=Roboto');
+        <style jsx>{
+          `@import url('https://fonts.googleapis.com/css?family=Roboto');
         
         h1 {
           font-family: 'Roboto', sans-serif;
@@ -30,8 +32,9 @@ export default function Items() {
           background-color: #ddd;
           margin: 5px;
         }`
-      }
-      </style>
-    </Layout>
+        }
+        </style>
+      </Layout>
+    </Grommet>
   )
 }
