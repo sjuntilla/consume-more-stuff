@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const userRoutes = require("./routes/users");
-const itemRoutes = require("./routes/items");
+const userRoutes = require("./database/routes/users");
+const itemRoutes = require("./database/routes/items");
 const decorator = require("./database/decorator");
 require("dotenv").config();
 
@@ -17,6 +17,7 @@ const app = express();
 app.use(bodyParser.json({ extended: true }));
 app.use(decorator);
 
+//smoke test
 app.get("/api/smoke", (req, res) => {
   res.json({ smoke: "test" });
 });
