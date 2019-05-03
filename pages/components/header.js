@@ -15,23 +15,26 @@ const Header = () => (
 
 
         {/* component styling */}
-        <style jsx>{`{
-            @import url('https://fonts.googleapis.com/css?family=Roboto');
+        <style jsx>{
+            `@import url('https://fonts.googleapis.com/css?family=Roboto');
 
         div {
             display: flex;
             flex-flow: row nowrap;
             font-size: 25px;
-            background-color: #ffffff;
+            background-color: #ccc;
+            width: 100%;
             font-family: 'Roboto', sans-serif;
             opacity: 0.4;
         };
          a {
+             font-family: 'Roboto', sans-serif;
                 text-decoration: none;
+                letter-spacing: 3px;
                 text-transform: uppercase;
                 font-weight: bold;
             }
-    }`}
+    `}
         </style>
     </div>
 

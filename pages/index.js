@@ -1,5 +1,6 @@
 import Layout from './components/layout';
 import Link from 'next/link';
+import '../index.css'
 
 const PostLink = props => (
   <li>
@@ -19,12 +20,15 @@ export default function Items() {
       </ul>
 
       <style jsx>{
-        `h1, a {
-          font-family: 'Helvetica', sans-serif
+        `@import url('https://fonts.googleapis.com/css?family=Roboto');
+        
+        h1 {
+          font-family: 'Roboto', sans-serif;
         };
         
         ul {
-          background-color: red;
+          background-color: #ddd;
+          margin: 5px;
         }`
       }
       </style>
