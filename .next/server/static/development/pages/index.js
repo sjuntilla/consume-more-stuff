@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2572,10 +2572,10 @@ const Layout = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createEleme
 
 /***/ }),
 
-/***/ "./pages/itemPosting.js":
-/*!******************************!*\
-  !*** ./pages/itemPosting.js ***!
-  \******************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2587,38 +2587,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/myLayout */ "./pages/components/myLayout.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/itemPosting.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js";
 
-// import { withRouter } from 'next/router'
-// import Layout from './components/myLayout.js'
-// const Page = withRouter(props => (
-//     <Layout>
-//         <h1>{props.router.query.title}</h1>
-//         <p>This is the item post content.</p>
-//     </Layout>
-// ))
-// export default Page
-// import { withRouter } from 'next/router'
-// import Layout from './components/myLayout.js';
-// const Content = withRouter(props => (
-//     <div>
-//         <h1>{props.router.query.title}</h1>
-//         <p>holy shit man</p>
-//     </div>
-// ))
-// const Page = props => (
-//     <Layout>
-//         <Content />
-//     </Layout>
+// import Link from 'next/link';
+// import Layout from './components/myLayout';
+// import Header from './components/header';
+// const PostLink = props => (
+//   <li>
+//     <Link href={`/itemPosting?title=${props.title}`}>
+//       <a>{props.title}</a>
+//     </Link>
+//   </li>
 // )
-// export default Page
+// export default function Shop() {
+//   return (
+//     <Layout>
+//       <h1>My Shop</h1>
+//       <ul>
+//         <PostLink title="Login Here" />
+//         <PostLink title="Learn Next.js is awesome" />
+//         <PostLink title="Deploy apps with Zeit" />
+//       </ul>
+//     </Layout>
+//   )
+// }
 
 
 
 const PostLink = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 32
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -2626,13 +2625,13 @@ const PostLink = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createEle
   href: `/post?title=${props.title}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 33
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38
+    lineNumber: 34
   },
   __self: undefined
 }, props.title)));
@@ -2641,19 +2640,19 @@ function Items() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_myLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 41
     },
     __self: this
   }, "My Items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
@@ -2661,16 +2660,15 @@ function Items() {
     title: "Lady Tech Gear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 43
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Post, {
-    Link: true,
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
     id: "tech-bling",
     title: "Tech Bling",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 44
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
@@ -2678,7 +2676,7 @@ function Items() {
     title: "Tech Accessories",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 45
     },
     __self: this
   })));
@@ -2686,14 +2684,14 @@ function Items() {
 
 /***/ }),
 
-/***/ 6:
-/*!************************************!*\
-  !*** multi ./pages/itemPosting.js ***!
-  \************************************/
+/***/ 4:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/itemPosting.js */"./pages/itemPosting.js");
+module.exports = __webpack_require__(/*! /Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -2765,4 +2763,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=itemPosting.js.map
+//# sourceMappingURL=index.js.map
