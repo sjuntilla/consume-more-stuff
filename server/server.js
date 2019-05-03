@@ -13,10 +13,11 @@ if (!PORT) {
 }
 
 const app = express();
-
 app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(decorator);
 
+app.use("/api", userRoutes);
 //smoke test
 app.get("/api/smoke", (req, res) => {
   res.json({ smoke: "test" });
