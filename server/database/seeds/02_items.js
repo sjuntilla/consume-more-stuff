@@ -1,24 +1,33 @@
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
   return knex("items")
     .del()
-    .then(function() {
+    .then(function () {
       // Inserts seed entries
       return knex("items").insert([
         {
           user_id: 1,
           name: "The mecha keyboard",
-          price: "priceless"
+          description: "priceless beautiful key caps & theme",
+          price: "200",
+          category: "equipment",
+          created_at: new Date()
         },
         {
-          user_id: 1,
+          user_id: 2,
           name: "Fit Byte",
-          price: "10 watermelons"
+          description: "track your fitness, diet, & future well being",
+          price: "250",
+          category: "wellness",
+          created_at: new Date()
         },
         {
-          user_id: 1,
-          name: "sexy techie",
-          price: "$1.00"
+          user_id: 3,
+          name: "Sparkly Personal Desk Massager",
+          description: "clinically proven & recommended to boost your productivity & mood by relieving stress",
+          price: "300",
+          category: "office",
+          created_at: new Date()
         }
       ]);
     });
