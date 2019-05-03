@@ -29,7 +29,7 @@
 
 // export default Page
 
-import Layout from './components/myLayout';
+import Layout from './components/layout';
 import Link from 'next/link';
 
 const PostLink = props => (

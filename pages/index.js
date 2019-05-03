@@ -1,31 +1,4 @@
-// import Link from 'next/link';
-// import Layout from './components/myLayout';
-// import Header from './components/header';
-
-
-// const PostLink = props => (
-//   <li>
-//     <Link href={`/itemPosting?title=${props.title}`}>
-//       <a>{props.title}</a>
-//     </Link>
-//   </li>
-// )
-
-
-// export default function Shop() {
-//   return (
-//     <Layout>
-//       <h1>My Shop</h1>
-//       <ul>
-//         <PostLink title="Login Here" />
-//         <PostLink title="Learn Next.js is awesome" />
-//         <PostLink title="Deploy apps with Zeit" />
-//       </ul>
-//     </Layout>
-//   )
-// }
-
-import Layout from './components/myLayout';
+import Layout from './components/layout';
 import Link from 'next/link';
 
 const PostLink = props => (
@@ -44,6 +17,17 @@ export default function Items() {
         <PostLink id="tech-bling" title="Tech Bling" />
         <PostLink id="tech-accessories" title="Tech Accessories" />
       </ul>
+
+      <style jsx>{
+        `h1, a {
+          font-family: 'Helvetica', sans-serif
+        };
+        
+        ul {
+          background-color: red;
+        }`
+      }
+      </style>
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-import Layout from './components/myLayout.js'
+import Layout from './components/layout'
 
 export default function Items() {
     return (
