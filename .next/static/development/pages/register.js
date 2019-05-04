@@ -44478,13 +44478,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/register.js";
 
+ // import { Component } from 'react';
 
+ // class Register extends Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             users: [],
+//           };
+//     }
+//     submitForm(data) {
+//     }
+// }
 
 function Register() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Form"], {
@@ -44494,7 +44505,7 @@ function Register() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
@@ -44503,7 +44514,7 @@ function Register() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 32
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
@@ -44512,7 +44523,7 @@ function Register() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 33
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
@@ -44521,7 +44532,7 @@ function Register() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 34
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
@@ -44530,7 +44541,7 @@ function Register() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 35
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
@@ -44539,7 +44550,7 @@ function Register() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 36
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -44548,7 +44559,7 @@ function Register() {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 38
     },
     __self: this
   })));
@@ -44556,7 +44567,7 @@ function Register() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!*************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fregister&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js ***!
   \*************************************************************************************************************************************************************/
@@ -44579,5 +44590,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=register.js.map

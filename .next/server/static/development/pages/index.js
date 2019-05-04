@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3359,132 +3359,115 @@ var Layout = function Layout(props) {
 
 /***/ }),
 
-/***/ "./pages/register.js":
-/*!***************************!*\
-  !*** ./pages/register.js ***!
-  \***************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Register; });
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Items; });
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! grommet */ "grommet");
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/register.js";
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js";
 
- // import { Component } from 'react';
 
- // class Register extends Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             users: [],
-//           };
-//     }
-//     submitForm(data) {
-//     }
-// }
 
-function Register() {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+
+
+var PostLink = function PostLink(props) {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Form"], {
-    onSubmit: function onSubmit(_ref) {
-      var value = _ref.value;
-      return console.log("Submit: ", value);
-    },
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    as: "/p/".concat(props.id),
+    href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 7
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
-    name: "fname",
-    label: "First Name",
-    required: true,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 8
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
-    name: "lname",
-    label: "Last Name",
-    required: true,
+  }, props.title)));
+};
+
+function Items() {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 14
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
-    name: "email",
-    label: "E-mail",
-    required: true,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    className: "jsx-2952860516",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 15
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
-    name: "username",
-    label: "Username",
-    required: true,
+  }, "My Items"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+    className: "jsx-2952860516",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 16
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["FormField"], {
-    name: "password",
-    label: "Password",
-    required: true,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
+    id: "lady-tech-gear",
+    title: "Lady Tech Gear",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 17
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-    type: "submit",
-    label: "Register",
-    primary: true,
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
+    id: "tech-bling",
+    title: "Tech Bling",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 18
     },
     __self: this
-  })));
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
+    id: "tech-accessories",
+    title: "Tech Accessories",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "2952860516",
+    __self: this
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-2952860516{font-family:'Roboto',sans-serif;}ul.jsx-2952860516{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBc0JRLEFBQzhELEFBR2xCLEFBSVgsc0JBQ1gsVUFKYixDQUtBIiwiZmlsZSI6Ii9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGF5b3V0IGZyb20gJy4vY29tcG9uZW50cy9sYXlvdXQnO1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcblxuXG5jb25zdCBQb3N0TGluayA9IHByb3BzID0+IChcbiAgPGxpPlxuICAgIDxMaW5rIGFzPXtgL3AvJHtwcm9wcy5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwcm9wcy50aXRsZX1gfT5cbiAgICAgIDxhPntwcm9wcy50aXRsZX08L2E+PC9MaW5rPlxuICA8L2xpPlxuKVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJdGVtcygpIHtcbiAgcmV0dXJuIChcbiAgICA8TGF5b3V0PlxuICAgICAgPGgxPk15IEl0ZW1zPC9oMT5cbiAgICAgIDx1bD5cbiAgICAgICAgPFBvc3RMaW5rIGlkPVwibGFkeS10ZWNoLWdlYXJcIiB0aXRsZT1cIkxhZHkgVGVjaCBHZWFyXCIgLz5cbiAgICAgICAgPFBvc3RMaW5rIGlkPVwidGVjaC1ibGluZ1wiIHRpdGxlPVwiVGVjaCBCbGluZ1wiIC8+XG4gICAgICAgIDxQb3N0TGluayBpZD1cInRlY2gtYWNjZXNzb3JpZXNcIiB0aXRsZT1cIlRlY2ggQWNjZXNzb3JpZXNcIiAvPlxuICAgICAgPC91bD5cblxuICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgIGBAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bycpO1xuICAgICAgICBcbiAgICAgICAgaDEge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgfTtcbiAgICAgICAgXG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9YFxuICAgICAgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L0xheW91dD5cbiAgKVxufSJdfQ== */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js */"));
 }
 
 /***/ }),
 
-/***/ 3:
-/*!*********************************!*\
-  !*** multi ./pages/register.js ***!
-  \*********************************/
+/***/ 5:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sylvia/Documents/devleague/consume-more-stuff/pages/register.js */"./pages/register.js");
+module.exports = __webpack_require__(/*! /Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "grommet":
-/*!**************************!*\
-  !*** external "grommet" ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("grommet");
 
 /***/ }),
 
@@ -3555,4 +3538,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=index.js.map

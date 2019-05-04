@@ -1,6 +1,6 @@
 import Layout from './components/layout';
 import React from "react";
-import { Component } from 'react';
+// import { Component } from 'react';
 
 import {
   Box,
@@ -12,18 +12,18 @@ import {
   Select
 } from "grommet";
 
-class Register extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            users: [],
-          };
-    }
+// class Register extends Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             users: [],
+//           };
+//     }
 
-    submitForm(data) {
+//     submitForm(data) {
         
-    }
-}
+//     }
+// }
 
 export default function Register () {
    return (
