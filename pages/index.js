@@ -17,16 +17,7 @@ export default function Items() {
     <Grommet theme={dark}>
       <Layout animation="fadeIn">
         <Heading color="neutral-2">silk code.</Heading>
-        <Box key="accordion" basis="xxsmall" animation="fadeIn" alignSelf="start">
-          <Accordion color="neutral-2">
-            <AccordionPanel label="Menu">
-              <Box pad="small">
-                <PostLink id="lady-tech-gear" title="Lady Tech Gear" />
-                <PostLink id="tech-accessories" title="Tech Accessories" />
-              </Box>
-            </AccordionPanel>
-          </Accordion>
-        </Box>
+
         <Box key="type" align="start">
           <Text>Excuse me sir this is my emotional support text tag</Text>
           <Clock type="digital" background="brand" />
