@@ -23,8 +23,32 @@ passport.deserializeUser((user, done) => {
     });
 });
 
+passport.use(
+  new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
+    console.log("Local Strat being called..");
+    User.where({ email })
+      .fetch()
+      .then(user => {
+        console.log("user Local Strat", user.toJSON());
+        user = user.toJSON();
+        bcrypt.compare(password, user.hashedPassword).then(res => {
+          if (res) {
+            done(null, user);
+          } else {
+            done(null, false);
+          }
+        });
+      })
+      .catch(err => {
+        console.log("AUTH ERROR", err);
+        done(null, false);
+      });
+  })
+);
+
 const SALT_ROUND = 12;
 
+//register route to post a new user to database with a hashed password
 router.route("/register").post((req, res) => {
   console.log("hello");
   const { first_name, last_name, email, password, username } = req.body;
@@ -48,6 +72,7 @@ router.route("/register").post((req, res) => {
       }).save();
     })
     .then(user => {
+      console.log("Registration successful!");
       return res.json({ success: true });
     })
     .catch(err => {
@@ -56,21 +81,20 @@ router.route("/register").post((req, res) => {
     });
 });
 
-//   return new req.database.User({
-//     first_name,
-//     last_name,
-//     email,
-//     hashedPassword,
-//     username
-//   })
-//     .save()
-//     .then(user => {
-//       return res.json({ success: true });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.sendStatus(500);
-//     });
-// });
+//login route to authenticate user.
+router.route("/login").post(
+  passport.authenticate("local", { failureRedirect: "/" }, (req, res) => {
+    const email = req.body.email;
+    User.where({ email })
+      .fetch()
+      .then(user => {
+        console.log("user", user.toJSON());
+      })
+      .catch(err => {
+        console.log(err);
+        res.sendStatus(500);
+      });
+  })
+);
 
 module.exports = router;
