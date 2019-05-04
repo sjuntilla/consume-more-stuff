@@ -12,6 +12,9 @@ const Header = () => (
         <Link href="/items">
             <a style={linkStyle}>items</a>
         </Link>
+        <Link href="/register">
+            <a style={linkStyle}>Register</a>
+        </Link>
 
 
         {/* component styling */}

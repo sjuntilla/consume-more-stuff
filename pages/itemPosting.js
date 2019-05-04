@@ -45,7 +45,7 @@ export default function Items() {
             <h1>My Items</h1>
             <ul>
                 <PostLink id="lady-tech-gear" title="Lady Tech Gear" />
-                <Post Link id="tech-bling" title="Tech Bling" />
+                <PostLink id="tech-bling" title="Tech Bling" />
                 <PostLink id="tech-accessories" title="Tech Accessories" />
             </ul>
         </Layout>
