@@ -1,5 +1,7 @@
 import Layout from './components/layout';
 import React from "react";
+import { Component } from 'react';
+
 import {
   Box,
   Button,
@@ -9,6 +11,19 @@ import {
 
   Select
 } from "grommet";
+
+class Register extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            users: [],
+          };
+    }
+
+    submitForm(data) {
+        
+    }
+}
 
 export default function Register () {
    return (
@@ -20,10 +35,12 @@ export default function Register () {
       <FormField name="username" label="Username" required={true} />
       <FormField name="password" label="Password" required={true} />
     
-      <Button type="submit" label="Submit" primary={true} />
+      <Button type="submit" label="Register" primary={true} />
     </Form></Layout>
 );
     }
+
+
 
 
 
