@@ -72399,7 +72399,8 @@ var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/page
 
 
 var linkStyle = {
-  marginRight: 15
+  marginRight: 15,
+  textDecoration: "none"
 };
 
 var PostLink = function PostLink(props) {
@@ -72408,13 +72409,14 @@ var PostLink = function PostLink(props) {
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Anchor"], {
+    color: "brand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, props.title));
@@ -72425,104 +72427,83 @@ var Header = function Header() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_3__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Anchor"], {
-    style: linkStyle,
-    color: "neutral-4",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/items",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Anchor"], {
-    style: linkStyle,
-    color: "neutral-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Items")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Box"], {
-    background: "text-dark",
-    direction: "row-responsive",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Accordion"], {
-    color: "neutral-2",
-    elevation: "medium",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["AccordionPanel"], {
-    label: "Menu",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Box"], {
-    pad: "small",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
-    id: "lady-tech-gear",
-    title: "Lady Tech Gear",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
-    id: "tech-accessories",
-    title: "Tech Accessories",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Box"], {
     direction: "row-responsive",
-    justify: "end",
+    fit: "cover",
+    alignContent: "between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Anchor"], {
-    style: {
-      margin: "left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["DropButton"], {
+    elevation: "xxsmall",
+    margin: "small",
+    height: "xxsmall",
+    animate: "true",
+    label: "Menu",
+    dropAlign: {
+      top: 'bottom',
+      left: 'left'
     },
-    color: "neutral-3",
+    dropContent: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Box"], {
+      pad: "small",
+      background: "backgroundColor",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_2__["Anchor"], {
+      style: linkStyle,
+      color: "brand",
+      background: "backgroundColor",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+      id: "items",
+      title: "Tech Accessories",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+      id: "office-supplies",
+      title: "Office Supplies",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostLink, {
+      id: "health-wellness",
+      title: "Health and Wellness",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 20
     },
     __self: this
-  }, "Login"))));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -72547,13 +72528,18 @@ var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/page
 
 
 
-var layoutStyle = {
-  margin: 20,
-  padding: 20
+var headerStyle = {
+  margin: 15,
+  display: "flex",
+  alignContent: "center"
 };
 var wrapperStyle = {
-  marginLeft: 10,
+  marginLeft: 0,
   marginRight: 0,
+  backgroundColor: "#111111"
+};
+var layoutWidth = {
+  margin: 0,
   padding: 0
 };
 
@@ -72562,20 +72548,27 @@ var Layout = function Layout(props) {
     style: wrapperStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: headerStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 24
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: layoutStyle,
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: layoutWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 26
     },
     __self: this
   }, props.children));
@@ -72642,42 +72635,111 @@ function Items() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    animation: "fadeIn",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
-    color: "neutral-2",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    key: "banner",
+    pad: "large",
+    animation: "fadeIn",
+    background: {
+      image: "url(https://i.imgur.com/JnPr8Hs.png)",
+      size: "cover"
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, "silk code."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
-    key: "type",
-    align: "start",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    key: "heading",
+    elevation: "xxsmall",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
+    color: "brand",
+    responsive: "true",
+    size: "large",
+    pad: "xxsmall",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+  }, "silk code."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    key: "blurb",
+    pad: "xxsmall",
+    height: "small",
+    width: "large",
+    alignSelf: "start",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "Excuse me sir this is my emotional support text tag"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Clock"], {
-    type: "digital",
-    background: "brand",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+    color: "accent-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }))));
+  }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    key: "type",
+    align: "start",
+    pad: "small",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
+    color: "accent-2",
+    pad: "small",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Carousel"], {
+    play: "30000",
+    background: "backgroundColor",
+    fill: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+    fit: "cover",
+    src: "https://i.imgur.com/W6fcu6b.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+    fit: "cover",
+    src: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+    fit: "cover",
+    src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  })))));
 }
 
 /***/ }),

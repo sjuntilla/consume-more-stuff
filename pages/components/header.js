@@ -1,41 +1,36 @@
 import Link from 'next/link';
-import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel } from 'grommet';
+import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton } from 'grommet';
 import { dark } from 'grommet/themes';
 
 
 const linkStyle = {
-    marginRight: 15
+    marginRight: 15,
+    textDecoration: "none"
 }
+
 
 const PostLink = props => (
     <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-        <Anchor>{props.title}</Anchor></Link>
+        <Anchor color="brand">{props.title}</Anchor></Link>
 )
 
 const Header = () => (
     <Grommet theme={dark}>
-        <Link href="/">
-            <Anchor style={linkStyle} color="neutral-4">Home</Anchor>
-        </Link>
+        <Box direction="row-responsive" fit="cover" alignContent="between">
+            <DropButton elevation="xxsmall" margin="small" height="xxsmall" animate="true" label="Menu" dropAlign={{ top: 'bottom', left: 'left' }} dropContent={
+                <Box pad="small" background="backgroundColor">
+                    <Link href="/">
+                        <Anchor style={linkStyle} color="brand" background="backgroundColor">Home</Anchor>
+                    </Link>
+                    <PostLink id="items" title="Tech Accessories" />
+                    <PostLink id="office-supplies" title="Office Supplies" />
+                    <PostLink id="health-wellness" title="Health and Wellness" />
 
-        <Link href="/items">
-            <Anchor style={linkStyle} color="neutral-4">Items</Anchor>
-        </Link>
-        <Box background="text-dark" direction="row-responsive">
-            <Accordion color="neutral-2" elevation="medium">
-                <AccordionPanel label="Menu">
-                    <Box pad="small">
-                        <PostLink id="lady-tech-gear" title="Lady Tech Gear" />
-                        <PostLink id="tech-accessories" title="Tech Accessories" />
-                    </Box>
-                </AccordionPanel>
-            </Accordion>
-
-            <Box direction="row-responsive" justify="end">
-                <Anchor style={{ margin: "left" }} color="neutral-3">Login</Anchor></Box>
+                </Box>
+            }>
+            </DropButton>
         </Box>
-
-    </Grommet>
+    </Grommet >
 
 )
 
