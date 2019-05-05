@@ -9,9 +9,6 @@ const PostLink = props => (
     <Anchor>{props.title}</Anchor></Link>
 )
 
-// < PostLink id = "lady-tech-gear" title = "Lady Tech Gear" />
-// < PostLink id = "tech-accessories" title = "Tech Accessories" />
-
 export default function Items() {
   return (
     <Grommet theme={dark}>
@@ -25,7 +22,7 @@ export default function Items() {
           </Box>
         </Box>
         <Box key="type" align="start" pad="hair" overflow="hidden">
-          <Heading color="accent-2" pad="small">Featured Items</Heading>
+          <Heading color="accent-2" margin="small">Featured Items</Heading>
           <Carousel play="30000" background="backgroundColor" height="small" fill>
             <Image fit="cover" src="https://i.imgur.com/W6fcu6b.png" />
             <Image fit="cover" src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg" />
