@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const User = require("../../models/User");
 const passport = require("passport");
-const LocalStrategy = require("passport-local");
+const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
 
 passport.serializeUser((user, done) => {
@@ -24,20 +24,32 @@ passport.deserializeUser((user, done) => {
 });
 
 passport.use(
+  "login",
   new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
+    console.log("password", password);
     console.log("Local Strat being called..");
     User.where({ email })
       .fetch()
       .then(user => {
         console.log("user Local Strat", user.toJSON());
         user = user.toJSON();
-        bcrypt.compare(password, user.hashedPassword).then(res => {
-          if (res) {
-            done(null, user);
-          } else {
-            done(null, false);
-          }
-        });
+        bcrypt
+          .compare(password, user.pw)
+          .then(res => {
+            console.log("res", res);
+            console.log("password", password);
+            console.log("userHASH", user.pw);
+            console.log("typeof_password", typeof password);
+            console.log("typeofuserhash", typeof user.pw);
+            if (res) {
+              done(null, user);
+            } else {
+              done(null, false);
+            }
+          })
+          .catch(err => {
+            console.log("err", err);
+          });
       })
       .catch(err => {
         console.log("AUTH ERROR", err);
@@ -52,7 +64,7 @@ const SALT_ROUND = 12;
 router.route("/register").post((req, res) => {
   console.log("hello");
   const { first_name, last_name, email, password, username } = req.body;
-
+  console.log("req.body", req.body);
   console.log("registering......");
 
   bcrypt
@@ -67,7 +79,7 @@ router.route("/register").post((req, res) => {
         first_name,
         last_name,
         email,
-        hashedPassword: hashPassword,
+        pw: hashPassword,
         username
       }).save();
     })
@@ -82,19 +94,30 @@ router.route("/register").post((req, res) => {
 });
 
 //login route to authenticate user.
-router.route("/login").post(
-  passport.authenticate("local", { failureRedirect: "/" }, (req, res) => {
-    const email = req.body.email;
-    User.where({ email })
-      .fetch()
-      .then(user => {
-        console.log("user", user.toJSON());
-      })
-      .catch(err => {
-        console.log(err);
-        res.sendStatus(500);
-      });
-  })
-);
+router
+  .route("/login")
+  .post(
+    passport.authenticate("login", { failureRedirect: "/" }),
+    (req, res) => {
+      console.log("req.body", req.body);
+      const email = req.body.email;
+      User.where({ email })
+        .fetch()
+        .then(user => {
+          user = user.toJSON();
+          const userData = {
+            id: user.id,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            username: user.username
+          };
+          res.json(userData);
+        })
+        .catch(err => {
+          console.log(err);
+          res.sendStatus(500);
+        });
+    }
+  );
 
 module.exports = router;
