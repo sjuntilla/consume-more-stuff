@@ -3,6 +3,7 @@ const User = require("../../models/User");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
+const next = require("next");
 
 passport.serializeUser((user, done) => {
   done(null, {
