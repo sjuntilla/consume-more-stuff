@@ -2,15 +2,19 @@ import Layout from './components/layout';
 import fetch from 'isomorphic-unfetch';
 
 import Link from 'next/link';
-import { Grommet, Heading, Anchor, Text, Box, Distribution } from 'grommet';
+import { Grommet, Heading, Anchor, Text, Box, Layer } from 'grommet';
 import { dark } from 'grommet/themes';
 import { Disposer } from 'bluebird';
 
 
 const Items = ({ items }) => {
     return (
-        <Grommet theme={dark} >
-            <Layout><Box key="wrapper" direction="row-responsive">
+        <Layer
+            full
+            modal={false}
+            animate="true"
+        >
+            <Box key="wrapper" direction="row-responsive">
                 {items.map(item =>
                     <Box key={item.id} background="#666" animate="fadeIn" margin="small" pad="small" size="small" elevation="xsmall" >
                         <Heading level={3} color="brand">{item.name}</Heading>
@@ -21,8 +25,7 @@ const Items = ({ items }) => {
                     </Box>
                 )}
             </Box>
-            </Layout>
-        </Grommet >
+        </Layer>
     )
 }
 
