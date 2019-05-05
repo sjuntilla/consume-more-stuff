@@ -1,6 +1,6 @@
 import Layout from './components/layout';
 import React from "react";
-// import { Component } from 'react';
+import { Component } from 'react';
 
 import {
   Box,
@@ -8,37 +8,80 @@ import {
   CheckBox,
   Form,
   FormField,
-
   Select
 } from "grommet";
 
-// class Register extends Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             users: [],
-//           };
-//     }
+class Register extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            users: [],
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: '',
+            username: ''
+          };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    
+        }
+    
+    handleSubmit(e) {
+      e.preventDefault();
+      console.log("STATEEEE", this.state)
+      fetch('http://localhost:8080/api/register', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
 
-//     submitForm(data) {
-        
-//     }
-// }
+        },
+        body: JSON.stringify({
+          first_name: this.state.first_name,
+          last_name: this.state.last_name,
+          email: this.state.email,
+          username: this.state.username,
+          password: this.state.password,
+        })
+      })
+      // .then(function(res) {
+      //   // console.log("HITTTT")
+      //    res.json();
+      // })
+      .then(function(body) {
+        console.log(body);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+    
+    handleChange = e => {
+      // console.log("HITTT", e.target.value)
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
 
-export default function Register () {
+  render() {
+    
+
    return (
        <Layout>
-    <Form onSubmit={({ value }) => console.log("Submit: ", value)}>
-      <FormField name="fname" label="First Name" required={true} />
-      <FormField name="lname" label="Last Name" required={true} />
-      <FormField name="email" label="E-mail" required={true} />
-      <FormField name="username" label="Username" required={true} />
-      <FormField name="password" label="Password" required={true} />
-    
+    <Form onSubmit={ this.handleSubmit } >
+      <FormField onChange={this.handleChange} name="first_name" label="First Name" required={true} />
+      <FormField onChange={this.handleChange} name="last_name" label="Last Name" required={true} />
+      <FormField onChange={this.handleChange} name="email" label="E-mail" required={true} />
+      <FormField onChange={this.handleChange} name="username" label="Username" required={true} />
+      <FormField onChange={this.handleChange} name="hashedPassword" label="Password" required={true} />
       <Button type="submit" label="Register" primary={true} />
     </Form></Layout>
 );
-    }
+   }
+}
+
+
+    export default Register;
 
 
 
