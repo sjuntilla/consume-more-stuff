@@ -44706,12 +44706,11 @@ function (_Component) {
     });
 
     _this.state = {
-      users: [],
-      first_name: '',
-      last_name: '',
-      email: '',
-      password: '',
-      username: ''
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      username: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     return _this;
@@ -44722,11 +44721,11 @@ function (_Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       console.log("STATEEEE", this.state);
-      fetch('http://localhost:8080/api/register', {
-        method: 'POST',
+      fetch("http://localhost:8080/api/register", {
+        method: "POST",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: "application/json",
+          "Content-Type": "application/json"
         },
         body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
           first_name: this.state.first_name,
@@ -44735,13 +44734,12 @@ function (_Component) {
           username: this.state.username,
           password: this.state.password
         })
-      }) // .then(function(res) {
-      //   // console.log("HITTTT")
-      //    res.json();
+      }).then(function () {
+        console.log("added to database");
+      }) // .then(function(response) {
+      //   console.log(response);
       // })
-      .then(function (body) {
-        console.log(body);
-      }).catch(function (err) {
+      .catch(function (err) {
         console.log(err);
       });
     }
@@ -44751,14 +44749,14 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -44768,7 +44766,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 56
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -44778,7 +44776,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 62
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -44788,7 +44786,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -44798,17 +44796,17 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 74
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
         onChange: this.handleChange,
-        name: "hashedPassword",
+        name: "password",
         label: "Password",
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 80
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
@@ -44817,7 +44815,7 @@ function (_Component) {
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 86
         },
         __self: this
       })));
