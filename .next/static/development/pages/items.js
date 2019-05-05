@@ -10879,24 +10879,52 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/items.js";
 
 
-
+ // class ItemList extends Component {
+//     constructor(props) {
+//         super(props);
+//         //properties
+//         this.state = {
+//             items: props.items
+//         }
+//     }
+//     handleRefresh = async(e) => {
+//         const res = awaitfetch('http://localhost:8080/api/items')
+//         const json = await res.json()
+//         this.setState({ items: json});
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 Next items: {this.state.items}
+//                 <button onClick={this.handleRefresh}>Refresh</button>
+//             </div>
+//         )
+//     }
+// }
+// ItemList.getInitialProps = async ({ req }) => {
+//     const res = await
+//         fetch('http://localhost:8080/api/items')
+//         const json = await res.json()
+//         return { items: json}
+//     }
 
 var Items = function Items(_ref) {
   var items = _ref.items;
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 37
     },
     __self: this
   }, items.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      key: item.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 39
       },
       __self: this
-    }, item.name);
+    }, item.name, item.description, item.price, item.category);
   }));
 };
 
