@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/items.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/register.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -31244,18 +31244,6 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/isomorphic-unfetch/browser.js":
-/*!****************************************************!*\
-  !*** ./node_modules/isomorphic-unfetch/browser.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = window.fetch || (window.fetch = __webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.mjs").default || __webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.mjs"));
-
-
-/***/ }),
-
 /***/ "./node_modules/markdown-to-jsx/dist/esm.js":
 /*!**************************************************!*\
   !*** ./node_modules/markdown-to-jsx/dist/esm.js ***!
@@ -32332,21 +32320,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fregister&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js!./":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fregister&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/items", function() {
-      var page = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/register", function() {
+      var page = __webpack_require__(/*! ./pages/register.js */ "./pages/register.js")
       if(true) {
-        module.hot.accept(/*! ./pages/items.js */ "./pages/items.js", function() {
-          if(!next.router.components["/items"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
-          next.router.update("/items", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/register.js */ "./pages/register.js", function() {
+          if(!next.router.components["/register"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/register.js */ "./pages/register.js")
+          next.router.update("/register", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -44995,21 +44983,6 @@ function symbolObservablePonyfill(root) {
 
 /***/ }),
 
-/***/ "./node_modules/unfetch/dist/unfetch.mjs":
-/*!***********************************************!*\
-  !*** ./node_modules/unfetch/dist/unfetch.mjs ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (function(e,n){return n=n||{},new Promise(function(t,r){var s=new XMLHttpRequest,o=[],u=[],i={},a=function(){return{ok:2==(s.status/100|0),statusText:s.statusText,status:s.status,url:s.responseURL,text:function(){return Promise.resolve(s.responseText)},json:function(){return Promise.resolve(JSON.parse(s.responseText))},blob:function(){return Promise.resolve(new Blob([s.response]))},clone:a,headers:{keys:function(){return o},entries:function(){return u},get:function(e){return i[e.toLowerCase()]},has:function(e){return e.toLowerCase()in i}}}};for(var l in s.open(n.method||"get",e,!0),s.onload=function(){s.getAllResponseHeaders().replace(/^(.*?):[^\S\n]*([\s\S]*?)$/gm,function(e,n,t){o.push(n=n.toLowerCase()),u.push([n,t]),i[n]=i[n]?i[n]+","+t:t}),t(a())},s.onerror=r,s.withCredentials="include"==n.credentials,n.headers)s.setRequestHeader(l,n.headers[l]);s.send(n.body||null)})});
-//# sourceMappingURL=unfetch.mjs.map
-
-
-/***/ }),
-
 /***/ "./node_modules/unquote/index.js":
 /*!***************************************!*\
   !*** ./node_modules/unquote/index.js ***!
@@ -46294,31 +46267,28 @@ var Layout = function Layout(props) {
 
 /***/ }),
 
-/***/ "./pages/items.js":
-/*!************************!*\
-  !*** ./pages/items.js ***!
-  \************************/
+/***/ "./pages/register.js":
+/*!***************************!*\
+  !*** ./pages/register.js ***!
+  \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_7__);
-
-
-var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/items.js";
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
 
 
 
@@ -46326,111 +46296,162 @@ var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/
 
 
 
-var Items = function Items(_ref) {
-  var items = _ref.items;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Grommet"], {
-    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_7__["dark"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, items.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      key: item.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      },
-      __self: this
-    }, item.name, item.description, item.price, item.category);
-  })));
-};
 
-Items.getInitialProps =
+var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/register.js";
+
+
+
+
+
+var Register =
 /*#__PURE__*/
-function () {
-  var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref2) {
-    var req, res, json;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            req = _ref2.req;
-            _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('http://localhost:8080/api/items');
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Register, _Component);
 
-          case 3:
-            res = _context.sent;
-            _context.next = 6;
-            return res.json();
+  function Register(props) {
+    var _this;
 
-          case 6:
-            json = _context.sent;
-            return _context.abrupt("return", {
-              items: json
-            });
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Register);
 
-          case 8:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Register).call(this, props));
 
-  return function (_x) {
-    return _ref3.apply(this, arguments);
-  };
-}();
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "handleChange", function (e) {
+      // console.log("HITTT", e.target.value)
+      _this.setState(Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])({}, e.target.name, e.target.value));
+    });
 
-/* harmony default export */ __webpack_exports__["default"] = (Items); // class ItemList extends Component {
-//     constructor(props) {
-//         super(props);
-//         //properties
-//         this.state = {
-//             items: props.items
-//         }
-//     }
-//     handleRefresh = async(e) => {
-//         const res = awaitfetch('http://localhost:8080/api/items')
-//         const json = await res.json()
-//         this.setState({ items: json});
-//     }
-//     render() {
-//         return (
-//             <div>
-//                 Next items: {this.state.items}
-//                 <button onClick={this.handleRefresh}>Refresh</button>
-//             </div>
-//         )
-//     }
-// }
-// ItemList.getInitialProps = async ({ req }) => {
-//     const res = await
-//         fetch('http://localhost:8080/api/items')
-//         const json = await res.json()
-//         return { items: json}
-//     }
+    _this.state = {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      username: ""
+    };
+    _this.handleSubmit = _this.handleSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Register, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      console.log("STATEEEE", this.state);
+      fetch("http://localhost:8080/api/register", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+          first_name: this.state.first_name,
+          last_name: this.state.last_name,
+          email: this.state.email,
+          username: this.state.username,
+          password: this.state.password
+        })
+      }).then(function () {
+        console.log("added to database");
+      }) // .then(function(response) {
+      //   console.log(response);
+      // })
+      .catch(function (err) {
+        console.log(err);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+        onChange: this.handleChange,
+        name: "first_name",
+        label: "First Name",
+        required: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+        onChange: this.handleChange,
+        name: "last_name",
+        label: "Last Name",
+        required: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+        onChange: this.handleChange,
+        name: "email",
+        label: "E-mail",
+        required: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+        onChange: this.handleChange,
+        name: "username",
+        label: "Username",
+        required: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+        onChange: this.handleChange,
+        name: "password",
+        label: "Password",
+        required: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        type: "submit",
+        label: "Register",
+        primary: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Register;
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Register);
 
 /***/ }),
 
-/***/ 0:
-/*!**************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
-  \**************************************************************************************************************************************************************/
+/***/ 1:
+/*!********************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fregister&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fregister&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fregister&absolutePagePath=%2FUsers%2Fdjavancackley%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fregister.js!./");
 
 
 /***/ }),
@@ -46446,5 +46467,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=items.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=register.js.map
