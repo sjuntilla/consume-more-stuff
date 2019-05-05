@@ -1,27 +1,14 @@
-import Layout from "./components/layout";
-import Link from "next/link";
-import {
-  Grommet,
-  Heading,
-  Anchor,
-  Menu,
-  Box,
-  Text,
-  Clock,
-  Carousel,
-  Image
-} from "grommet";
-import { dark } from "grommet/themes";
-import generate from "@babel/generator";
+import Layout from './components/layout';
+import Link from 'next/link';
+import { Grommet, Heading, Anchor, Menu, Box, Text, Clock, Carousel, Image } from 'grommet';
+import { dark } from 'grommet/themes';
+import generate from '@babel/generator';
 
 const PostLink = props => (
   <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
     <Anchor>{props.title}</Anchor>
   </Link>
 );
-
-// < PostLink id = "lady-tech-gear" title = "Lady Tech Gear" />
-// < PostLink id = "tech-accessories" title = "Tech Accessories" />
 
 export default function Items() {
   return (
@@ -63,6 +50,7 @@ export default function Items() {
           </Box>
         </Box>
         <Box key="type" align="start" pad="hair" overflow="hidden">
+<<<<<<< HEAD
           <Heading color="accent-2" pad="small">
             Featured Items
           </Heading>
@@ -72,6 +60,10 @@ export default function Items() {
             height="small"
             fill
           >
+=======
+          <Heading color="accent-2" margin="small">Featured Items</Heading>
+          <Carousel play="30000" background="backgroundColor" height="small" fill>
+>>>>>>> origin/sambranch
             <Image fit="cover" src="https://i.imgur.com/W6fcu6b.png" />
             <Image
               fit="cover"
