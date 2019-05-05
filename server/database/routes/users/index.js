@@ -64,7 +64,7 @@ const SALT_ROUND = 12;
 router.route("/register").post((req, res) => {
   console.log("hello");
   const { first_name, last_name, email, password, username } = req.body;
-
+  console.log("req.body", req.body);
   console.log("registering......");
 
   bcrypt
