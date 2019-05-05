@@ -2,7 +2,6 @@ import Layout from './components/layout';
 import fetch from 'isomorphic-unfetch';
 
 
-
 const Items = ({ items }) => {
     return (
         <Layout>
@@ -17,7 +16,5 @@ Items.getInitialProps = async ({ req }) => {
     const json = await res.json();
     return { items: json }
 }
-
-
 
 export default Items
