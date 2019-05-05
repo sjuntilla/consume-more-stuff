@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Register from '../register';
+import AddItem from '../itemForm';
 import { Component } from 'react';
 import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
 import { dark } from 'grommet/themes';
@@ -26,6 +27,7 @@ const Header = () => (
                 <Tab title="SHOP">
                 </Tab>
                 <Tab title="ADD ITEM">
+                    <AddItem />
                 </Tab>
                 <Tab title="LOGIN">
                 </Tab>

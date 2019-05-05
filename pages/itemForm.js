@@ -1,7 +1,7 @@
 import Layout from './components/layout';
 import React from "react";
 import { Component } from "react";
-import { Box, Form, FormField, Select, Button } from "grommet";
+import { Box, Form, FormField, Select, Button, Layer, Grommet } from "grommet";
 //should only show when user is logged in
 
 class AddItem extends Component {
@@ -47,35 +47,46 @@ class AddItem extends Component {
     };
     render() {
         return (
-            <Layout>
-                <Form onSubmit={this.handleSubmit}>
-                    <FormField
-                        onChange={this.handleChange}
-                        name="name"
-                        label="Product Name"
-                        required={true}
-                    />
-                    <FormField
-                        onChange={this.handleChange}
-                        name="description"
-                        label="Product Description"
-                        required={true}
-                    />
-                    <FormField
-                        onChange={this.handleChange}
-                        name="price"
-                        label="Product Price"
-                        required={true}
-                    />
-                    <FormField
-                        onChange={this.handleChange}
-                        name="category"
-                        label="Category"
-                        required={true}
-                    />
-                    <Button type="submit" label="AddItem" primary={true} />
-                </Form>
-            </Layout>
+            <Layer
+                position="right"
+                width="large"
+                full="vertical"
+                modal={false}
+                animate="true"
+                onClickOutside={this.onClose}
+                onEsc={this.onClose}
+            >
+                <Box pad="large">
+                    <Form onSubmit={this.handleSubmit}>
+                        <FormField
+                            onChange={this.handleChange}
+                            name="name"
+                            label="Product Name"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="description"
+                            label="Product Description"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="price"
+                            label="Product Price"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="category"
+                            label="Category"
+                            required={true}
+                        />
+                        <Button type="submit" label="Add Item" primary={true} />
+                    </Form>
+                </Box>
+            </Layer>
+
         );
     }
 }
