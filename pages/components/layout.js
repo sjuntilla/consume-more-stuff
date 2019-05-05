@@ -1,17 +1,17 @@
 import Header from './header'
+import { Grommet } from 'grommet';
 import { dark } from 'grommet/themes';
 
+const wrapperStyle = {
+    marginLeft: 0,
+    marginRight: 0,
+    backgroundColor: "#111111"
+}
 const headerStyle = {
     margin: 15,
     display: "flex",
     alignContent: "center"
 };
-
-const wrapperStyle = {
-    marginLeft: 0,
-    marginRight: 0,
-    backgroundColor: "#111111",
-}
 
 const layoutWidth = {
     margin: 0,
@@ -19,14 +19,16 @@ const layoutWidth = {
 }
 
 const Layout = props => (
-    <div style={wrapperStyle}>
-        <div style={headerStyle}>
-            <Header />
+    <Grommet theme={dark} full>
+        <div style={wrapperStyle}>
+            <div style={headerStyle}>
+                <Header />
+            </div>
+            <div style={layoutWidth}>
+                {props.children}
+            </div>
         </div>
-        <div style={layoutWidth}>
-            {props.children}
-        </div>
-    </div>
+    </Grommet>
 )
 
 export default Layout;
