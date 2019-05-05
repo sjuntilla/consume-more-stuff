@@ -1,7 +1,7 @@
 import Layout from './components/layout';
 import React from "react";
-import Component from "react";
-import { Box, Form, FormField, Select } from "grommet";
+import { Component } from "react";
+import { Box, Form, FormField, Select, Button } from "grommet";
 //should only show when user is logged in
 
 class AddItem extends Component {
@@ -67,16 +67,55 @@ class AddItem extends Component {
                         label="Product Price"
                         required={true}
                     />
-                    <FormField
+                    {/* <Select
+                        placeholder="Category"
                         onChange={this.handleChange}
+                        value={this.state}
+                        options={["WELLNESS", "OFFICE", "ACCESSORIES"]}
+                        onChange={({ option }) => this.setState({ value: option })}
                         name="category"
-                        label="Category"
-                        required={true}
-                    />
+                        required={true} */}
+                    <Select
+                        multiple
+                        closeOnChange={false}
+                        placeholder="select an option..."
+                        selected={selected}
+                        options={options}
+                        dropHeight="medium"
+                        onClose={() =>
+                            this.setState({
+                                options: options.sort((p1, p2) => {
+                                    const p1Exists = selected.includes(p1);
+                                    const p2Exists = selected.includes(p2);
+
+                                    if (!p1Exists && p2Exists) {
+                                        return 1;
+                                    }
+                                    if (p1Exists && !p2Exists) {
+                                        return -1;
+                                    }
+                                    return p1.localeCompare(p2, undefined, {
+                                        numeric: true,
+                                        sensitivity: "base"
+                                    });
+                                })
+                            })
+                        }
+                        onChange={({ selected: nextSelected }) => {
+                            this.setState({ selected: nextSelected });
+                        }}
+                    >
+                        {(option, index) => (
+                            <Option
+                                value={option}
+                                selected={selected.indexOf(index) !== -1}
+                            />
+                        )}
+                        />
                     <Button type="submit" label="AddItem" primary={true} />
                 </Form>
             </Layout>
-        );
-    }
-}
+                );
+            }
+        }
 export default AddItem;
