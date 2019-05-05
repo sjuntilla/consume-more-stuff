@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import Register from "../register";
 import { Component } from "react";
@@ -20,6 +21,15 @@ import {
   onClickOutside
 } from "grommet";
 import { dark } from "grommet/themes";
+=======
+import Link from 'next/link';
+import Register from '../register';
+import Login from '../login';
+import { Component } from 'react';
+import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
+import { dark } from 'grommet/themes';
+
+>>>>>>> origin/syl
 
 const linkStyle = {
   marginRight: 15,
@@ -126,23 +136,27 @@ class FormLayer extends Component {
 }
 
 const Header = () => (
-  <Grommet theme={dark}>
-    <Box direction="row-responsive" fit="cover" pad="small">
-      {/* TABS OPTION */}
-      <Tabs>
-        <Tab title="HOME" />
-        <Tab title="SHOP">
-          <CornerLayer />
-        </Tab>
-        <Tab title="LOGIN">
-          <FormLayer />
-        </Tab>
-        <Tab title="REGISTER">
-          <Register />
-        </Tab>
-      </Tabs>
-    </Box>
-  </Grommet>
-);
+    <Grommet theme={dark}>
+        <Box direction="row-responsive" fit="cover" pad="small">
+
+
+            {/* TABS OPTION */}
+            <Tabs>
+                <Tab title="HOME" />
+                <Tab title="SHOP">
+                    <CornerLayer />
+                </Tab>
+                <Tab title="LOGIN">
+                    <Login />
+                </Tab>
+                <Tab title="REGISTER">
+                    <Register />
+                </Tab>
+            </Tabs>
+
+        </Box>
+    </Grommet >
+
+)
 
 export default Header;

@@ -18,7 +18,7 @@ const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
 if (!PORT) {
-  console.log("No Port Found");
+ console.log("No Port Found");
 }
 
 if (!SESSION_SECRET) {
