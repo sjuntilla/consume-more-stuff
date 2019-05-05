@@ -1,8 +1,10 @@
-import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
-import { Box, Button, CheckBox, Form, FormField, Select } from "grommet";
+import { Box, Button, CheckBox, Form, FormField, Select, Layer, onClickOutside } from "grommet";
 class Register extends Component {
+
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -10,10 +12,14 @@ class Register extends Component {
       last_name: "",
       email: "",
       password: "",
-      username: ""
+      username: "",
+      open: false,
+      select: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -50,41 +56,55 @@ class Register extends Component {
     });
   };
   render() {
+    const { layerType } = this.state;
+
     return (
 
-      <Form onSubmit={this.handleSubmit}>
-        <FormField
-          onChange={this.handleChange}
-          name="first_name"
-          label="First Name"
-          required={true}
-        />
-        <FormField
-          onChange={this.handleChange}
-          name="last_name"
-          label="Last Name"
-          required={true}
-        />
-        <FormField
-          onChange={this.handleChange}
-          name="email"
-          label="E-mail"
-          required={true}
-        />
-        <FormField
-          onChange={this.handleChange}
-          name="username"
-          label="Username"
-          required={true}
-        />
-        <FormField
-          onChange={this.handleChange}
-          name="password"
-          label="Password"
-          required={true}
-        />
-        <Button type="submit" label="Register" primary={true} />
-      </Form>
+      <Layer
+        position="right"
+        width="large"
+        full="vertical"
+        modal={false}
+        animate="true"
+        onClickOutside={this.onClose}
+        onEsc={this.onClose}
+      >
+        <Box pad="large">
+          <Form onSubmit={this.handleSubmit}>
+            <FormField
+              onChange={this.handleChange}
+              name="first_name"
+              label="First Name"
+              required={true}
+            />
+            <FormField
+              onChange={this.handleChange}
+              name="last_name"
+              label="Last Name"
+              required={true}
+            />
+            <FormField
+              onChange={this.handleChange}
+              name="email"
+              label="E-mail"
+              required={true}
+            />
+            <FormField
+              onChange={this.handleChange}
+              name="username"
+              label="Username"
+              required={true}
+            />
+            <FormField
+              onChange={this.handleChange}
+              name="password"
+              label="Password"
+              required={true}
+            />
+            <Button type="submit" label="Register" primary={true} />
+          </Form>
+        </Box>
+      </Layer>
 
     );
   }
