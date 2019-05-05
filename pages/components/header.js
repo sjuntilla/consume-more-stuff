@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Register from '../register';
 import { Component } from 'react';
 import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
 import { dark } from 'grommet/themes';
@@ -122,6 +123,7 @@ const Header = () => (
                     <FormLayer />
                 </Tab>
                 <Tab title="REGISTER">
+                    <Register />
                 </Tab>
             </Tabs>
 
