@@ -8,6 +8,11 @@ const session = require("express-session");
 const RedisStore = require("connect-redis")(session);
 require("dotenv").config();
 
+//nextjs middleware
+const next = require("next");
+const dev = process.env.NODE_DEV !== "production";
+const nextApp = next({ dev });
+
 const PORT = process.env.PORT;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 
@@ -15,24 +20,34 @@ if (!PORT) {
   console.log("No Port Found");
 }
 
-const app = express();
+nextApp.prepare().then(() => {
+  const app = express();
 
-//server middleware
-app.use(bodyParser.json({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(decorator);
-app.use(passport.initialize());
-app.use(passport.session());
+  //server middleware
+  app.use(bodyParser.json({ extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(decorator);
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
 
-app.use("/api", userRoutes);
-app.use("/api", itemRoutes);
+  app.use("/api", userRoutes);
+  app.use("/api", itemRoutes);
 
-//smoke test
-app.get("/api/smoke", (req, res) => {
-  res.json({ smoke: "test" });
-});
+  //smoke test
+  app.get("/api/smoke", (req, res) => {
+    res.json({ smoke: "test" });
+  });
 
-// start server
-app.listen(PORT, () => {
-  console.log(`Server stated on port: ${PORT}`);
+  // start server
+  app.listen(PORT, () => {
+    console.log(`Server stated on port: ${PORT}`);
+  });
 });

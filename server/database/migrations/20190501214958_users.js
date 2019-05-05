@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
       .string("email")
       .unique()
       .notNull();
-    table.string("hashedPassword");
+    table.string("pw", 100);
     table
       .string("username", 25)
       .unique()
