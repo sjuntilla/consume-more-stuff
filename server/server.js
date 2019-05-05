@@ -15,9 +15,21 @@ const nextApp = next({ dev });
 
 const PORT = process.env.PORT;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
+const SESSION_SECRET = process.env.SESSION_SECRET;
 
 if (!PORT) {
   console.log("No Port Found");
+}
+
+if (!SESSION_SECRET) {
+  console.log("No Session Secret Found!");
+}
+if (!REDIS_HOSTNAME) {
+  console.log("No Redis Hostname Found!");
+}
+
+if (!PORT || !SESSION_SECRET || !REDIS_HOSTNAME) {
+  return process.exit(1);
 }
 
 nextApp.prepare().then(() => {
@@ -37,6 +49,15 @@ nextApp.prepare().then(() => {
     );
     next();
   });
+
+  app.use(
+    session({
+      store: new RedisStore({ url: process.env.REDIS_HOSTNAME }),
+      secret: process.env.COOKIE_SECRET,
+      resave: true,
+      saveUninitialized: true
+    })
+  );
 
   app.use("/api", userRoutes);
   app.use("/api", itemRoutes);

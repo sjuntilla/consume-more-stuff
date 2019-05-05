@@ -122,4 +122,18 @@ router
     }
   );
 
+router.get("/secret", isAuthenticated, (req, res) => {
+  console.log("secret authed!");
+  res.send("YOU ARE AUTHENTICATED!!!");
+});
+
+function isAuthenticated(req, res, done) {
+  if (req.isAuthenticated()) {
+    done();
+  } else {
+    console.log("Not Authenticated!");
+    res.redirect("/");
+  }
+}
+
 module.exports = router;

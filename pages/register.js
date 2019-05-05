@@ -51,41 +51,41 @@ class Register extends Component {
   };
   render() {
     return (
-      <Layout>
-        <Form onSubmit={this.handleSubmit}>
-          <FormField
-            onChange={this.handleChange}
-            name="first_name"
-            label="First Name"
-            required={true}
-          />
-          <FormField
-            onChange={this.handleChange}
-            name="last_name"
-            label="Last Name"
-            required={true}
-          />
-          <FormField
-            onChange={this.handleChange}
-            name="email"
-            label="E-mail"
-            required={true}
-          />
-          <FormField
-            onChange={this.handleChange}
-            name="username"
-            label="Username"
-            required={true}
-          />
-          <FormField
-            onChange={this.handleChange}
-            name="password"
-            label="Password"
-            required={true}
-          />
-          <Button type="submit" label="Register" primary={true} />
-        </Form>
-      </Layout>
+
+      <Form onSubmit={this.handleSubmit}>
+        <FormField
+          onChange={this.handleChange}
+          name="first_name"
+          label="First Name"
+          required={true}
+        />
+        <FormField
+          onChange={this.handleChange}
+          name="last_name"
+          label="Last Name"
+          required={true}
+        />
+        <FormField
+          onChange={this.handleChange}
+          name="email"
+          label="E-mail"
+          required={true}
+        />
+        <FormField
+          onChange={this.handleChange}
+          name="username"
+          label="Username"
+          required={true}
+        />
+        <FormField
+          onChange={this.handleChange}
+          name="password"
+          label="Password"
+          required={true}
+        />
+        <Button type="submit" label="Register" primary={true} />
+      </Form>
+
     );
   }
 }

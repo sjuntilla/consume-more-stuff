@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Register from "../register";
 import { Component } from "react";
 import {
   Heading,
@@ -136,7 +137,9 @@ const Header = () => (
         <Tab title="LOGIN">
           <FormLayer />
         </Tab>
-        <Tab title="REGISTER" />
+        <Tab title="REGISTER">
+          <Register />
+        </Tab>
       </Tabs>
     </Box>
   </Grommet>
