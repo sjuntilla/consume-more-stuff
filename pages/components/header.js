@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Component } from 'react';
-import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, TextArea, Text, Add } from 'grommet';
+import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, TextArea, Text } from 'grommet';
 import { dark } from 'grommet/themes';
 
 
@@ -27,7 +27,6 @@ class CornerLayer extends Component {
             <Grommet theme={dark} full>
                 <Box fill align="center" justify="center">
                     <Button
-                        icon={<Add color="brand" />}
                         label={
                             <Text>
                                 <strong>Add Corner Layer</strong>
@@ -47,6 +46,65 @@ class CornerLayer extends Component {
             </Grommet>
         );
     }
+};
+
+class FormLayer extends Component {
+    state = { open: false, select: "" };
+
+    onOpen = () => this.setState({ open: true });
+
+    onClose = () => {
+        this.setState({ open: undefined });
+    };
+
+    render() {
+        const { open, select } = this.state;
+        return (
+            <Tab title="LOGIN" onClick={this.onOpen}>
+                {open && (
+                    <Layer
+                        position="right"
+                        full="vertical"
+                        modal
+                        onClickOutside={this.onClose}
+                        onEsc={this.onClose}
+                    >
+                        <Box
+                            as="form"
+                            fill="vertical"
+                            overflow="auto"
+                            width="medium"
+                            pad="medium"
+                            onSubmit={this.onClose}
+                        >
+                            <Box flex={false} direction="row" justify="between">
+                                <Heading level={2} margin="none">
+                                    Add
+                  </Heading>
+                                <Button onClick={this.onClose} />
+                            </Box>
+                            <Box flex="grow" overflow="auto" pad={{ vertical: "medium" }}>
+                                <FormField label="First">
+                                    <TextInput />
+                                </FormField>
+                                <FormField label="Third">
+                                    <TextArea />
+                                </FormField>
+                            </Box>
+                            <Box flex={false} as="footer" align="start">
+                                <Button
+                                    type="submit"
+                                    label="Submit"
+                                    onClick={this.onClose}
+                                    primary
+                                />
+                            </Box>
+                        </Box>
+                    </Layer>
+                )}
+            </Tab>
+        );
+    }
 }
 
 const Header = () => (
@@ -61,36 +119,7 @@ const Header = () => (
                     <CornerLayer />
                 </Tab>
                 <Tab title="LOGIN">
-                    <Layer
-                        position="right"
-                        full="vertical"
-                        onClickOutside={{ open: false }}
-                    >
-                        <Box
-                            as="form"
-                            fill="vertical"
-                            overflow="auto"
-                            width="medium"
-                            pad="medium"
-                        >
-                            <Box flex={false} direction="row" justify="between">
-                                <Heading level={2} margin="none">
-                                    Login
-                  </Heading>
-                            </Box>
-                            <Box flex="grow" overflow="auto" pad={{ vertical: "medium" }}>
-                                <FormField label="Username">
-                                    <TextInput />
-                                </FormField>
-                                <FormField label="Password">
-                                    <TextArea />
-                                </FormField>
-                            </Box>
-                            <Box flex={false} as="footer" align="start">
-
-                            </Box>
-                        </Box>
-                    </Layer>
+                    <FormLayer />
                 </Tab>
                 <Tab title="REGISTER">
                 </Tab>
@@ -101,4 +130,4 @@ const Header = () => (
 
 )
 
-export default Header
+export default Header;
