@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea } from 'grommet';
+import { Component } from 'react';
+import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, TextArea, Text, Add } from 'grommet';
 import { dark } from 'grommet/themes';
 
 
@@ -13,35 +14,51 @@ const PostLink = props => (
         <Anchor color="neutral-2">{props.title}</Anchor></Link>
 )
 
+class CornerLayer extends Component {
+    state = {};
+
+    onOpen = () => this.setState({ open: true });
+
+    onClose = () => this.setState({ open: undefined });
+
+    render() {
+        const { open } = this.state;
+        return (
+            <Grommet theme={dark} full>
+                <Box fill align="center" justify="center">
+                    <Button
+                        icon={<Add color="brand" />}
+                        label={
+                            <Text>
+                                <strong>Add Corner Layer</strong>
+                            </Text>
+                        }
+                        onClick={this.onOpen}
+                        plain
+                    />
+                </Box>
+                {open && (
+                    <Layer position="top-right">
+                        <Box height="small" overflow="auto">
+                            <Box pad="xlarge">Corner top-right position</Box>
+                        </Box>
+                    </Layer>
+                )}
+            </Grommet>
+        );
+    }
+}
+
 const Header = () => (
     <Grommet theme={dark}>
         <Box direction="row-responsive" fit="cover" pad="small">
 
-            {/* DROPBUTTON OPTION */}
-            {/* <DropButton elevation="xxsmall" margin="small" height="xxsmall" animate="true" label="Menu" dropAlign={{ top: 'bottom', left: 'left' }} dropContent={
-                <Box pad="small">
-                    <Box background="#444">
-                        <Link href="/">
-                            <Anchor style={linkStyle} color="brand" background="backgroundColor">Home</Anchor>
-                        </Link></Box>
-                    <Box background="#111">
-                        <PostLink id="items" title="Tech Accessories" />
-                    </Box>
-                    <Box background="#444">
-                        <PostLink id="office-supplies" title="Office Supplies" />
-                    </Box>
-                    <Box background="#111">
-                        <PostLink id="health-wellness" title="Health and Wellness" />
-                    </Box>
-                </Box>
-            }>
-            </DropButton> */}
-
 
             {/* TABS OPTION */}
             <Tabs>
+                <Tab title="HOME" />
                 <Tab title="SHOP">
-
+                    <CornerLayer />
                 </Tab>
                 <Tab title="LOGIN">
                     <Layer
@@ -74,6 +91,8 @@ const Header = () => (
                             </Box>
                         </Box>
                     </Layer>
+                </Tab>
+                <Tab title="REGISTER">
                 </Tab>
             </Tabs>
 
