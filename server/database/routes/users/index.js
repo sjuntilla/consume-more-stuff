@@ -66,6 +66,7 @@ router.route("/register").post((req, res) => {
   const { first_name, last_name, email, password, username } = req.body;
   console.log("req.body", req.body);
   console.log("registering......");
+  const created_at = new Date();
 
   bcrypt
     .genSalt(SALT_ROUND)
@@ -80,7 +81,8 @@ router.route("/register").post((req, res) => {
         last_name,
         email,
         pw: hashPassword,
-        username
+        username,
+        created_at
       }).save();
     })
     .then(user => {
