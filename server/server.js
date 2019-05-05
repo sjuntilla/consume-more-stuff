@@ -25,7 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/api", userRoutes);
-// app.use("/items", itemRoutes);
+app.use("/api", itemRoutes);
 
 //smoke test
 app.get("/api/smoke", (req, res) => {

@@ -73487,7 +73487,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Button"], {
-        label: react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Text"], {
+        label: react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Text, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 31
@@ -74023,7 +74023,7 @@ function Items() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************************/
@@ -74046,5 +74046,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
