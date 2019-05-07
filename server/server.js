@@ -18,7 +18,7 @@ const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
 if (!PORT) {
- console.log("No Port Found");
+  console.log("No Port Found");
 }
 
 if (!SESSION_SECRET) {
@@ -39,6 +39,18 @@ nextApp.prepare().then(() => {
   app.use(bodyParser.json({ extended: true }));
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(decorator);
+  app.use(
+    session({
+      store: new RedisStore({
+        host: "localhost",
+        port: 6379,
+        url: process.env.REDIS_HOSTNAME
+      }),
+      secret: process.env.COOKIE_SECRET,
+      resave: false,
+      saveUninitialized: false
+    })
+  );
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(function(req, res, next) {
@@ -49,15 +61,6 @@ nextApp.prepare().then(() => {
     );
     next();
   });
-
-  app.use(
-    session({
-      store: new RedisStore({ url: process.env.REDIS_HOSTNAME }),
-      secret: process.env.COOKIE_SECRET,
-      resave: true,
-      saveUninitialized: true
-    })
-  );
 
   app.use("/api", userRoutes);
   app.use("/api", itemRoutes);
