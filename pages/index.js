@@ -24,9 +24,9 @@ export default function Index() {
         <Box key="type" align="start" pad="hair" overflow="hidden">
           <Heading color="accent-2" margin="small">Featured Items</Heading>
           <Carousel play="30000" background="backgroundColor" height="small" fill>
-            <Image fit="cover" src="https://i.imgur.com/W6fcu6b.png" />
-            <Image fit="cover" src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg" />
-            <Image fit="cover" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*" />
+            <Image fit="cover" src="" />
+            <Image fit="cover" src="" />
+            <Image fit="cover" src="" />
           </Carousel>
         </Box>
       </Layout>

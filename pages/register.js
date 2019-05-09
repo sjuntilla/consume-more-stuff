@@ -1,6 +1,9 @@
 import React from "react";
 import { Component } from "react";
-import { Box, Button, CheckBox, Form, FormField, Select, Layer, onClickOutside } from "grommet";
+import { Box, Button, CheckBox, Form, FormField, Select, Layer } from "grommet";
+
+
+
 class Register extends Component {
 
   constructor(props) {
@@ -61,13 +64,12 @@ class Register extends Component {
       <Layer
         position="right"
         width="large"
-        full="vertical"
         modal={false}
         animate="true"
         onClickOutside={this.onClose}
         onEsc={this.onClose}
       >
-        <Box pad="large">
+        <Box pad="large" background="neutral-2">
           <Form onSubmit={this.handleSubmit}>
             <FormField
               onChange={this.handleChange}

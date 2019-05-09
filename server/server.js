@@ -17,7 +17,7 @@ const PORT = process.env.PORT;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 
 if (!PORT) {
-  console.log("No Port Found");
+ console.log("No Port Found");
 }
 
 nextApp.prepare().then(() => {

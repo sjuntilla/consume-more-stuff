@@ -5,6 +5,7 @@ import Register from '../register';
 import AddItem from '../itemForm';
 import Items from '../items';
 import Index from '../index';
+import Login from '../login';
 import { Component } from 'react';
 import { Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
 import { dark } from 'grommet/themes';
@@ -28,22 +29,13 @@ const Header = () => (
 
             {/* TABS OPTION */}
             <Tabs>
-                <Tab title="HOME" />
-                <Tab title="ALL ITEMS">
-                    <Layer>
-                        <Items />
-                    </Layer>
-                </Tab>
-                <Tab title="ADD ITEM">
-                    <AddItem />
-                </Tab>
                 <Tab title="LOGIN">
+                    <Login />
                 </Tab>
                 <Tab title="REGISTER">
                     <Register />
                 </Tab>
             </Tabs>
-
         </Box>
 
         <style jsx>{
