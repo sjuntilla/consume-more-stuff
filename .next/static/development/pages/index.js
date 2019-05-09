@@ -64937,17 +64937,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SkipLink__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./SkipLink */ "./node_modules/grommet/es6/components/SkipLink/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SkipLink", function() { return _SkipLink__WEBPACK_IMPORTED_MODULE_37__["SkipLink"]; });
 
-<<<<<<< HEAD
 /* harmony import */ var _SkipLinks__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./SkipLinks */ "./node_modules/grommet/es6/components/SkipLinks/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SkipLinks", function() { return _SkipLinks__WEBPACK_IMPORTED_MODULE_38__["SkipLinks"]; });
-=======
-/***/ "./node_modules/grommet/es6/utils/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/grommet/es6/utils/index.js ***!
-  \*************************************************/
-/*! exports provided: parseMetricToNum, fontSize, breakpointStyle, findAllByType, getAvailableAtBadge, normalizeBackground, backgroundIsDark, backgroundStyle, activeStyle, selectedStyle, normalizeColor, colorIsDark, getRGBA, debounce, debounceDelay, filterByFocusable, findScrollParents, getFirstFocusableDescendant, getBodyChildElements, getNewContainer, setFocusWithoutScroll, setTabIndex, copyAttribute, makeNodeFocusable, makeNodeUnfocusable, findVisibleParent, isNodeAfterScroll, isNodeBeforeScroll, baseUnit, polarToCartesian, arcCommands, translateEndAngle, a11yTitlePropType, backgroundPropType, colorPropType, genericProps, baseStyle, controlBorderStyle, edgeStyle, focusStyle, inputStyle, overflowStyle, placeholderStyle, evalStyle, genericStyles, disabledStyle, isObject, deepFreeze, deepMerge, removeUndefined, getBreakpoint, getDeviceBreakpoint, ROUTER_PROPS, throttle, themeDocUtils */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
 
 /* harmony import */ var _SkipLinkTarget__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./SkipLinkTarget */ "./node_modules/grommet/es6/components/SkipLinkTarget/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SkipLinkTarget", function() { return _SkipLinkTarget__WEBPACK_IMPORTED_MODULE_39__["SkipLinkTarget"]; });
@@ -94216,7 +94207,6 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
         onChange: this.handleChange,
-<<<<<<< HEAD
         name: "description",
         label: "Product Description",
         required: true,
@@ -94229,11 +94219,6 @@ function (_Component) {
         onChange: this.handleChange,
         name: "price",
         label: "Product Price",
-=======
-        type: "password",
-        name: "password",
-        label: "password",
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
         required: true,
         __source: {
           fileName: _jsxFileName,
@@ -94259,11 +94244,7 @@ function (_Component) {
         primary: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
           lineNumber: 126
-=======
-          lineNumber: 69
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
         },
         __self: this
       }))));
@@ -94536,25 +94517,21 @@ function (_Component) {
         onEsc: this.onClose,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 66
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Box"], {
         pad: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 71
-=======
-          lineNumber: 58
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -94564,11 +94541,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 72
-=======
-          lineNumber: 59
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 77
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -94578,11 +94551,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 78
-=======
-          lineNumber: 65
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 83
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -94592,11 +94561,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 84
-=======
-          lineNumber: 71
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 89
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -94606,26 +94571,17 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 90
-=======
-          lineNumber: 77
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 95
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
         onChange: this.handleChange,
-        type: "password",
         name: "password",
         label: "Password",
         required: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 96
-=======
-          lineNumber: 83
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 101
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Button"], {
@@ -94634,11 +94590,7 @@ function (_Component) {
         primary: true,
         __source: {
           fileName: _jsxFileName,
-<<<<<<< HEAD
-          lineNumber: 102
-=======
-          lineNumber: 91
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
+          lineNumber: 107
         },
         __self: this
       }))));

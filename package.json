@@ -11,11 +11,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
-<<<<<<< HEAD
     "grommet": "^2.7.0",
-=======
-    "grommet": "^2.6.6",
->>>>>>> 3800b833ddd3a94b16757fac2977b4742cd284e4
     "grommet-controls": "^1.1.19",
     "grommet-icons": "^4.2.0",
     "isomorphic-unfetch": "^3.0.0",
