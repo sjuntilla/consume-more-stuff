@@ -2,10 +2,11 @@ import Link from "next/link";
 import Layout from "./layout";
 import fetch from "isomorphic-unfetch";
 import Register from "../register";
-import Login from "../login";
 import AddItem from "../itemForm";
 import Items from "../items";
+import UserItems from "../useritems";
 import Index from "../index";
+import Login from "../login";
 import { Component } from "react";
 import {
   Grommet,
@@ -44,26 +45,29 @@ const Header = () => (
       fit="cover"
       pad="small"
       background="neutral-3"
-    >
-      {/* TABS OPTION */}
-      <Tabs>
-        <Tab title="HOME" />
-        <Tab title="ALL ITEMS">
-          <Layer>
-            <Items />
-          </Layer>
-        </Tab>
-        <Tab title="ADD ITEM">
-          <AddItem />
-        </Tab>
-        <Tab title="LOGIN">
-          <Login />
-        </Tab>
-        <Tab title="REGISTER">
-          <Register />
-        </Tab>
-      </Tabs>
-    </Box>
+    />
+
+    {/* TABS OPTION */}
+    <Tabs>
+      <Tab title="HOME" />
+      <Tab title="ALL ITEMS">
+        <Layer>
+          <Items />
+        </Layer>
+      </Tab>
+      <Tab title="ADD ITEM">
+        <AddItem />
+      </Tab>
+      <Tab title="LOGIN">
+        <Login />
+      </Tab>
+      <Tab title="REGISTER">
+        <Register />
+      </Tab>
+      <Tab title="USER ITEMS">
+        <Register />
+      </Tab>
+    </Tabs>
 
     <style jsx>
       {`
