@@ -9,7 +9,7 @@ router.route("/items").get((req, res) => {
   });
 });
 
-router.route("/items").post((req, res) => {
+router.route("/items", isAuthenticated).post((req, res) => {
   const created_at = new Date();
   //TBD user_id connection with item id
   const user_id = 1;

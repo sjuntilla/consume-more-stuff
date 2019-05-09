@@ -90,7 +90,8 @@ router.route("/register").post((req, res) => {
     })
     .then(user => {
       console.log("Registration successful!");
-      return res.json({ success: true });
+      res.redirect("/");
+      return user.toJSON();
     })
     .catch(err => {
       console.log(err);
