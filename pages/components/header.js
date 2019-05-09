@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "./layout";
 import fetch from "isomorphic-unfetch";
 import Register from "../register";
+import Login from "../login";
 import AddItem from "../itemForm";
 import Items from "../items";
 import Index from "../index";
@@ -55,7 +56,9 @@ const Header = () => (
         <Tab title="ADD ITEM">
           <AddItem />
         </Tab>
-        <Tab title="LOGIN" />
+        <Tab title="LOGIN">
+          <Login />
+        </Tab>
         <Tab title="REGISTER">
           <Register />
         </Tab>

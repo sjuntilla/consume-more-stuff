@@ -31,7 +31,8 @@ class AddItem extends Component {
         description: this.state.description.toLowerCase(),
         price: this.state.price,
         category: this.state.category.toLowerCase()
-      })
+      }),
+      credentials: "include"
     })
       .then(() => {
         console.log("ADDED ITEM TOOOOOO ITEM LIST");

@@ -1,6 +1,9 @@
 const express = require("express");
 const Item = require("../../models/Item");
 const router = express.Router();
+const passport = require("passport");
+const bcrypt = require("bcryptjs");
+const auth = require("../users");
 //items routes
 
 router.route("/items").get((req, res) => {
@@ -9,12 +12,12 @@ router.route("/items").get((req, res) => {
   });
 });
 
-router.route("/items", isAuthenticated).post((req, res) => {
+router.post("/items", isAuthenticated, (req, res) => {
   const created_at = new Date();
   //TBD user_id connection with item id
   const user_id = 1;
   const { name, description, price, category } = req.body;
-  // console.log("POOOOOOOOOST");
+  console.log("POOOOOOOOOST");
   return new req.database.Item({
     name,
     user_id,
@@ -35,12 +38,13 @@ router.route("/items", isAuthenticated).post((req, res) => {
 });
 
 function isAuthenticated(req, res, done) {
+  //   console.log(req);
   if (req.isAuthenticated()) {
     done();
   } else {
     const msg = `Not authenticated!`;
     console.log(msg);
-    res.redirect("/");
+    res.send("not auth");
   }
 }
 
