@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/items.js"],{
 
 /***/ "./node_modules/@babel/generator/lib/buffer.js":
 /*!*****************************************************!*\
@@ -4837,28 +4837,6 @@ exports.default = SourceMap;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/get-iterator */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
@@ -5102,25 +5080,6 @@ module.exports = _createClass;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithHoles; });
-/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
-
-function _arrayWithHoles(arr) {
-  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) return arr;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
@@ -5331,63 +5290,6 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArrayLimit; });
-/* harmony import */ var _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
-/* harmony import */ var _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0__);
-
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0___default()(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableRest; });
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
@@ -5432,28 +5334,6 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _slicedToArray; });
-/* harmony import */ var _arrayWithHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js");
-/* harmony import */ var _iterableToArrayLimit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js");
-/* harmony import */ var _nonIterableRest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js");
-
-
-
-function _slicedToArray(arr, i) {
-  return Object(_arrayWithHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArrayLimit__WEBPACK_IMPORTED_MODULE_1__["default"])(arr, i) || Object(_nonIterableRest__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 /***/ }),
@@ -5635,33 +5515,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.array.is-array */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Array.isArray;
-
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js");
-module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js");
-
 
 /***/ }),
 
@@ -8174,39 +8027,6 @@ module.exports = __webpack_require__(/*! ./_core */ "./node_modules/@babel/runti
     || it['@@iterator']
     || Iterators[classof(it)];
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js ***!
-  \*******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var get = __webpack_require__(/*! ./core.get-iterator-method */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator-method.js");
-module.exports = __webpack_require__(/*! ./_core */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").getIterator = function (it) {
-  var iterFn = get(it);
-  if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
-  return anObject(iterFn.call(it));
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-
-$export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js") });
 
 
 /***/ }),
@@ -68284,7 +68104,8 @@ var generate = function generate(baseSpacing, scale) {
     },
     grommet: {},
     heading: {
-      font: {// family: undefined
+      font: {
+        family: 'Roboto',
       },
       level: {
         1: {
@@ -68297,7 +68118,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(24))
         },
         2: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(2)),
@@ -68315,7 +68137,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(6))
         },
         4: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(0)),
@@ -68324,7 +68147,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(0))
         },
         5: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-0.5)),
@@ -68333,7 +68157,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(-0.5))
         },
         6: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-1)),
@@ -75775,26 +75600,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 function mitt() {
-  var all = (0, _create.default)(null);
+  const all = (0, _create.default)(null);
   return {
-    on: function on(type, handler) {
+    on(type, handler) {
       (all[type] || (all[type] = [])).push(handler);
     },
-    off: function off(type, handler) {
+
+    off(type, handler) {
       if (all[type]) {
         // tslint:disable-next-line:no-bitwise
         all[type].splice(all[type].indexOf(handler) >>> 0, 1);
       }
     },
-    emit: function emit(type) {
-      for (var _len = arguments.length, evts = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        evts[_key - 1] = arguments[_key];
-      }
 
-      (all[type] || []).slice().map(function (handler) {
-        handler.apply(void 0, evts);
+    emit(type, ...evts) {
+      (all[type] || []).slice().map(handler => {
+        handler(...evts);
       });
     }
+
   };
 }
 
@@ -75815,9 +75639,7 @@ exports.default = mitt;
 var __importStar = void 0 && (void 0).__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
+  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
   result["default"] = mod;
   return result;
 };
@@ -75826,7 +75648,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 exports.RequestContext = React.createContext(null);
 
@@ -75845,9 +75667,7 @@ exports.RequestContext = React.createContext(null);
 var __importStar = void 0 && (void 0).__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
+  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
   result["default"] = mod;
   return result;
 };
@@ -75856,7 +75676,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 exports.RouterContext = React.createContext(null);
 
@@ -75874,21 +75694,11 @@ exports.RouterContext = React.createContext(null);
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
-
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js"));
-
 var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
 
 var _assign = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js"));
 
 var _set = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/set */ "./node_modules/@babel/runtime-corejs2/core-js/set.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js"));
 
 var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
@@ -75900,30 +75710,25 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+const url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
 
-var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
+const mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
 
-var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next-server/dist/lib/utils.js");
+const utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next-server/dist/lib/utils.js");
 
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
 }
 
-var Router =
-/*#__PURE__*/
-function () {
-  function Router(pathname, query, as, _ref) {
-    var _this = this;
-
-    var initialProps = _ref.initialProps,
-        pageLoader = _ref.pageLoader,
-        App = _ref.App,
-        Component = _ref.Component,
-        err = _ref.err;
-    (0, _classCallCheck2.default)(this, Router);
-
-    this.onPopState = function (e) {
+class Router {
+  constructor(pathname, query, as, {
+    initialProps,
+    pageLoader,
+    App,
+    Component,
+    err
+  }) {
+    this.onPopState = e => {
       if (!e.state) {
         // We get state as undefined for two reasons.
         //  1. With older safari (< 8) and older chrome (< 34)
@@ -75934,14 +75739,14 @@ function () {
         // But we can simply replace the state with the new changes.
         // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
         // So, doing the following for (1) does no harm.
-        var _pathname = _this.pathname,
-            _query = _this.query;
-
-        _this.changeState('replaceState', utils_1.formatWithValidation({
-          pathname: _pathname,
-          query: _query
+        const {
+          pathname,
+          query
+        } = this;
+        this.changeState('replaceState', utils_1.formatWithValidation({
+          pathname,
+          query
         }), utils_1.getURL());
-
         return;
       } // Make sure we don't re-render on initial load,
       // can be caused by navigating back from an external site
@@ -75953,14 +75758,15 @@ function () {
       // They will then be responsible for handling the event.
 
 
-      if (_this._bps && !_this._bps(e.state)) {
+      if (this._bps && !this._bps(e.state)) {
         return;
       }
 
-      var _e$state = e.state,
-          url = _e$state.url,
-          as = _e$state.as,
-          options = _e$state.options;
+      const {
+        url,
+        as,
+        options
+      } = e.state;
 
       if (true) {
         if (typeof url === 'undefined' || typeof as === 'undefined') {
@@ -75968,7 +75774,7 @@ function () {
         }
       }
 
-      _this.replace(url, as, options);
+      this.replace(url, as, options);
     }; // represents the current component key
 
 
@@ -75980,9 +75786,9 @@ function () {
 
     if (pathname !== '/_error') {
       this.components[this.route] = {
-        Component: Component,
+        Component,
         props: initialProps,
-        err: err
+        err
       };
     }
 
@@ -76004,20 +75810,20 @@ function () {
       // in order for `e.state` to work on the `onpopstate` event
       // we have to register the initial route upon initialization
       this.changeState('replaceState', utils_1.formatWithValidation({
-        pathname: pathname,
-        query: query
+        pathname,
+        query
       }), as);
       window.addEventListener('popstate', this.onPopState);
-      window.addEventListener('unload', function () {
+      window.addEventListener('unload', () => {
         // Workaround for popstate firing on initial page load when
         // navigating back from an external site
         if (history.state) {
-          var _history$state = history.state,
-              url = _history$state.url,
-              _as2 = _history$state.as,
-              options = _history$state.options;
-
-          _this.changeState('replaceState', url, _as2, (0, _assign.default)({}, options, {
+          const {
+            url,
+            as,
+            options
+          } = history.state;
+          this.changeState('replaceState', url, as, (0, _assign.default)({}, options, {
             fromExternal: true
           }));
         }
@@ -76025,556 +75831,434 @@ function () {
     }
   }
 
-  (0, _createClass2.default)(Router, [{
-    key: "update",
-    value: function update(route, Component) {
-      var data = this.components[route];
+  static _rewriteUrlForNextExport(url) {
+    const [pathname, hash] = url.split('#'); // tslint:disable-next-line
 
-      if (!data) {
-        throw new Error("Cannot update unavailable route: ".concat(route));
-      }
+    let [path, qs] = pathname.split('?');
+    path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
 
-      var newData = (0, _assign.default)({}, data, {
-        Component: Component
-      });
-      this.components[route] = newData; // pages/_app.js updated
+    if (!/\.[^/]+\/?$/.test(path)) path += `/`;
+    if (qs) path += '?' + qs;
+    if (hash) path += '#' + hash;
+    return path;
+  }
 
-      if (route === '/_app') {
-        this.notify(this.components[this.route]);
-        return;
-      }
+  update(route, Component) {
+    const data = this.components[route];
 
-      if (route === this.route) {
-        this.notify(newData);
-      }
+    if (!data) {
+      throw new Error(`Cannot update unavailable route: ${route}`);
     }
-  }, {
-    key: "reload",
-    value: function reload(route) {
-      var _this2 = this;
 
-      return new _promise.default(function (resolve, reject) {
-        delete _this2.components[route];
+    const newData = (0, _assign.default)({}, data, {
+      Component
+    });
+    this.components[route] = newData; // pages/_app.js updated
 
-        _this2.pageLoader.clearCache(route);
+    if (route === '/_app') {
+      this.notify(this.components[this.route]);
+      return;
+    }
 
-        if (route !== _this2.route) {
+    if (route === this.route) {
+      this.notify(newData);
+    }
+  }
+
+  reload(route) {
+    return new _promise.default((resolve, reject) => {
+      delete this.components[route];
+      this.pageLoader.clearCache(route);
+
+      if (route !== this.route) {
+        return resolve();
+      }
+
+      const {
+        pathname,
+        query
+      } = this;
+      const url = window.location.href; // This makes sure we only use pathname + query + hash, to mirror `asPath` coming from the server.
+
+      const as = window.location.pathname + window.location.search + window.location.hash;
+      Router.events.emit('routeChangeStart', url);
+      this.getRouteInfo(route, pathname, query, as).then(routeInfo => {
+        const {
+          error
+        } = routeInfo;
+
+        if (error && error.cancelled) {
           return resolve();
         }
 
-        var pathname = _this2.pathname,
-            query = _this2.query;
-        var url = window.location.href; // This makes sure we only use pathname + query + hash, to mirror `asPath` coming from the server.
+        this.notify(routeInfo);
 
-        var as = window.location.pathname + window.location.search + window.location.hash;
-        Router.events.emit('routeChangeStart', url);
-
-        _this2.getRouteInfo(route, pathname, query, as).then(function (routeInfo) {
-          var error = routeInfo.error;
-
-          if (error && error.cancelled) {
-            return resolve();
-          }
-
-          _this2.notify(routeInfo);
-
-          if (error) {
-            Router.events.emit('routeChangeError', error, url);
-            return reject(error);
-          }
-
-          Router.events.emit('routeChangeComplete', url);
-        });
-      });
-    }
-  }, {
-    key: "back",
-    value: function back() {
-      window.history.back();
-    }
-  }, {
-    key: "push",
-    value: function push(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('pushState', url, as, options);
-    }
-  }, {
-    key: "replace",
-    value: function replace(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('replaceState', url, as, options);
-    }
-  }, {
-    key: "change",
-    value: function change(method, _url, _as, options) {
-      var _this3 = this;
-
-      return new _promise.default(function (resolve, reject) {
-        // If url and as provided as an object representation,
-        // we'll format them into the string version here.
-        var url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
-        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
-        // "<page>/index.html" directly for the SSR page.
-
-        if (true) {
-          // @ts-ignore this is temporarily global (attached to window)
-          if (__NEXT_DATA__.nextExport) {
-            as = Router._rewriteUrlForNextExport(as);
-          }
+        if (error) {
+          Router.events.emit('routeChangeError', error, url);
+          return reject(error);
         }
 
-        _this3.abortComponentLoad(as); // If the url change is only related to a hash change
-        // We should not proceed. We should only change the state.
-
-
-        if (_this3.onlyAHashChange(as)) {
-          Router.events.emit('hashChangeStart', as);
-
-          _this3.changeState(method, url, as);
-
-          _this3.scrollToHash(as);
-
-          Router.events.emit('hashChangeComplete', as);
-          return true;
-        }
-
-        var _url_1$parse = url_1.parse(url, true),
-            pathname = _url_1$parse.pathname,
-            query = _url_1$parse.query; // If asked to change the current URL we should reload the current page
-        // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-        // We also need to set the method = replaceState always
-        // as this should not go into the history (That's how browsers work)
-        // We should compare the new asPath to the current asPath, not the url
-
-
-        if (!_this3.urlIsNew(as)) {
-          method = 'replaceState';
-        } // @ts-ignore pathname is always a string
-
-
-        var route = toRoute(pathname);
-        var _options$shallow = options.shallow,
-            shallow = _options$shallow === void 0 ? false : _options$shallow;
-        Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
-        // @ts-ignore pathname is always a string
-
-        _this3.getRouteInfo(route, pathname, query, as, shallow).then(function (routeInfo) {
-          var error = routeInfo.error;
-
-          if (error && error.cancelled) {
-            return resolve(false);
-          }
-
-          Router.events.emit('beforeHistoryChange', as);
-
-          _this3.changeState(method, url, as, options);
-
-          var hash = window.location.hash.substring(1); // @ts-ignore pathname is always defined
-
-          _this3.set(route, pathname, query, as, (0, _assign.default)({}, routeInfo, {
-            hash: hash
-          }));
-
-          if (error) {
-            Router.events.emit('routeChangeError', error, as);
-            throw error;
-          }
-
-          Router.events.emit('routeChangeComplete', as);
-          return resolve(true);
-        }, reject);
+        Router.events.emit('routeChangeComplete', url);
       });
-    }
-  }, {
-    key: "changeState",
-    value: function changeState(method, url, as) {
-      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    });
+  }
+
+  back() {
+    window.history.back();
+  }
+
+  push(url, as = url, options = {}) {
+    return this.change('pushState', url, as, options);
+  }
+
+  replace(url, as = url, options = {}) {
+    return this.change('replaceState', url, as, options);
+  }
+
+  change(method, _url, _as, options) {
+    return new _promise.default((resolve, reject) => {
+      // If url and as provided as an object representation,
+      // we'll format them into the string version here.
+      const url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
+      let as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
+      // "<page>/index.html" directly for the SSR page.
 
       if (true) {
-        if (typeof window.history === 'undefined') {
-          console.error("Warning: window.history is not available.");
-          return;
-        } // @ts-ignore method should always exist on history
-
-
-        if (typeof window.history[method] === 'undefined') {
-          console.error("Warning: window.history.".concat(method, " is not available"));
-          return;
+        // @ts-ignore this is temporarily global (attached to window)
+        if (__NEXT_DATA__.nextExport) {
+          as = Router._rewriteUrlForNextExport(as);
         }
       }
 
-      if (method !== 'pushState' || utils_1.getURL() !== as) {
-        // @ts-ignore method should always exist on history
-        window.history[method]({
-          url: url,
-          as: as,
-          options: options
-        }, null, as);
-      }
-    }
-  }, {
-    key: "getRouteInfo",
-    value: function getRouteInfo(route, pathname, query, as) {
-      var _this4 = this;
+      this.abortComponentLoad(as); // If the url change is only related to a hash change
+      // We should not proceed. We should only change the state.
 
-      var shallow = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-      var cachedRouteInfo = this.components[route]; // If there is a shallow route transition possible
-      // If the route is already rendered on the screen.
-
-      if (shallow && cachedRouteInfo && this.route === route) {
-        return _promise.default.resolve(cachedRouteInfo);
-      }
-
-      return new _promise.default(function (resolve, reject) {
-        if (cachedRouteInfo) {
-          return resolve(cachedRouteInfo);
-        }
-
-        _this4.fetchComponent(route).then(function (Component) {
-          return resolve({
-            Component: Component
-          });
-        }, reject);
-      }).then(function (routeInfo) {
-        var Component = routeInfo.Component;
-
-        if (true) {
-          var _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"),
-              isValidElementType = _require.isValidElementType;
-
-          if (!isValidElementType(Component)) {
-            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
-          }
-        }
-
-        return new _promise.default(function (resolve, reject) {
-          var ctx = {
-            pathname: pathname,
-            query: query,
-            asPath: as
-          };
-
-          _this4.getInitialProps(Component, ctx).then(function (props) {
-            routeInfo.props = props;
-            _this4.components[route] = routeInfo;
-            resolve(routeInfo);
-          }, reject);
-        });
-      }).catch(function (err) {
-        return new _promise.default(function (resolve) {
-          if (err.code === 'PAGE_LOAD_ERROR') {
-            // If we can't load the page it could be one of following reasons
-            //  1. Page doesn't exists
-            //  2. Page does exist in a different zone
-            //  3. Internal error while loading the page
-            // So, doing a hard reload is the proper way to deal with this.
-            window.location.href = as; // Changing the URL doesn't block executing the current code path.
-            // So, we need to mark it as a cancelled error and stop the routing logic.
-
-            err.cancelled = true; // @ts-ignore TODO: fix the control flow here
-
-            return resolve({
-              error: err
-            });
-          }
-
-          if (err.cancelled) {
-            // @ts-ignore TODO: fix the control flow here
-            return resolve({
-              error: err
-            });
-          }
-
-          resolve(_this4.fetchComponent('/_error').then(function (Component) {
-            var routeInfo = {
-              Component: Component,
-              err: err
-            };
-            var ctx = {
-              err: err,
-              pathname: pathname,
-              query: query
-            };
-            return new _promise.default(function (resolve) {
-              _this4.getInitialProps(Component, ctx).then(function (props) {
-                routeInfo.props = props;
-                routeInfo.error = err;
-                resolve(routeInfo);
-              }, function (gipErr) {
-                console.error('Error in error page `getInitialProps`: ', gipErr);
-                routeInfo.error = err;
-                routeInfo.props = {};
-                resolve(routeInfo);
-              });
-            });
-          }));
-        });
-      });
-    }
-  }, {
-    key: "set",
-    value: function set(route, pathname, query, as, data) {
-      this.route = route;
-      this.pathname = pathname;
-      this.query = query;
-      this.asPath = as;
-      this.notify(data);
-    }
-  }, {
-    key: "beforePopState",
-    value: function beforePopState(cb) {
-      this._bps = cb;
-    }
-  }, {
-    key: "onlyAHashChange",
-    value: function onlyAHashChange(as) {
-      if (!this.asPath) return false;
-
-      var _this$asPath$split = this.asPath.split('#'),
-          _this$asPath$split2 = (0, _slicedToArray2.default)(_this$asPath$split, 2),
-          oldUrlNoHash = _this$asPath$split2[0],
-          oldHash = _this$asPath$split2[1];
-
-      var _as$split = as.split('#'),
-          _as$split2 = (0, _slicedToArray2.default)(_as$split, 2),
-          newUrlNoHash = _as$split2[0],
-          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
-
-
-      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
+      if (this.onlyAHashChange(as)) {
+        Router.events.emit('hashChangeStart', as);
+        this.changeState(method, url, as);
+        this.scrollToHash(as);
+        Router.events.emit('hashChangeComplete', as);
         return true;
-      } // If the urls are change, there's more than a hash change
+      }
+
+      const {
+        pathname,
+        query
+      } = url_1.parse(url, true); // If asked to change the current URL we should reload the current page
+      // (not location.reload() but reload getInitialProps and other Next.js stuffs)
+      // We also need to set the method = replaceState always
+      // as this should not go into the history (That's how browsers work)
+      // We should compare the new asPath to the current asPath, not the url
+
+      if (!this.urlIsNew(as)) {
+        method = 'replaceState';
+      } // @ts-ignore pathname is always a string
 
 
-      if (oldUrlNoHash !== newUrlNoHash) {
-        return false;
-      } // If the hash has changed, then it's a hash only change.
-      // This check is necessary to handle both the enter and
-      // leave hash === '' cases. The identity case falls through
-      // and is treated as a next reload.
+      const route = toRoute(pathname);
+      const {
+        shallow = false
+      } = options;
+      Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
+      // @ts-ignore pathname is always a string
 
+      this.getRouteInfo(route, pathname, query, as, shallow).then(routeInfo => {
+        const {
+          error
+        } = routeInfo;
 
-      return oldHash !== newHash;
-    }
-  }, {
-    key: "scrollToHash",
-    value: function scrollToHash(as) {
-      var _as$split3 = as.split('#'),
-          _as$split4 = (0, _slicedToArray2.default)(_as$split3, 2),
-          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
+        if (error && error.cancelled) {
+          return resolve(false);
+        }
 
+        Router.events.emit('beforeHistoryChange', as);
+        this.changeState(method, url, as, options);
+        const hash = window.location.hash.substring(1); // @ts-ignore pathname is always defined
 
-      if (hash === '') {
-        window.scrollTo(0, 0);
+        this.set(route, pathname, query, as, (0, _assign.default)({}, routeInfo, {
+          hash
+        }));
+
+        if (error) {
+          Router.events.emit('routeChangeError', error, as);
+          throw error;
+        }
+
+        Router.events.emit('routeChangeComplete', as);
+        return resolve(true);
+      }, reject);
+    });
+  }
+
+  changeState(method, url, as, options = {}) {
+    if (true) {
+      if (typeof window.history === 'undefined') {
+        console.error(`Warning: window.history is not available.`);
         return;
-      } // First we check if the element by id is found
+      } // @ts-ignore method should always exist on history
 
 
-      var idEl = document.getElementById(hash);
-
-      if (idEl) {
-        idEl.scrollIntoView();
+      if (typeof window.history[method] === 'undefined') {
+        console.error(`Warning: window.history.${method} is not available`);
         return;
-      } // If there's no element with the id, we check the `name` property
-      // To mirror browsers
-
-
-      var nameEl = document.getElementsByName(hash)[0];
-
-      if (nameEl) {
-        nameEl.scrollIntoView();
       }
     }
-  }, {
-    key: "urlIsNew",
-    value: function urlIsNew(asPath) {
-      return this.asPath !== asPath;
+
+    if (method !== 'pushState' || utils_1.getURL() !== as) {
+      // @ts-ignore method should always exist on history
+      window.history[method]({
+        url,
+        as,
+        options
+      }, null, as);
     }
-  }, {
-    key: "prefetch",
-    value: function prefetch(url) {
-      var _this5 = this;
+  }
 
-      return new _promise.default(function (resolve, reject) {
-        // Prefetch is not supported in development mode because it would trigger on-demand-entries
-        if (true) return;
+  getRouteInfo(route, pathname, query, as, shallow = false) {
+    const cachedRouteInfo = this.components[route]; // If there is a shallow route transition possible
+    // If the route is already rendered on the screen.
 
-        var _url_1$parse2 = url_1.parse(url),
-            pathname = _url_1$parse2.pathname; // @ts-ignore pathname is always defined
+    if (shallow && cachedRouteInfo && this.route === route) {
+      return _promise.default.resolve(cachedRouteInfo);
+    }
 
+    return new _promise.default((resolve, reject) => {
+      if (cachedRouteInfo) {
+        return resolve(cachedRouteInfo);
+      }
 
-        var route = toRoute(pathname);
+      this.fetchComponent(route).then(Component => resolve({
+        Component
+      }), reject);
+    }).then(routeInfo => {
+      const {
+        Component
+      } = routeInfo;
 
-        _this5.pageLoader.prefetch(route).then(resolve, reject);
+      if (true) {
+        const {
+          isValidElementType
+        } = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+
+        if (!isValidElementType(Component)) {
+          throw new Error(`The default export is not a React Component in page: "${pathname}"`);
+        }
+      }
+
+      return new _promise.default((resolve, reject) => {
+        const ctx = {
+          pathname,
+          query,
+          asPath: as
+        };
+        this.getInitialProps(Component, ctx).then(props => {
+          routeInfo.props = props;
+          this.components[route] = routeInfo;
+          resolve(routeInfo);
+        }, reject);
       });
-    }
-  }, {
-    key: "fetchComponent",
-    value: function () {
-      var _fetchComponent = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee(route) {
-        var cancelled, cancel, Component, error;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                cancelled = false;
+    }).catch(err => {
+      return new _promise.default(resolve => {
+        if (err.code === 'PAGE_LOAD_ERROR') {
+          // If we can't load the page it could be one of following reasons
+          //  1. Page doesn't exists
+          //  2. Page does exist in a different zone
+          //  3. Internal error while loading the page
+          // So, doing a hard reload is the proper way to deal with this.
+          window.location.href = as; // Changing the URL doesn't block executing the current code path.
+          // So, we need to mark it as a cancelled error and stop the routing logic.
 
-                cancel = this.componentLoadCancel = function () {
-                  cancelled = true;
-                };
+          err.cancelled = true; // @ts-ignore TODO: fix the control flow here
 
-                _context.next = 4;
-                return this.pageLoader.loadPage(route);
+          return resolve({
+            error: err
+          });
+        }
 
-              case 4:
-                Component = _context.sent;
+        if (err.cancelled) {
+          // @ts-ignore TODO: fix the control flow here
+          return resolve({
+            error: err
+          });
+        }
 
-                if (!cancelled) {
-                  _context.next = 9;
-                  break;
-                }
-
-                error = new Error("Abort fetching component for route: \"".concat(route, "\""));
-                error.cancelled = true;
-                throw error;
-
-              case 9:
-                if (cancel === this.componentLoadCancel) {
-                  this.componentLoadCancel = null;
-                }
-
-                return _context.abrupt("return", Component);
-
-              case 11:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function fetchComponent(_x) {
-        return _fetchComponent.apply(this, arguments);
-      }
-
-      return fetchComponent;
-    }()
-  }, {
-    key: "getInitialProps",
-    value: function () {
-      var _getInitialProps = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee2(Component, ctx) {
-        var cancelled, cancel, App, props, err;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                cancelled = false;
-
-                cancel = function cancel() {
-                  cancelled = true;
-                };
-
-                this.componentLoadCancel = cancel;
-                App = this.components['/_app'].Component;
-                _context2.next = 6;
-                return utils_1.loadGetInitialProps(App, {
-                  Component: Component,
-                  router: this,
-                  ctx: ctx
-                });
-
-              case 6:
-                props = _context2.sent;
-
-                if (cancel === this.componentLoadCancel) {
-                  this.componentLoadCancel = null;
-                }
-
-                if (!cancelled) {
-                  _context2.next = 12;
-                  break;
-                }
-
-                err = new Error('Loading initial props cancelled');
-                err.cancelled = true;
-                throw err;
-
-              case 12:
-                return _context2.abrupt("return", props);
-
-              case 13:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this);
-      }));
-
-      function getInitialProps(_x2, _x3) {
-        return _getInitialProps.apply(this, arguments);
-      }
-
-      return getInitialProps;
-    }()
-  }, {
-    key: "abortComponentLoad",
-    value: function abortComponentLoad(as) {
-      if (this.componentLoadCancel) {
-        Router.events.emit('routeChangeError', new Error('Route Cancelled'), as);
-        this.componentLoadCancel();
-        this.componentLoadCancel = null;
-      }
-    }
-  }, {
-    key: "notify",
-    value: function notify(data) {
-      var App = this.components['/_app'].Component;
-      this.subscriptions.forEach(function (fn) {
-        return fn((0, _assign.default)({}, data, {
-          App: App
+        resolve(this.fetchComponent('/_error').then(Component => {
+          const routeInfo = {
+            Component,
+            err
+          };
+          const ctx = {
+            err,
+            pathname,
+            query
+          };
+          return new _promise.default(resolve => {
+            this.getInitialProps(Component, ctx).then(props => {
+              routeInfo.props = props;
+              routeInfo.error = err;
+              resolve(routeInfo);
+            }, gipErr => {
+              console.error('Error in error page `getInitialProps`: ', gipErr);
+              routeInfo.error = err;
+              routeInfo.props = {};
+              resolve(routeInfo);
+            });
+          });
         }));
       });
+    });
+  }
+
+  set(route, pathname, query, as, data) {
+    this.route = route;
+    this.pathname = pathname;
+    this.query = query;
+    this.asPath = as;
+    this.notify(data);
+  }
+
+  beforePopState(cb) {
+    this._bps = cb;
+  }
+
+  onlyAHashChange(as) {
+    if (!this.asPath) return false;
+    const [oldUrlNoHash, oldHash] = this.asPath.split('#');
+    const [newUrlNoHash, newHash] = as.split('#'); // Makes sure we scroll to the provided hash if the url/hash are the same
+
+    if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
+      return true;
+    } // If the urls are change, there's more than a hash change
+
+
+    if (oldUrlNoHash !== newUrlNoHash) {
+      return false;
+    } // If the hash has changed, then it's a hash only change.
+    // This check is necessary to handle both the enter and
+    // leave hash === '' cases. The identity case falls through
+    // and is treated as a next reload.
+
+
+    return oldHash !== newHash;
+  }
+
+  scrollToHash(as) {
+    const [, hash] = as.split('#'); // Scroll to top if the hash is just `#` with no value
+
+    if (hash === '') {
+      window.scrollTo(0, 0);
+      return;
+    } // First we check if the element by id is found
+
+
+    const idEl = document.getElementById(hash);
+
+    if (idEl) {
+      idEl.scrollIntoView();
+      return;
+    } // If there's no element with the id, we check the `name` property
+    // To mirror browsers
+
+
+    const nameEl = document.getElementsByName(hash)[0];
+
+    if (nameEl) {
+      nameEl.scrollIntoView();
     }
-  }, {
-    key: "subscribe",
-    value: function subscribe(fn) {
-      var _this6 = this;
+  }
 
-      this.subscriptions.add(fn);
-      return function () {
-        return _this6.subscriptions.delete(fn);
-      };
+  urlIsNew(asPath) {
+    return this.asPath !== asPath;
+  }
+
+  prefetch(url) {
+    return new _promise.default((resolve, reject) => {
+      // Prefetch is not supported in development mode because it would trigger on-demand-entries
+      if (true) return;
+      const {
+        pathname
+      } = url_1.parse(url); // @ts-ignore pathname is always defined
+
+      const route = toRoute(pathname);
+      this.pageLoader.prefetch(route).then(resolve, reject);
+    });
+  }
+
+  async fetchComponent(route) {
+    let cancelled = false;
+
+    const cancel = this.componentLoadCancel = () => {
+      cancelled = true;
+    };
+
+    const Component = await this.pageLoader.loadPage(route);
+
+    if (cancelled) {
+      const error = new Error(`Abort fetching component for route: "${route}"`);
+      error.cancelled = true;
+      throw error;
     }
-  }], [{
-    key: "_rewriteUrlForNextExport",
-    value: function _rewriteUrlForNextExport(url) {
-      var _url$split = url.split('#'),
-          _url$split2 = (0, _slicedToArray2.default)(_url$split, 2),
-          pathname = _url$split2[0],
-          hash = _url$split2[1]; // tslint:disable-next-line
 
-
-      var _pathname$split = pathname.split('?'),
-          _pathname$split2 = (0, _slicedToArray2.default)(_pathname$split, 2),
-          path = _pathname$split2[0],
-          qs = _pathname$split2[1];
-
-      path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
-
-      if (!/\.[^/]+\/?$/.test(path)) path += "/";
-      if (qs) path += '?' + qs;
-      if (hash) path += '#' + hash;
-      return path;
+    if (cancel === this.componentLoadCancel) {
+      this.componentLoadCancel = null;
     }
-  }]);
-  return Router;
-}();
+
+    return Component;
+  }
+
+  async getInitialProps(Component, ctx) {
+    let cancelled = false;
+
+    const cancel = () => {
+      cancelled = true;
+    };
+
+    this.componentLoadCancel = cancel;
+    const {
+      Component: App
+    } = this.components['/_app'];
+    const props = await utils_1.loadGetInitialProps(App, {
+      Component,
+      router: this,
+      ctx
+    });
+
+    if (cancel === this.componentLoadCancel) {
+      this.componentLoadCancel = null;
+    }
+
+    if (cancelled) {
+      const err = new Error('Loading initial props cancelled');
+      err.cancelled = true;
+      throw err;
+    }
+
+    return props;
+  }
+
+  abortComponentLoad(as) {
+    if (this.componentLoadCancel) {
+      Router.events.emit('routeChangeError', new Error('Route Cancelled'), as);
+      this.componentLoadCancel();
+      this.componentLoadCancel = null;
+    }
+  }
+
+  notify(data) {
+    const {
+      Component: App
+    } = this.components['/_app'];
+    this.subscriptions.forEach(fn => fn((0, _assign.default)({}, data, {
+      App
+    })));
+  }
+
+  subscribe(fn) {
+    this.subscriptions.add(fn);
+    return () => this.subscriptions.delete(fn);
+  }
+
+}
 
 Router.events = mitt_1.default();
 exports.default = Router;
@@ -76593,31 +76277,20 @@ exports.default = Router;
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
-
 var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
-
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js"));
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+const url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
 
 function execOnce(fn) {
-  var _this = this;
-
-  var used = false;
-  return function () {
+  let used = false;
+  return (...args) => {
     if (!used) {
       used = true;
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      fn.apply(_this, args);
+      fn.apply(this, args);
     }
   };
 }
@@ -76625,18 +76298,21 @@ function execOnce(fn) {
 exports.execOnce = execOnce;
 
 function getLocationOrigin() {
-  var _window$location = window.location,
-      protocol = _window$location.protocol,
-      hostname = _window$location.hostname,
-      port = _window$location.port;
-  return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
+  const {
+    protocol,
+    hostname,
+    port
+  } = window.location;
+  return `${protocol}//${hostname}${port ? ':' + port : ''}`;
 }
 
 exports.getLocationOrigin = getLocationOrigin;
 
 function getURL() {
-  var href = window.location.href;
-  var origin = getLocationOrigin();
+  const {
+    href
+  } = window.location;
+  const origin = getLocationOrigin();
   return href.substring(origin.length);
 }
 
@@ -76654,72 +76330,27 @@ function isResSent(res) {
 
 exports.isResSent = isResSent;
 
-function loadGetInitialProps(_x, _x2) {
-  return _loadGetInitialProps.apply(this, arguments);
-}
+async function loadGetInitialProps(Component, ctx) {
+  if (true) {
+    if (Component.prototype && Component.prototype.getInitialProps) {
+      const message = `"${getDisplayName(Component)}.getInitialProps()" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.`;
+      throw new Error(message);
+    }
+  }
 
-function _loadGetInitialProps() {
-  _loadGetInitialProps = (0, _asyncToGenerator2.default)(
-  /*#__PURE__*/
-  _regenerator.default.mark(function _callee(Component, ctx) {
-    var message, props, _message;
+  if (!Component.getInitialProps) return {};
+  const props = await Component.getInitialProps(ctx);
 
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            if (false) {}
+  if (ctx.res && isResSent(ctx.res)) {
+    return props;
+  }
 
-            if (!(Component.prototype && Component.prototype.getInitialProps)) {
-              _context.next = 4;
-              break;
-            }
+  if (!props) {
+    const message = `"${getDisplayName(Component)}.getInitialProps()" should resolve to an object. But found "${props}" instead.`;
+    throw new Error(message);
+  }
 
-            message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.");
-            throw new Error(message);
-
-          case 4:
-            if (Component.getInitialProps) {
-              _context.next = 6;
-              break;
-            }
-
-            return _context.abrupt("return", {});
-
-          case 6:
-            _context.next = 8;
-            return Component.getInitialProps(ctx);
-
-          case 8:
-            props = _context.sent;
-
-            if (!(ctx.res && isResSent(ctx.res))) {
-              _context.next = 11;
-              break;
-            }
-
-            return _context.abrupt("return", props);
-
-          case 11:
-            if (props) {
-              _context.next = 14;
-              break;
-            }
-
-            _message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" should resolve to an object. But found \"").concat(props, "\" instead.");
-            throw new Error(_message);
-
-          case 14:
-            return _context.abrupt("return", props);
-
-          case 15:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return _loadGetInitialProps.apply(this, arguments);
+  return props;
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
@@ -76728,9 +76359,9 @@ exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pa
 function formatWithValidation(url, options) {
   if (true) {
     if (url !== null && typeof url === 'object') {
-      (0, _keys.default)(url).forEach(function (key) {
+      (0, _keys.default)(url).forEach(key => {
         if (exports.urlObjectKeys.indexOf(key) === -1) {
-          console.warn("Unknown key passed via urlObject into url.format: ".concat(key));
+          console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
         }
       });
     }
@@ -76743,21 +76374,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fhugomcmittens%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js!./":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fhugomcmittens%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var page = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/items", function() {
+      var page = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/items.js */ "./pages/items.js", function() {
+          if(!next.router.components["/items"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
+          next.router.update("/items", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -78658,12 +78289,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7aff549c98b978433226 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -82739,12 +82370,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7aff549c98b978433226 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -83379,12 +83010,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7aff549c98b978433226 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -84273,12 +83904,12 @@ exports.default = {
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -84712,12 +84343,12 @@ function polyfill(Component) {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -93688,7 +93319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_10__);
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/components/header.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/header.js";
 
 
 
@@ -93712,14 +93343,14 @@ var PostLink = function PostLink(props) {
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Anchor"], {
     color: "neutral-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 20
     },
     __self: this
   }, props.title));
@@ -93730,7 +93361,7 @@ var Header = function Header() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_10__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Box"], {
@@ -93740,78 +93371,78 @@ var Header = function Header() {
     background: "neutral-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tabs"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "HOME",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 31
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "ALL ITEMS",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 32
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Layer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_items__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 34
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "ADD ITEM",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_itemForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 38
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "LOGIN",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 40
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "REGISTER",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 43
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1883600651",
+    id: "36998399",
     __self: this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1883600651{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1883600651{font-family:\"Roboto\",sans-serif;}ul.jsx-1883600651{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9odWdvbWNtaXR0ZW5zL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9oZWFkZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUVPLEFBRXNFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL2h1Z29tY21pdHRlbnMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9jb21wb25lbnRzL2hlYWRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCBMYXlvdXQgZnJvbSBcIi4vbGF5b3V0XCI7XG5pbXBvcnQgZmV0Y2ggZnJvbSBcImlzb21vcnBoaWMtdW5mZXRjaFwiO1xuaW1wb3J0IFJlZ2lzdGVyIGZyb20gXCIuLi9yZWdpc3RlclwiO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSBcIi4uL2l0ZW1Gb3JtXCI7XG5pbXBvcnQgSXRlbXMgZnJvbSBcIi4uL2l0ZW1zXCI7XG5pbXBvcnQgSW5kZXggZnJvbSBcIi4uL2luZGV4XCI7XG5pbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7XG4gIEdyb21tZXQsXG4gIEFuY2hvcixcbiAgQm94LFxuICBBY2NvcmRpb24sXG4gIEFjY29yZGlvblBhbmVsLFxuICBEcm9wQnV0dG9uLFxuICBUYWJzLFxuICBUYWIsXG4gIExheWVyLFxuICBCdXR0b24sXG4gIEZvcm1GaWVsZCxcbiAgVGV4dElucHV0LFxuICBTZWxlY3QsXG4gIFRleHRBcmVhLFxuICBvbkNsaWNrT3V0c2lkZVxufSBmcm9tIFwiZ3JvbW1ldFwiO1xuaW1wb3J0IHsgZGFyayB9IGZyb20gXCJncm9tbWV0L3RoZW1lc1wiO1xuXG5jb25zdCBsaW5rU3R5bGUgPSB7XG4gIG1hcmdpblJpZ2h0OiAxNSxcbiAgdGV4dERlY29yYXRpb246IFwibm9uZVwiXG59O1xuXG5jb25zdCBQb3N0TGluayA9IHByb3BzID0+IChcbiAgPExpbmsgYXM9e2AvcC8ke3Byb3BzLmlkfWB9IGhyZWY9e2AvcG9zdD90aXRsZT0ke3Byb3BzLnRpdGxlfWB9PlxuICAgIDxBbmNob3IgY29sb3I9XCJuZXV0cmFsLTJcIj57cHJvcHMudGl0bGV9PC9BbmNob3I+XG4gIDwvTGluaz5cbik7XG5cbmNvbnN0IEhlYWRlciA9ICgpID0+IChcbiAgPEdyb21tZXQgdGhlbWU9e2Rhcmt9PlxuICAgIDxCb3hcbiAgICAgIGRpcmVjdGlvbj1cInJvdy1yZXNwb25zaXZlXCJcbiAgICAgIGZpdD1cImNvdmVyXCJcbiAgICAgIHBhZD1cInNtYWxsXCJcbiAgICAgIGJhY2tncm91bmQ9XCJuZXV0cmFsLTNcIlxuICAgID5cbiAgICAgIHsvKiBUQUJTIE9QVElPTiAqL31cbiAgICAgIDxUYWJzPlxuICAgICAgICA8VGFiIHRpdGxlPVwiSE9NRVwiIC8+XG4gICAgICAgIDxUYWIgdGl0bGU9XCJBTEwgSVRFTVNcIj5cbiAgICAgICAgICA8TGF5ZXI+XG4gICAgICAgICAgICA8SXRlbXMgLz5cbiAgICAgICAgICA8L0xheWVyPlxuICAgICAgICA8L1RhYj5cbiAgICAgICAgPFRhYiB0aXRsZT1cIkFERCBJVEVNXCI+XG4gICAgICAgICAgPEFkZEl0ZW0gLz5cbiAgICAgICAgPC9UYWI+XG4gICAgICAgIDxUYWIgdGl0bGU9XCJMT0dJTlwiIC8+XG4gICAgICAgIDxUYWIgdGl0bGU9XCJSRUdJU1RFUlwiPlxuICAgICAgICAgIDxSZWdpc3RlciAvPlxuICAgICAgICA8L1RhYj5cbiAgICAgIDwvVGFicz5cbiAgICA8L0JveD5cblxuICAgIDxzdHlsZSBqc3g+XG4gICAgICB7YFxuICAgICAgICBAaW1wb3J0IHVybChcImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG9cIik7XG5cbiAgICAgICAgaDEge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9XG5cbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgIH1cbiAgICAgICAgdWwge1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgIH1cbiAgICAgIGB9XG4gICAgPC9zdHlsZT5cbiAgPC9Hcm9tbWV0PlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyO1xuIl19 */\n/*@ sourceURL=/Users/hugomcmittens/devleague/consume-more-stuff/pages/components/header.js */"));
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9oZWFkZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaURZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi9sYXlvdXQnO1xuaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCc7XG5pbXBvcnQgUmVnaXN0ZXIgZnJvbSAnLi4vcmVnaXN0ZXInO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSAnLi4vaXRlbUZvcm0nO1xuaW1wb3J0IEl0ZW1zIGZyb20gJy4uL2l0ZW1zJztcbmltcG9ydCBJbmRleCBmcm9tICcuLi9pbmRleCc7XG5pbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBHcm9tbWV0LCBBbmNob3IsIEJveCwgQWNjb3JkaW9uLCBBY2NvcmRpb25QYW5lbCwgRHJvcEJ1dHRvbiwgVGFicywgVGFiLCBMYXllciwgQnV0dG9uLCBGb3JtRmllbGQsIFRleHRJbnB1dCwgU2VsZWN0LCBUZXh0QXJlYSwgb25DbGlja091dHNpZGUgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3QgbGlua1N0eWxlID0ge1xuICAgIG1hcmdpblJpZ2h0OiAxNSxcbiAgICB0ZXh0RGVjb3JhdGlvbjogXCJub25lXCJcbn1cblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gICAgPExpbmsgYXM9e2AvcC8ke3Byb3BzLmlkfWB9IGhyZWY9e2AvcG9zdD90aXRsZT0ke3Byb3BzLnRpdGxlfWB9PlxuICAgICAgICA8QW5jaG9yIGNvbG9yPVwibmV1dHJhbC0yXCI+e3Byb3BzLnRpdGxlfTwvQW5jaG9yPjwvTGluaz5cbilcblxuXG5jb25zdCBIZWFkZXIgPSAoKSA9PiAoXG4gICAgPEdyb21tZXQgdGhlbWU9e2Rhcmt9PlxuXG4gICAgICAgIDxCb3ggZGlyZWN0aW9uPVwicm93LXJlc3BvbnNpdmVcIiBmaXQ9XCJjb3ZlclwiIHBhZD1cInNtYWxsXCIgYmFja2dyb3VuZD1cIm5ldXRyYWwtM1wiPlxuXG4gICAgICAgICAgICB7LyogVEFCUyBPUFRJT04gKi99XG4gICAgICAgICAgICA8VGFicz5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiSE9NRVwiIC8+XG4gICAgICAgICAgICAgICAgPFRhYiB0aXRsZT1cIkFMTCBJVEVNU1wiPlxuICAgICAgICAgICAgICAgICAgICA8TGF5ZXI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8SXRlbXMgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9MYXllcj5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiQUREIElURU1cIj5cbiAgICAgICAgICAgICAgICAgICAgPEFkZEl0ZW0gLz5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiTE9HSU5cIj5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiUkVHSVNURVJcIj5cbiAgICAgICAgICAgICAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICAgICAgICAgICAgPC9UYWI+XG4gICAgICAgICAgICA8L1RhYnM+XG5cbiAgICAgICAgPC9Cb3g+XG5cbiAgICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgICAgICBgQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG8nKTtcbiAgICAgICAgXG4gICAgICAgIGgxIHtcbiAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIH07XG4gICAgICAgIFxuICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9YFxuICAgICAgICB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0ID5cbilcblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyOyJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -93835,7 +93466,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/components/layout.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/layout.js";
 
 
 
@@ -93898,7 +93529,7 @@ var Layout = function Layout(props) {
   }, props.children)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "36998399",
     __self: this
-  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9odWdvbWNtaXR0ZW5zL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvaHVnb21jbWl0dGVucy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3Qgd3JhcHBlclN0eWxlID0ge1xuICAgIG1hcmdpbkxlZnQ6IDAsXG4gICAgbWFyZ2luUmlnaHQ6IDAsXG4gICAgYmFja2dyb3VuZENvbG9yOiBcIiMxMTExMTFcIixcbn1cbmNvbnN0IGhlYWRlclN0eWxlID0ge1xuICAgIG1hcmdpbjogMTUsXG4gICAgZGlzcGxheTogXCJmbGV4XCIsXG4gICAgYWxpZ25Db250ZW50OiBcImNlbnRlclwiXG59O1xuXG5jb25zdCBsYXlvdXRXaWR0aCA9IHtcbiAgICBtYXJnaW46IDAsXG4gICAgcGFkZGluZzogMFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2hlYWRlclN0eWxlfT5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+e1xuICAgICAgICAgICAgYEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvJyk7XG4gICAgICAgIFxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9O1xuICAgICAgICBcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICB1bCB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgfWBcbiAgICAgICAgfVxuICAgICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbilcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0OyJdfQ== */\n/*@ sourceURL=/Users/hugomcmittens/devleague/consume-more-stuff/pages/components/layout.js */"));
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3Qgd3JhcHBlclN0eWxlID0ge1xuICAgIG1hcmdpbkxlZnQ6IDAsXG4gICAgbWFyZ2luUmlnaHQ6IDAsXG4gICAgYmFja2dyb3VuZENvbG9yOiBcIiMxMTExMTFcIixcbn1cbmNvbnN0IGhlYWRlclN0eWxlID0ge1xuICAgIG1hcmdpbjogMTUsXG4gICAgZGlzcGxheTogXCJmbGV4XCIsXG4gICAgYWxpZ25Db250ZW50OiBcImNlbnRlclwiXG59O1xuXG5jb25zdCBsYXlvdXRXaWR0aCA9IHtcbiAgICBtYXJnaW46IDAsXG4gICAgcGFkZGluZzogMFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2hlYWRlclN0eWxlfT5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+e1xuICAgICAgICAgICAgYEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvJyk7XG4gICAgICAgIFxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9O1xuICAgICAgICBcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICB1bCB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgfWBcbiAgICAgICAgfVxuICAgICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbilcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0OyJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -93927,7 +93558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/generator */ "./node_modules/@babel/generator/lib/index.js");
 /* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_generator__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/index.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js";
 
 
 
@@ -93942,13 +93573,13 @@ var PostLink = function PostLink(props) {
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 8
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Anchor"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 9
     },
     __self: this
   }, props.title));
@@ -93959,13 +93590,13 @@ function Index() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_5__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -93978,7 +93609,7 @@ function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -93986,7 +93617,7 @@ function Index() {
     elevation: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
@@ -93995,7 +93626,7 @@ function Index() {
     pad: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 18
     },
     __self: this
   }, "silk code."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -94006,14 +93637,14 @@ function Index() {
     alignSelf: "start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Text"], {
     color: "accent-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 20
     },
     __self: this
   }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -94023,7 +93654,7 @@ function Index() {
     overflow: "hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
@@ -94031,7 +93662,7 @@ function Index() {
     margin: "small",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 25
     },
     __self: this
   }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Carousel"], {
@@ -94041,7 +93672,7 @@ function Index() {
     fill: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -94049,7 +93680,7 @@ function Index() {
     src: "https://i.imgur.com/W6fcu6b.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -94057,7 +93688,7 @@ function Index() {
     src: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 28
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -94065,13 +93696,13 @@ function Index() {
     src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 29
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1435639402",
+    id: "36998399",
     __self: this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1435639402{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1435639402{font-family:\"Roboto\",sans-serif;}ul.jsx-1435639402{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9odWdvbWNtaXR0ZW5zL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0ZTLEFBRXdFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL2h1Z29tY21pdHRlbnMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSBcIi4vY29tcG9uZW50cy9sYXlvdXRcIjtcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCB7XG4gIEdyb21tZXQsXG4gIEhlYWRpbmcsXG4gIEFuY2hvcixcbiAgTWVudSxcbiAgQm94LFxuICBUZXh0LFxuICBDbG9jayxcbiAgQ2Fyb3VzZWwsXG4gIEltYWdlXG59IGZyb20gXCJncm9tbWV0XCI7XG5pbXBvcnQgeyBkYXJrIH0gZnJvbSBcImdyb21tZXQvdGhlbWVzXCI7XG5pbXBvcnQgZ2VuZXJhdGUgZnJvbSBcIkBiYWJlbC9nZW5lcmF0b3JcIjtcblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gIDxMaW5rIGFzPXtgL3AvJHtwcm9wcy5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwcm9wcy50aXRsZX1gfT5cbiAgICA8QW5jaG9yPntwcm9wcy50aXRsZX08L0FuY2hvcj5cbiAgPC9MaW5rPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSW5kZXgoKSB7XG4gIHJldHVybiAoXG4gICAgPEdyb21tZXQgdGhlbWU9e2Rhcmt9PlxuICAgICAgPExheW91dD5cbiAgICAgICAgPEJveFxuICAgICAgICAgIGtleT1cImJhbm5lclwiXG4gICAgICAgICAgcGFkPVwibGFyZ2VcIlxuICAgICAgICAgIGFuaW1hdGlvbj1cImZhZGVJblwiXG4gICAgICAgICAgYmFja2dyb3VuZD17e1xuICAgICAgICAgICAgaW1hZ2U6IFwidXJsKGh0dHBzOi8vaS5pbWd1ci5jb20vSm5QcjhIcy5wbmcpXCIsXG4gICAgICAgICAgICBzaXplOiBcImNvdmVyXCJcbiAgICAgICAgICB9fVxuICAgICAgICA+XG4gICAgICAgICAgPEJveCBrZXk9XCJoZWFkaW5nXCIgZWxldmF0aW9uPVwieHhzbWFsbFwiPlxuICAgICAgICAgICAgPEhlYWRpbmcgY29sb3I9XCJhY2NlbnQtM1wiIHNpemU9XCJsYXJnZVwiIHBhZD1cInh4c21hbGxcIj5cbiAgICAgICAgICAgICAgc2lsayBjb2RlLlxuICAgICAgICAgICAgPC9IZWFkaW5nPlxuICAgICAgICAgICAgPEJveFxuICAgICAgICAgICAgICBrZXk9XCJibHVyYlwiXG4gICAgICAgICAgICAgIHBhZD1cInh4c21hbGxcIlxuICAgICAgICAgICAgICBoZWlnaHQ9XCJzbWFsbFwiXG4gICAgICAgICAgICAgIHdpZHRoPVwibGFyZ2VcIlxuICAgICAgICAgICAgICBhbGlnblNlbGY9XCJzdGFydFwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxUZXh0IGNvbG9yPVwiYWNjZW50LTRcIj5cbiAgICAgICAgICAgICAgICBMb3JlbSBLaGFsZWQgSXBzdW0gaXMgYSBtYWpvciBrZXkgdG8gc3VjY2Vzcy4gVG8gYmUgc3VjY2Vzc2Z1bFxuICAgICAgICAgICAgICAgIHlvdeKAmXZlIGdvdCB0byB3b3JrIGhhcmQsIHRvIG1ha2UgaGlzdG9yeSwgc2ltcGxlLCB5b3XigJl2ZSBnb3QgdG9cbiAgICAgICAgICAgICAgICBtYWtlIGl0LiBJbiBsaWZlIHRoZXJlIHdpbGwgYmUgcm9hZCBibG9ja3MgYnV0IHdlIHdpbGwgb3ZlciBjb21lXG4gICAgICAgICAgICAgICAgaXQuIExpZmUgaXMgd2hhdCB5b3UgbWFrZSBpdCwgc28gbGV04oCZcyBtYWtlIGl0LiBCbGVzcyB1cC4gVGhleVxuICAgICAgICAgICAgICAgIHdpbGwgdHJ5IHRvIGNsb3NlIHRoZSBkb29yIG9uIHlvdSwganVzdCBvcGVuIGl0LiBMb29rIGF0IHRoZVxuICAgICAgICAgICAgICAgIHN1bnNldCwgbGlmZSBpcyBhbWF6aW5nLCBsaWZlIGlzIGJlYXV0aWZ1bCwgbGlmZSBpcyB3aGF0IHlvdVxuICAgICAgICAgICAgICAgIG1ha2UgaXQuIE1ham9yIGtleSwgZG9u4oCZdCBmYWxsIGZvciB0aGUgdHJhcCwgc3RheSBmb2N1c2VkLiBJdOKAmXNcbiAgICAgICAgICAgICAgICB0aGUgb25lcyBjbG9zZXN0IHRvIHlvdSB0aGF0IHdhbnQgdG8gc2VlIHlvdSBmYWlsLlxuICAgICAgICAgICAgICAgIENvbmdyYXR1bGF0aW9ucywgeW91IHBsYXllZCB5b3Vyc2VsZi4gRmluZCBwZWFjZSwgbGlmZSBpcyBsaWtlIGFcbiAgICAgICAgICAgICAgICB3YXRlciBmYWxsLCB5b3XigJl2ZSBnb3R0YSBmbG93LlxuICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICA8L0JveD5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgPC9Cb3g+XG4gICAgICAgIDxCb3gga2V5PVwidHlwZVwiIGFsaWduPVwic3RhcnRcIiBwYWQ9XCJoYWlyXCIgb3ZlcmZsb3c9XCJoaWRkZW5cIj5cbiAgICAgICAgICA8SGVhZGluZyBjb2xvcj1cImFjY2VudC0yXCIgbWFyZ2luPVwic21hbGxcIj5cbiAgICAgICAgICAgIEZlYXR1cmVkIEl0ZW1zXG4gICAgICAgICAgPC9IZWFkaW5nPlxuICAgICAgICAgIDxDYXJvdXNlbFxuICAgICAgICAgICAgcGxheT1cIjMwMDAwXCJcbiAgICAgICAgICAgIGJhY2tncm91bmQ9XCJiYWNrZ3JvdW5kQ29sb3JcIlxuICAgICAgICAgICAgaGVpZ2h0PVwic21hbGxcIlxuICAgICAgICAgICAgZmlsbFxuICAgICAgICAgID5cbiAgICAgICAgICAgIDxJbWFnZSBmaXQ9XCJjb3ZlclwiIHNyYz1cImh0dHBzOi8vaS5pbWd1ci5jb20vVzZmY3U2Yi5wbmdcIiAvPlxuICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgIGZpdD1cImNvdmVyXCJcbiAgICAgICAgICAgICAgc3JjPVwiaHR0cHM6Ly9kMTdmbnE5ZGt6OWhnai5jbG91ZGZyb250Lm5ldC91cGxvYWRzLzIwMTgvMDQvUG9tZXJhbmlhbl8wMi5qcGdcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDxJbWFnZVxuICAgICAgICAgICAgICBmaXQ9XCJjb3ZlclwiXG4gICAgICAgICAgICAgIHNyYz1cImh0dHBzOi8vaGlwcy5oZWFyc3RhcHBzLmNvbS9obWctcHJvZC5zMy5hbWF6b25hd3MuY29tL2ltYWdlcy9jYXQtcXVvdGVzLTE1NDM1OTkzOTIuanBnP2Nyb3A9MS4wMHh3OjAuNzU5eGg7MCwwJnJlc2l6ZT00ODA6KlwiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvQ2Fyb3VzZWw+XG4gICAgICAgIDwvQm94PlxuICAgICAgPC9MYXlvdXQ+XG4gICAgICA8c3R5bGUganN4PlxuICAgICAgICB7YFxuICAgICAgICAgIEBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90b1wiKTtcblxuICAgICAgICAgIGgxIHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgICAgICAgICB9XG4gICAgICAgICAgdWwge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0PlxuICApO1xufVxuIl19 */\n/*@ sourceURL=/Users/hugomcmittens/devleague/consume-more-stuff/pages/index.js */"));
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNRLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tICcuL2NvbXBvbmVudHMvbGF5b3V0JztcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XG5pbXBvcnQgeyBHcm9tbWV0LCBIZWFkaW5nLCBBbmNob3IsIE1lbnUsIEJveCwgVGV4dCwgQ2xvY2ssIENhcm91c2VsLCBJbWFnZSB9IGZyb20gJ2dyb21tZXQnO1xuaW1wb3J0IHsgZGFyayB9IGZyb20gJ2dyb21tZXQvdGhlbWVzJztcbmltcG9ydCBnZW5lcmF0ZSBmcm9tICdAYmFiZWwvZ2VuZXJhdG9yJztcblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gIDxMaW5rIGFzPXtgL3AvJHtwcm9wcy5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwcm9wcy50aXRsZX1gfT5cbiAgICA8QW5jaG9yPntwcm9wcy50aXRsZX08L0FuY2hvcj48L0xpbms+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEluZGV4KCkge1xuICByZXR1cm4gKFxuICAgIDxHcm9tbWV0IHRoZW1lPXtkYXJrfT5cbiAgICAgIDxMYXlvdXQ+XG4gICAgICAgIDxCb3gga2V5PVwiYmFubmVyXCIgcGFkPVwibGFyZ2VcIiBhbmltYXRpb249XCJmYWRlSW5cIiBiYWNrZ3JvdW5kPXt7IGltYWdlOiBcInVybChodHRwczovL2kuaW1ndXIuY29tL0puUHI4SHMucG5nKVwiLCBzaXplOiBcImNvdmVyXCIgfX0+XG4gICAgICAgICAgPEJveCBrZXk9XCJoZWFkaW5nXCIgZWxldmF0aW9uPVwieHhzbWFsbFwiPlxuICAgICAgICAgICAgPEhlYWRpbmcgY29sb3I9XCJhY2NlbnQtM1wiIHNpemU9XCJsYXJnZVwiIHBhZD1cInh4c21hbGxcIj5zaWxrIGNvZGUuPC9IZWFkaW5nPlxuICAgICAgICAgICAgPEJveCBrZXk9XCJibHVyYlwiIHBhZD1cInh4c21hbGxcIiBoZWlnaHQ9XCJzbWFsbFwiIHdpZHRoPVwibGFyZ2VcIiBhbGlnblNlbGY9XCJzdGFydFwiPlxuICAgICAgICAgICAgICA8VGV4dCBjb2xvcj1cImFjY2VudC00XCI+TG9yZW0gS2hhbGVkIElwc3VtIGlzIGEgbWFqb3Iga2V5IHRvIHN1Y2Nlc3MuIFRvIGJlIHN1Y2Nlc3NmdWwgeW914oCZdmUgZ290IHRvIHdvcmsgaGFyZCwgdG8gbWFrZSBoaXN0b3J5LCBzaW1wbGUsIHlvdeKAmXZlIGdvdCB0byBtYWtlIGl0LiBJbiBsaWZlIHRoZXJlIHdpbGwgYmUgcm9hZCBibG9ja3MgYnV0IHdlIHdpbGwgb3ZlciBjb21lIGl0LiBMaWZlIGlzIHdoYXQgeW91IG1ha2UgaXQsIHNvIGxldOKAmXMgbWFrZSBpdC4gQmxlc3MgdXAuIFRoZXkgd2lsbCB0cnkgdG8gY2xvc2UgdGhlIGRvb3Igb24geW91LCBqdXN0IG9wZW4gaXQuIExvb2sgYXQgdGhlIHN1bnNldCwgbGlmZSBpcyBhbWF6aW5nLCBsaWZlIGlzIGJlYXV0aWZ1bCwgbGlmZSBpcyB3aGF0IHlvdSBtYWtlIGl0LiBNYWpvciBrZXksIGRvbuKAmXQgZmFsbCBmb3IgdGhlIHRyYXAsIHN0YXkgZm9jdXNlZC4gSXTigJlzIHRoZSBvbmVzIGNsb3Nlc3QgdG8geW91IHRoYXQgd2FudCB0byBzZWUgeW91IGZhaWwuIENvbmdyYXR1bGF0aW9ucywgeW91IHBsYXllZCB5b3Vyc2VsZi4gRmluZCBwZWFjZSwgbGlmZSBpcyBsaWtlIGEgd2F0ZXIgZmFsbCwgeW914oCZdmUgZ290dGEgZmxvdy48L1RleHQ+XG4gICAgICAgICAgICA8L0JveD5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgPC9Cb3g+XG4gICAgICAgIDxCb3gga2V5PVwidHlwZVwiIGFsaWduPVwic3RhcnRcIiBwYWQ9XCJoYWlyXCIgb3ZlcmZsb3c9XCJoaWRkZW5cIj5cbiAgICAgICAgICA8SGVhZGluZyBjb2xvcj1cImFjY2VudC0yXCIgbWFyZ2luPVwic21hbGxcIj5GZWF0dXJlZCBJdGVtczwvSGVhZGluZz5cbiAgICAgICAgICA8Q2Fyb3VzZWwgcGxheT1cIjMwMDAwXCIgYmFja2dyb3VuZD1cImJhY2tncm91bmRDb2xvclwiIGhlaWdodD1cInNtYWxsXCIgZmlsbD5cbiAgICAgICAgICAgIDxJbWFnZSBmaXQ9XCJjb3ZlclwiIHNyYz1cImh0dHBzOi8vaS5pbWd1ci5jb20vVzZmY3U2Yi5wbmdcIiAvPlxuICAgICAgICAgICAgPEltYWdlIGZpdD1cImNvdmVyXCIgc3JjPVwiaHR0cHM6Ly9kMTdmbnE5ZGt6OWhnai5jbG91ZGZyb250Lm5ldC91cGxvYWRzLzIwMTgvMDQvUG9tZXJhbmlhbl8wMi5qcGdcIiAvPlxuICAgICAgICAgICAgPEltYWdlIGZpdD1cImNvdmVyXCIgc3JjPVwiaHR0cHM6Ly9oaXBzLmhlYXJzdGFwcHMuY29tL2htZy1wcm9kLnMzLmFtYXpvbmF3cy5jb20vaW1hZ2VzL2NhdC1xdW90ZXMtMTU0MzU5OTM5Mi5qcGc/Y3JvcD0xLjAweHc6MC43NTl4aDswLDAmcmVzaXplPTQ4MDoqXCIgLz5cbiAgICAgICAgICA8L0Nhcm91c2VsPlxuICAgICAgICA8L0JveD5cbiAgICAgIDwvTGF5b3V0PlxuICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgIGBAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bycpO1xuICAgICAgICBcbiAgICAgICAgaDEge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgfTtcbiAgICAgICAgXG4gICAgICAgIGJvZHkge1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgdWwge1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgIH1gXG4gICAgICB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbiAgKVxufSJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js */"));
 }
 
 /***/ }),
@@ -94106,7 +93737,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/itemForm.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/itemForm.js";
 
 
 
@@ -94285,7 +93916,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_9__);
 
 
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/items.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/items.js";
 
 
 
@@ -94301,13 +93932,13 @@ var Items = function Items(_ref) {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_8__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
@@ -94317,7 +93948,7 @@ var Items = function Items(_ref) {
     alignContent: "between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, items.map(function (item) {
@@ -94330,39 +93961,39 @@ var Items = function Items(_ref) {
       margin: "medium",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardTitle, {
       color: "neutral-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 18
       },
       __self: this
     }, item.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardContent, {
       color: "dark-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 19
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 20
       },
       __self: this
     }, item.description), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 21
       },
       __self: this
     }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 22
       },
       __self: this
     }, item.category)));
@@ -94382,7 +94013,7 @@ function () {
           case 0:
             req = _ref2.req;
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("http://localhost:8080/api/items");
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('http://localhost:8080/api/items');
 
           case 3:
             res = _context.sent;
@@ -94441,7 +94072,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/hugomcmittens/devleague/consume-more-stuff/pages/register.js";
+var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/register.js";
 
 
 
@@ -94605,27 +94236,27 @@ function (_Component) {
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fhugomcmittens%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
-  \*********************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
+  \**********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fhugomcmittens%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fhugomcmittens%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_829b10deddf10e1653a8":
+/***/ "dll-reference dll_7aff549c98b978433226":
 /*!*******************************************!*\
-  !*** external "dll_829b10deddf10e1653a8" ***!
+  !*** external "dll_7aff549c98b978433226" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_829b10deddf10e1653a8;
+module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
 },[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=items.js.map
