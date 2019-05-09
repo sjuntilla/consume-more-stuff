@@ -1,9 +1,12 @@
 import Link from "next/link";
+import Layout from "./layout";
+import fetch from "isomorphic-unfetch";
 import Register from "../register";
 import AddItem from "../itemForm";
+import Items from "../items";
+import Index from "../index";
 import { Component } from "react";
 import {
-  Heading,
   Grommet,
   Anchor,
   Box,
@@ -35,11 +38,20 @@ const PostLink = props => (
 
 const Header = () => (
   <Grommet theme={dark}>
-    <Box direction="row-responsive" fit="cover" pad="small">
+    <Box
+      direction="row-responsive"
+      fit="cover"
+      pad="small"
+      background="neutral-3"
+    >
       {/* TABS OPTION */}
       <Tabs>
         <Tab title="HOME" />
-        <Tab title="SHOP" />
+        <Tab title="ALL ITEMS">
+          <Layer>
+            <Items />
+          </Layer>
+        </Tab>
         <Tab title="ADD ITEM">
           <AddItem />
         </Tab>
@@ -49,6 +61,25 @@ const Header = () => (
         </Tab>
       </Tabs>
     </Box>
+
+    <style jsx>
+      {`
+        @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+        h1 {
+          font-family: "Roboto", sans-serif;
+          font-weight: bold;
+        }
+
+        body {
+          font-family: "Roboto", sans-serif;
+        }
+        ul {
+          background-color: #ddd;
+          margin: 5px;
+        }
+      `}
+    </style>
   </Grommet>
 );
 

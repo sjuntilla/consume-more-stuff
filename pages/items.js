@@ -2,37 +2,32 @@ import Layout from "./components/layout";
 import fetch from "isomorphic-unfetch";
 
 import Link from "next/link";
-import { Grommet, Heading, Anchor, Text, Box, Distribution } from "grommet";
+import { Grommet, Heading, Anchor, Text, Box, Layer } from "grommet";
+import { Card } from "grommet-controls";
 import { dark } from "grommet/themes";
 import { Disposer } from "bluebird";
-
-import Link from "next/link";
-import { Grommet, Heading, Anchor, Menu } from "grommet";
-import { dark } from "grommet/themes";
 
 const Items = ({ items }) => {
   return (
     <Grommet theme={dark}>
       <Layout>
-        <Box key="wrapper" direction="row-responsive">
+        <Box key="wrapper" direction="row" wrap="true" alignContent="between">
           {items.map(item => (
-            <Box
-              key={item.id}
-              background="#666"
-              animate="fadeIn"
-              margin="small"
-              pad="small"
-              size="small"
-              elevation="xsmall"
+            <Card
+              basis="medium"
+              animation="fadeIn"
+              background="dark-1"
+              elevation="xxsmall"
+              gap="small"
+              margin="medium"
             >
-              <Heading level={3} color="brand">
-                {item.name}
-              </Heading>
-              <Text>{item.name}</Text>
-              <Text>{item.description}</Text>
-              <Text>${item.price}</Text>
-              <Text>{item.category}</Text>
-            </Box>
+              <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
+              <Card.CardContent color="dark-1">
+                <Text>{item.description}</Text>
+                <Text>${item.price}</Text>
+                <Text>{item.category}</Text>
+              </Card.CardContent>
+            </Card>
           ))}
         </Box>
       </Layout>

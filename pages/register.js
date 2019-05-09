@@ -3,8 +3,6 @@ import { Component } from "react";
 import { Box, Button, CheckBox, Form, FormField, Select, Layer, onClickOutside } from "grommet";
 class Register extends Component {
 
-
-
   constructor(props) {
     super(props);
     this.state = {

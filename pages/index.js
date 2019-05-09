@@ -20,7 +20,7 @@ const PostLink = props => (
   </Link>
 );
 
-export default function Items() {
+export default function Index() {
   return (
     <Grommet theme={dark}>
       <Layout>
@@ -34,7 +34,7 @@ export default function Items() {
           }}
         >
           <Box key="heading" elevation="xxsmall">
-            <Heading color="brand" responsive="true" size="large" pad="xxsmall">
+            <Heading color="accent-3" size="large" pad="xxsmall">
               silk code.
             </Heading>
             <Box
@@ -44,7 +44,7 @@ export default function Items() {
               width="large"
               alignSelf="start"
             >
-              <Text color="accent-3">
+              <Text color="accent-4">
                 Lorem Khaled Ipsum is a major key to success. To be successful
                 you’ve got to work hard, to make history, simple, you’ve got to
                 make it. In life there will be road blocks but we will over come
@@ -81,6 +81,24 @@ export default function Items() {
           </Carousel>
         </Box>
       </Layout>
+      <style jsx>
+        {`
+          @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+          h1 {
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+          }
+
+          body {
+            font-family: "Roboto", sans-serif;
+          }
+          ul {
+            background-color: #ddd;
+            margin: 5px;
+          }
+        `}
+      </style>
     </Grommet>
   );
 }
