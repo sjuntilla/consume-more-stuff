@@ -127,11 +127,7 @@ router.post(
   }
 );
 
-router.get("/secret", isAuthenticated, (req, res) => {
-  console.log("secret authed!");
-  res.send("YOU ARE AUTHENTICATED!!!");
-});
-
+//function to check authentication for api calls.
 function isAuthenticated(req, res, done) {
   if (req.isAuthenticated()) {
     console.log("req auth", req.isAuthenticated());
@@ -139,7 +135,7 @@ function isAuthenticated(req, res, done) {
   } else {
     console.log("req auth", req.isAuthenticated());
     console.log("Not Authenticated!");
-    res.redirect("/");
+    res.redirect("/"); //change this redirect to another page??
   }
 }
 
@@ -150,11 +146,17 @@ router.post("/logout", (req, res) => {
       if (err) {
         return next(err);
       } else {
-        console.log(req.session);
+        console.log("after", req.session);
         return res.send("user logged out");
       }
     });
   }
+});
+
+//Smoke test for authentication route.
+router.get("/secret", isAuthenticated, (req, res) => {
+  console.log("secret authed!");
+  res.send("YOU ARE AUTHENTICATED!!!");
 });
 
 module.exports = router;

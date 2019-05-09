@@ -9,7 +9,7 @@ router.route("/items").get((req, res) => {
   });
 });
 
-router.route("/items").post((req, res) => {
+router.route("/items").post(isAuthenticated, (req, res) => {
   const { name, description, price, category } = req.body;
   console.log("POOOOOOOOOST");
   return new req.database.Item({
