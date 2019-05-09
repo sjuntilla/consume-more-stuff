@@ -4912,7 +4912,8 @@ function (_Component) {
       name: "",
       description: "",
       price: "",
-      category: ""
+      category: "" // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
+
     };
     _this.handleSubmit = _this.handleSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     return _this;
@@ -4930,10 +4931,10 @@ function (_Component) {
           "Content-Type": "application/json"
         },
         body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-          name: this.state.name,
-          description: this.state.description,
+          name: this.state.name.toLowerCase(),
+          description: this.state.description.toLowerCase(),
           price: this.state.price,
-          category: this.state.category
+          category: this.state.category.toLowerCase()
         })
       }).then(function () {
         console.log("ADDED ITEM TOOOOOO ITEM LIST");
@@ -4944,6 +4945,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this,
+          _React$createElement;
+
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Layer"], {
         position: "right",
         width: "large",
@@ -4954,21 +4958,21 @@ function (_Component) {
         onEsc: this.onClose,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Box"], {
         pad: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 61
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -4978,7 +4982,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -4988,7 +4992,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -4998,26 +5002,29 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 74
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Select"], (_React$createElement = {
+        placeholder: "Category",
         onChange: this.handleChange,
-        name: "category",
-        label: "Category",
-        required: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        value: this.state.category,
+        options: ["WELLNESS", "OFFICE", "ACCESSORIES"]
+      }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "onChange", function onChange(_ref) {
+        var option = _ref.option;
+        return _this2.setState({
+          category: option
+        });
+      }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "name", "category"), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "required", true), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__source", {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__self", this), _React$createElement)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         type: "submit",
         label: "Add Item",
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 126
         },
         __self: this
       }))));
