@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import Layout from './layout';
+import fetch from 'isomorphic-unfetch';
 import Register from '../register';
 import AddItem from '../itemForm';
 import Items from '../items';
 import { Component } from 'react';
-import { Heading, Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
+import { Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
 import { dark } from 'grommet/themes';
 
 
@@ -17,16 +19,19 @@ const PostLink = props => (
         <Anchor color="neutral-2">{props.title}</Anchor></Link>
 )
 
+
 const Header = () => (
     <Grommet theme={dark}>
-        <Box direction="row-responsive" fit="cover" pad="small">
 
+        <Box direction="row-responsive" fit="cover" pad="small">
 
             {/* TABS OPTION */}
             <Tabs>
                 <Tab title="HOME" />
                 <Tab title="ALL ITEMS">
-                    <Items />
+                    <Layer>
+                        <Items />
+                    </Layer>
                 </Tab>
                 <Tab title="ADD ITEM">
                     <AddItem />
@@ -36,12 +41,10 @@ const Header = () => (
                 <Tab title="REGISTER">
                     <Register />
                 </Tab>
-
             </Tabs>
 
         </Box>
-    </Grommet >
-
+    </Grommet>
 )
 
 export default Header;

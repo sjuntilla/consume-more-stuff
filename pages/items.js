@@ -3,30 +3,33 @@ import fetch from 'isomorphic-unfetch';
 
 import Link from 'next/link';
 import { Grommet, Heading, Anchor, Text, Box, Layer } from 'grommet';
+import { Card } from 'grommet-controls';
 import { dark } from 'grommet/themes';
 import { Disposer } from 'bluebird';
 
 
 const Items = ({ items }) => {
     return (
-        <Layer
-            full
-            modal={false}
-            animate="true"
-        >
-            <Box key="wrapper" direction="row-responsive">
-                {items.map(item =>
-                    <Box key={item.id} background="#666" animate="fadeIn" margin="small" pad="small" size="small" elevation="xsmall" >
-                        <Heading level={3} color="brand">{item.name}</Heading>
-                        <Text>{item.name}</Text>
-                        <Text>{item.description}</Text>
-                        <Text>${item.price}</Text>
-                        <Text>{item.category}</Text>
-                    </Box>
-                )}
-            </Box>
-        </Layer>
+        <Grommet theme={dark}>
+            <Layout>
+                <Box key="wrapper" direction="row-responsive" alignContent="between">
+                    {items.map(item =>
+                        <Card basis="medium" animation="fadeIn" background="neutral-4" elevation="small" gap="small" margin="medium">
+                            <Card.CardTitle color="neutral-1">{item.name}</Card.CardTitle>
+                            <Card.CardContent>
+                                <Text>{item.description}</Text>
+                                <Text>${item.price}</Text>
+                                <Text>{item.category}</Text>
+                            </Card.CardContent>
+                        </Card>
+                    )}
+                </Box>
+
+
+            </Layout>
+        </Grommet>
     )
+
 }
 
 Items.getInitialProps = async ({ req }) => {
@@ -36,5 +39,4 @@ Items.getInitialProps = async ({ req }) => {
     return { items: json }
 }
 
-
-export default Items
+export default Items;

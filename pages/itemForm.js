@@ -82,7 +82,7 @@ class AddItem extends Component {
                             label="Category"
                             required={true}
                         />
-                        <Button type="submit" label="Add Item" primary={true} />
+                        <Button type="submit" label="AddItem" primary={true} />
                     </Form>
                 </Box>
             </Layer>
