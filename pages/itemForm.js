@@ -11,7 +11,8 @@ class AddItem extends Component {
             name: "",
             description: "",
             price: "",
-            category: ""
+            category: "",
+            // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,7 +30,7 @@ class AddItem extends Component {
                 name: this.state.name,
                 description: this.state.description,
                 price: this.state.price,
-                category: this.state.category
+                category: this.state.category.toLowerCase()
             })
         })
             .then(() => {
@@ -67,15 +68,16 @@ class AddItem extends Component {
                         label="Product Price"
                         required={true}
                     />
-                    {/* <Select
+                    <Select
                         placeholder="Category"
                         onChange={this.handleChange}
-                        value={this.state}
+                        value={this.state.category}
                         options={["WELLNESS", "OFFICE", "ACCESSORIES"]}
-                        onChange={({ option }) => this.setState({ value: option })}
+                        onChange={({ option }) => this.setState({ category: option })}
                         name="category"
-                        required={true} */}
-                    <Select
+                        required={true}
+                    />
+                    {/* <Select
                         multiple
                         closeOnChange={false}
                         placeholder="select an option..."
@@ -110,12 +112,13 @@ class AddItem extends Component {
                                 value={option}
                                 selected={selected.indexOf(index) !== -1}
                             />
-                        )}
-                        />
+                        )} */}
+
                     <Button type="submit" label="AddItem" primary={true} />
+
                 </Form>
             </Layout>
-                );
-            }
-        }
+        );
+    }
+}
 export default AddItem;
