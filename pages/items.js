@@ -12,11 +12,11 @@ const Items = ({ items }) => {
     return (
         <Grommet theme={dark}>
             <Layout>
-                <Box key="wrapper" direction="row-responsive" alignContent="between">
+                <Box key="wrapper" direction="row" wrap="true" alignContent="between">
                     {items.map(item =>
-                        <Card basis="medium" animation="fadeIn" background="neutral-4" elevation="small" gap="small" margin="medium">
-                            <Card.CardTitle color="neutral-1">{item.name}</Card.CardTitle>
-                            <Card.CardContent>
+                        <Card basis="medium" animation="fadeIn" background="dark-1" elevation="xxsmall" gap="small" margin="medium">
+                            <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
+                            <Card.CardContent color="dark-1">
                                 <Text>{item.description}</Text>
                                 <Text>${item.price}</Text>
                                 <Text>{item.category}</Text>

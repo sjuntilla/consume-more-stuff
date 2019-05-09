@@ -44936,7 +44936,7 @@ function (_Component) {
           } else {
             contents.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StyledBox__WEBPACK_IMPORTED_MODULE_6__["StyledBoxGap"] // eslint-disable-next-line react/no-array-index-key
             , {
-              key: index,
+              key: "gap-" + index,
               gap: gap,
               directionProp: direction,
               responsive: responsive
@@ -45535,7 +45535,7 @@ var doc = function doc(Box) {
       dark: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string]),
       image: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string,
       position: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string,
-      opacity: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['weak', 'medium', 'strong']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].number]),
+      opacity: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].number, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['weak', 'medium', 'strong'])]),
       repeat: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['no-repeat', 'repeat']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string]),
       size: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['cover', 'contain']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string]),
       light: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string
@@ -45742,6 +45742,7 @@ function (_Component) {
         children = _this$props.children,
         disabled = _this$props.disabled,
         icon = _this$props.icon,
+        gap = _this$props.gap,
         fill = _this$props.fill,
         focus = _this$props.focus,
         href = _this$props.href,
@@ -45753,7 +45754,7 @@ function (_Component) {
         theme = _this$props.theme,
         type = _this$props.type,
         as = _this$props.as,
-        rest = _objectWithoutPropertiesLoose(_this$props, ["a11yTitle", "color", "forwardRef", "children", "disabled", "icon", "fill", "focus", "href", "label", "onClick", "plain", "primary", "reverse", "theme", "type", "as"]);
+        rest = _objectWithoutPropertiesLoose(_this$props, ["a11yTitle", "color", "forwardRef", "children", "disabled", "icon", "gap", "fill", "focus", "href", "label", "onClick", "plain", "primary", "reverse", "theme", "type", "as"]);
 
     var hover = this.state.hover;
     var buttonIcon = icon; // only change color if user did not specify the color themselves...
@@ -45774,7 +45775,7 @@ function (_Component) {
         direction: "row",
         align: "center",
         justify: "center",
-        gap: "small"
+        gap: gap
       }, first, second);
     } else if (typeof children === 'function') {
       contents = children({
@@ -45795,6 +45796,7 @@ function (_Component) {
       colorValue: color,
       disabled: disabled,
       hasIcon: !!icon,
+      gap: gap,
       hasLabel: !!label,
       fillContainer: fill,
       focus: focus,
@@ -45814,7 +45816,8 @@ function (_Component) {
 
 _defineProperty(Button, "defaultProps", {
   type: 'button',
-  focusIndicator: true
+  focusIndicator: true,
+  gap: 'small'
 });
 
 Object.setPrototypeOf(Button.defaultProps, _default_props__WEBPACK_IMPORTED_MODULE_4__["defaultProps"]);
@@ -45879,14 +45882,33 @@ var hoverStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])([
 }, function (props) {
   return !props.plain && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["box-shadow:0px 0px 0px 2px ", ";"], getHoverColor(props));
 });
-var fillStyle = "\n  width: 100%;\n  height: 100%;\n  max-width: none;\n  flex: 1 0 auto;\n";
-var plainStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["color:inherit;border:none;padding:0;text-align:inherit;"]); // Deprecate props.theme.button.disabled.opacity in V3
+
+var fillStyle = function fillStyle(fillContainer) {
+  if (fillContainer === 'horizontal') {
+    return 'width: 100%;';
+  }
+
+  if (fillContainer === 'vertical') {
+    return 'height: 100%;';
+  }
+
+  if (fillContainer) {
+    return "\n      width: 100%;\n      height: 100%;\n      max-width: none;\n      flex: 1 0 auto;\n    ";
+  }
+
+  return undefined;
+};
+
+var plainStyle = function plainStyle(props) {
+  return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["color:", ";border:none;padding:0;text-align:inherit;"], Object(_utils__WEBPACK_IMPORTED_MODULE_1__["normalizeColor"])(props.colorValue || 'inherit', props.theme));
+}; // Deprecate props.theme.button.disabled.opacity in V3
+
 
 var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
   displayName: "StyledButton",
   componentId: "sc-323bzc-0"
 })(["display:inline-block;box-sizing:border-box;cursor:pointer;outline:none;font:inherit;text-decoration:none;margin:0;background:transparent;overflow:visible;text-transform:none;", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], _utils__WEBPACK_IMPORTED_MODULE_1__["genericStyles"], function (props) {
-  return props.plain && plainStyle;
+  return props.plain && plainStyle(props);
 }, function (props) {
   return !props.plain && basicStyle(props);
 }, function (props) {
@@ -45902,7 +45924,7 @@ var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].but
 }, function (props) {
   return !props.plain && "\n    transition: 0.1s ease-in-out;\n  ";
 }, function (props) {
-  return props.fillContainer && fillStyle;
+  return props.fillContainer && fillStyle(props.fillContainer);
 }, function (props) {
   return props.hasIcon && !props.hasLabel && "\n    line-height: 0;\n  ";
 }, function (props) {
@@ -45938,15 +45960,16 @@ var doc = function doc(Button) {
   var DocumentedButton = Object(react_desc__WEBPACK_IMPORTED_MODULE_0__["describe"])(Button).availableAt(Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getAvailableAtBadge"])('Button')).description('A button.').details("You can provide a single function child that will be called with\n      'hover' and 'focus' keys. This allows you to customize the rendering\n      of the Button in those cases.").usage("import { Button } from 'grommet';\n<Button primary={true} label='Label' />").intrinsicElement('button');
   DocumentedButton.propTypes = _extends({}, _utils__WEBPACK_IMPORTED_MODULE_1__["genericProps"], {
     active: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description('Whether the button is active.').defaultValue(false),
-    color: _utils__WEBPACK_IMPORTED_MODULE_1__["colorPropType"].description('Fill color for primary, border color otherwise.'),
+    color: _utils__WEBPACK_IMPORTED_MODULE_1__["colorPropType"].description('Fill color for primary, label color for plain, border color otherwise.'),
     disabled: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description('Whether the button is disabled.').defaultValue(false),
-    fill: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description('Whether the button expands to fill all of the available width and height.').defaultValue(false),
+    fill: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['horizontal', 'vertical']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool]).description('Whether the button expands to fill all of the available width and/or height.').defaultValue(false),
     focusIndicator: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Whether when 'plain' it should receive a focus outline.").defaultValue(true),
     hoverIndicator: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['background']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].shape({
       background: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string])
     })]).description("The hover indicator to apply when the user is mousing over the\nbutton. An object can be also be specified for color index support:\n{background: 'neutral-2'}. This prop is meant to be used only\nwith plain Buttons.").defaultValue(false),
     href: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string.description('If specified, the button will behave like an anchor tag.'),
     icon: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].element.description('Icon element to place in the button.'),
+    gap: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['xxsmall', 'xsmall', 'small', 'medium', 'large', 'xlarge']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string]).description("The amount of spacing between icon and label in the button.").defaultValue('small'),
     label: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].node.description('Label text to place in the button.'),
     onClick: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func.description("Click handler. Not setting this property and not specifying a href\ncauses the Button to be disabled."),
     plain: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Whether this is a plain button with no border or pad. \nNon plain button will show both pad and border. \nThe plain button has no border and unless the icon prop exist it has no pad as well.").defaultValue(false),
@@ -47229,30 +47252,26 @@ function (_Component) {
       fill: true,
       direction: "row",
       justify: "between"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-      fill: "vertical"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
-      fill: true,
+      fill: "vertical",
+      icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PreviousIcon, null),
+      plain: true,
       disabled: activeIndex <= 0,
       onClick: onLeft,
       hoverIndicator: true
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-      justify: "center"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PreviousIcon, null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
       justify: "end"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
       direction: "row",
       justify: "center"
-    }, selectors)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-      fill: "vertical"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
-      fill: true,
+    }, selectors)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      fill: "vertical",
+      icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NextIcon, null),
+      plain: true,
       disabled: activeIndex >= lastIndex,
       onClick: onRight,
       hoverIndicator: true
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-      justify: "center"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NextIcon, null)))))));
+    }))));
   };
 
   return Carousel;
@@ -50600,7 +50619,7 @@ __webpack_require__.r(__webpack_exports__);
 var StyledDataTable = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_Table__WEBPACK_IMPORTED_MODULE_4__["Table"]).withConfig({
   displayName: "StyledDataTable",
   componentId: "xrlyjm-0"
-})(["border-spacing:0;border-collapse:collapse;height:100%;", ";"], _utils__WEBPACK_IMPORTED_MODULE_1__["genericStyles"]);
+})(["border-spacing:0;border-collapse:collapse;height:100%;@-moz-document url-prefix(){height:auto;}", ";"], _utils__WEBPACK_IMPORTED_MODULE_1__["genericStyles"]);
 StyledDataTable.defaultProps = {};
 Object.setPrototypeOf(StyledDataTable.defaultProps, _default_props__WEBPACK_IMPORTED_MODULE_2__["defaultProps"]);
 var StyledDataTableRow = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_TableRow__WEBPACK_IMPORTED_MODULE_3__["TableRow"]).withConfig({
@@ -51178,14 +51197,14 @@ function (_Component) {
         var fromRect = fromElement.getBoundingClientRect();
         var toRect = toElement.getBoundingClientRect(); // There is no x and y when unit testing.
 
-        var fromPoint = [fromRect.x - containerRect.x || 0, fromRect.y - containerRect.y || 0];
-        var toPoint = [toRect.x - containerRect.x || 0, toRect.y - containerRect.y || 0];
+        var fromPoint = [fromRect.left - containerRect.left || 0, fromRect.top - containerRect.top || 0];
+        var toPoint = [toRect.left - containerRect.left || 0, toRect.top - containerRect.top || 0];
 
         if (anchor === 'vertical') {
           fromPoint[0] += fromRect.width / 2;
           toPoint[0] += toRect.width / 2;
 
-          if (fromRect.y < toRect.y) {
+          if (fromRect.top < toRect.top) {
             fromPoint[1] += fromRect.height;
           } else {
             toPoint[1] += toRect.height;
@@ -51194,7 +51213,7 @@ function (_Component) {
           fromPoint[1] += fromRect.height / 2;
           toPoint[1] += toRect.height / 2;
 
-          if (fromRect.x < toRect.x) {
+          if (fromRect.left < toRect.left) {
             fromPoint[0] += fromRect.width;
           } else {
             toPoint[0] += toRect.width;
@@ -51861,9 +51880,32 @@ function (_Component) {
             top = targetRect.top;
           } else {
             top = targetRect.bottom;
-          }
+          } // Calculate visible area underneath the control w.r.t window height
 
-          maxHeight = windowHeight - top;
+
+          var percentVisibleAreaBelow = 100 - targetRect.bottom / windowHeight * 100; // Check whether it is within 20% from bottom of the window or visible area to flip the control
+          // DropContainer doesn't fit well within visible area when percentVisibleAreaBelow value<=20%
+          // There is enough space from DropContainer to bottom of the window when percentVisibleAreaBelow>20%.
+
+          if (windowHeight === top || percentVisibleAreaBelow <= 20) {
+            // We need more room than we have.
+            // We put it below, but there's more room above, put it above
+            top = '';
+
+            if (align.top === 'bottom') {
+              bottom = targetRect.top;
+            } else {
+              bottom = targetRect.bottom;
+            }
+
+            maxHeight = bottom;
+            container.style.maxHeight = maxHeight + "px";
+          } else if (top > 0) {
+            maxHeight = windowHeight - top;
+            container.style.maxHeight = maxHeight + "px";
+          } else {
+            maxHeight = windowHeight - top;
+          }
         } else if (align.bottom) {
           if (align.bottom === 'bottom') {
             bottom = targetRect.bottom;
@@ -51872,6 +51914,7 @@ function (_Component) {
           }
 
           maxHeight = bottom;
+          container.style.maxHeight = maxHeight + "px";
         } else {
           // center
           top = targetRect.top + targetRect.height / 2 - containerRect.height / 2;
@@ -52921,12 +52964,12 @@ var FormFieldBox = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["defaul
   return props.theme.formField.extend;
 });
 
-var FormField =
+var FormFieldContent =
 /*#__PURE__*/
 function (_Component) {
-  _inheritsLoose(FormField, _Component);
+  _inheritsLoose(FormFieldContent, _Component);
 
-  function FormField() {
+  function FormFieldContent() {
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -52938,10 +52981,12 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "renderChildren", function (value, update) {
       var _this$props = _this.props,
           name = _this$props.name,
+          checked = _this$props.checked,
           component = _this$props.component,
           required = _this$props.required,
+          valueProp = _this$props.value,
           _onChange = _this$props.onChange,
-          rest = _objectWithoutPropertiesLoose(_this$props, ["name", "component", "required", "onChange"]);
+          rest = _objectWithoutPropertiesLoose(_this$props, ["name", "checked", "component", "required", "value", "onChange"]);
 
       delete rest.className;
       var Input = component || _TextInput__WEBPACK_IMPORTED_MODULE_8__["TextInput"];
@@ -52949,7 +52994,7 @@ function (_Component) {
       if (Input === _CheckBox__WEBPACK_IMPORTED_MODULE_6__["CheckBox"]) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, _extends({
           name: name,
-          checked: value[name] || false,
+          checked: value[name] !== undefined ? value[name] : checked || false,
           onChange: function onChange(event) {
             update(name, event.target.checked);
             if (_onChange) _onChange(event);
@@ -52959,9 +53004,9 @@ function (_Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, _extends({
         name: name,
-        value: value[name] || '',
+        value: value[name] !== undefined ? value[name] : valueProp || '',
         onChange: function onChange(event) {
-          update(name, event.value || event.target.value);
+          update(name, event.value || event.target.value || '');
           if (_onChange) _onChange(event);
         },
         plain: true,
@@ -52972,117 +53017,156 @@ function (_Component) {
     return _this;
   }
 
-  var _proto = FormField.prototype;
+  var _proto = FormFieldContent.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    var _this$props2 = this.props,
+        checked = _this$props2.checked,
+        context = _this$props2.context,
+        name = _this$props2.name,
+        value = _this$props2.value;
+
+    if (context && context.value[name] === undefined && (value !== undefined || checked !== undefined)) {
+      context.update(name, value !== undefined ? value : checked);
+    }
+  };
 
   _proto.render = function render() {
     var _this2 = this;
 
-    var _this$props2 = this.props,
-        children = _this$props2.children,
-        className = _this$props2.className,
-        component = _this$props2.component,
-        error = _this$props2.error,
-        focus = _this$props2.focus,
-        help = _this$props2.help,
-        htmlFor = _this$props2.htmlFor,
-        label = _this$props2.label,
-        name = _this$props2.name,
-        pad = _this$props2.pad,
-        required = _this$props2.required,
-        style = _this$props2.style,
-        theme = _this$props2.theme,
-        validate = _this$props2.validate,
-        onBlur = _this$props2.onBlur,
-        onFocus = _this$props2.onFocus;
+    var _this$props3 = this.props,
+        children = _this$props3.children,
+        className = _this$props3.className,
+        component = _this$props3.component,
+        context = _this$props3.context,
+        error = _this$props3.error,
+        focus = _this$props3.focus,
+        help = _this$props3.help,
+        htmlFor = _this$props3.htmlFor,
+        label = _this$props3.label,
+        name = _this$props3.name,
+        pad = _this$props3.pad,
+        required = _this$props3.required,
+        style = _this$props3.style,
+        theme = _this$props3.theme,
+        validate = _this$props3.validate,
+        onBlur = _this$props3.onBlur,
+        onFocus = _this$props3.onFocus;
     var formField = theme.formField;
     var border = formField.border;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form_FormContext__WEBPACK_IMPORTED_MODULE_10__["FormContext"].Consumer, null, function (context) {
-      var normalizedError = error;
-      var contents = children;
+    var normalizedError = error;
+    var contents = children;
 
-      if (context) {
-        var addValidation = context.addValidation,
-            errors = context.errors,
-            value = context.value,
-            update = context.update,
-            messages = context.messages;
-        addValidation(name, validateField(required, validate, messages));
-        normalizedError = error || errors[name];
-        contents = children || _this2.renderChildren(value, update);
-      }
+    if (context) {
+      var addValidation = context.addValidation,
+          errors = context.errors,
+          value = context.value,
+          update = context.update,
+          messages = context.messages;
+      addValidation(name, validateField(required, validate, messages));
+      normalizedError = error || errors[name];
+      contents = children || this.renderChildren(value, update);
+    }
 
-      if (pad) {
-        contents = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], formField.content, contents);
-      }
+    if (pad) {
+      contents = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], formField.content, contents);
+    }
 
-      var borderColor;
+    var borderColor;
 
-      if (focus && !normalizedError) {
-        borderColor = 'focus';
-      } else if (normalizedError) {
-        borderColor = border && border.error.color || 'status-critical';
-      } else {
-        borderColor = border && border.color || 'border';
-      }
+    if (focus && !normalizedError) {
+      borderColor = 'focus';
+    } else if (normalizedError) {
+      borderColor = border && border.error.color || 'status-critical';
+    } else {
+      borderColor = border && border.color || 'border';
+    }
 
-      var abut;
-      var outerStyle = style;
+    var abut;
+    var outerStyle = style;
 
-      if (border) {
-        var normalizedChildren = children ? react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (child) {
-          if (child) {
-            return Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
-              plain: true,
-              focusIndicator: false,
-              onBlur: onBlur,
-              onFocus: onFocus
-            });
-          }
-
-          return child;
-        }) : contents;
-        contents = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-          ref: function ref(_ref) {
-            _this2.childContainerRef = _ref;
-          },
-          border: border.position === 'inner' ? _extends({}, border, {
-            side: border.side || 'bottom',
-            color: borderColor
-          }) : undefined
-        }, normalizedChildren);
-        abut = border.position === 'outer' && (border.side === 'all' || border.side === 'horizontal' || !border.side);
-
-        if (abut) {
-          // marginBottom is set to overlap adjacent fields
-          var marginBottom = '-1px';
-
-          if (border.size) {
-            marginBottom = "-" + Object(_utils__WEBPACK_IMPORTED_MODULE_4__["parseMetricToNum"])(theme.global.borderSize[border.size]) + "px";
-          }
-
-          outerStyle = _extends({
-            position: focus ? 'relative' : undefined,
-            marginBottom: marginBottom,
-            zIndex: focus ? 10 : undefined
-          }, style);
+    if (border) {
+      var normalizedChildren = children ? react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (child) {
+        if (child) {
+          return Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
+            plain: true,
+            focusIndicator: false,
+            onBlur: onBlur,
+            onFocus: onFocus
+          });
         }
-      }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormFieldBox, {
-        className: className,
-        border: border && border.position === 'outer' ? _extends({}, border, {
+        return child;
+      }) : contents;
+      contents = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
+        ref: function ref(_ref) {
+          _this2.childContainerRef = _ref;
+        },
+        border: border.position === 'inner' ? _extends({}, border, {
+          side: border.side || 'bottom',
           color: borderColor
-        }) : undefined,
-        margin: abut ? undefined : _extends({}, formField.margin),
-        style: outerStyle
-      }, label && component !== _CheckBox__WEBPACK_IMPORTED_MODULE_6__["CheckBox"] || help ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, label && component !== _CheckBox__WEBPACK_IMPORTED_MODULE_6__["CheckBox"] && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({
-        as: "label",
-        htmlFor: htmlFor
-      }, formField.label), label), help && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({}, formField.help, {
-        color: formField.help.color[theme.dark ? 'dark' : 'light']
-      }), help)) : undefined, contents, normalizedError && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({}, formField.error, {
-        color: formField.error.color[theme.dark ? 'dark' : 'light']
-      }), normalizedError));
+        }) : undefined
+      }, normalizedChildren);
+      abut = border.position === 'outer' && (border.side === 'all' || border.side === 'horizontal' || !border.side);
+
+      if (abut) {
+        // marginBottom is set to overlap adjacent fields
+        var marginBottom = '-1px';
+
+        if (border.size) {
+          marginBottom = "-" + Object(_utils__WEBPACK_IMPORTED_MODULE_4__["parseMetricToNum"])(theme.global.borderSize[border.size]) + "px";
+        }
+
+        outerStyle = _extends({
+          position: focus ? 'relative' : undefined,
+          marginBottom: marginBottom,
+          zIndex: focus ? 10 : undefined
+        }, style);
+      }
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormFieldBox, {
+      className: className,
+      border: border && border.position === 'outer' ? _extends({}, border, {
+        color: borderColor
+      }) : undefined,
+      margin: abut ? undefined : _extends({}, formField.margin),
+      style: outerStyle
+    }, label && component !== _CheckBox__WEBPACK_IMPORTED_MODULE_6__["CheckBox"] || help ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, label && component !== _CheckBox__WEBPACK_IMPORTED_MODULE_6__["CheckBox"] && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({
+      as: "label",
+      htmlFor: htmlFor
+    }, formField.label), label), help && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({}, formField.help, {
+      color: formField.help.color[theme.dark ? 'dark' : 'light']
+    }), help)) : undefined, contents, normalizedError && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_7__["Text"], _extends({}, formField.error, {
+      color: formField.error.color[theme.dark ? 'dark' : 'light']
+    }), normalizedError));
+  };
+
+  return FormFieldContent;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // Can't be a functional component because styled-components withTheme() needs
+// to attach a ref.
+
+/* eslint-disable-next-line react/no-multi-comp, react/prefer-stateless-function */
+
+
+var FormField =
+/*#__PURE__*/
+function (_Component2) {
+  _inheritsLoose(FormField, _Component2);
+
+  function FormField() {
+    return _Component2.apply(this, arguments) || this;
+  }
+
+  var _proto2 = FormField.prototype;
+
+  _proto2.render = function render() {
+    var _this3 = this;
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form_FormContext__WEBPACK_IMPORTED_MODULE_10__["FormContext"].Consumer, null, function (context) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormFieldContent, _extends({
+        context: context
+      }, _this3.props));
     });
   };
 
@@ -53123,7 +53207,7 @@ __webpack_require__.r(__webpack_exports__);
 var doc = function doc(FormField) {
   var DocumentedFormField = Object(react_desc__WEBPACK_IMPORTED_MODULE_0__["describe"])(FormField).availableAt(Object(_utils__WEBPACK_IMPORTED_MODULE_1__["getAvailableAtBadge"])('FormField')).description("A single field in a form. FormField wraps an input component with\n      a label, help, and/or error messaging. It typically contains an input\n      control like TextInput, TextArea, Select, etc.").usage("import { FormField } from 'grommet';\n<FormField />").intrinsicElement('div');
   DocumentedFormField.propTypes = {
-    component: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func.description("The component to insert in the FormField. Grommet will add update the form values when this field changes. Any additional properties (such as initial value) you pass to FormField will be forwarded to this component."),
+    component: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object]).description("The component to insert in the FormField. Grommet will add update the form values when this field changes. Any additional properties (such as initial value) you pass to FormField will be forwarded to this component. The component may be custom as long it supports the proporties of name, value, onChange (event => {}), while event has either event.value or event.target.value.  "),
     error: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].node]).description('Any error text describing issues with the field'),
     help: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].node]).description('Any help text describing how the field works'),
     htmlFor: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string.description('The id of the input element contained in this field'),
@@ -53135,7 +53219,7 @@ var doc = function doc(FormField) {
       regexp: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object,
       // regular expression
       message: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string
-    }), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func]).description("Validation rule. Provide a regular expression or a function. If a\n      function is provided, it will be called with two arguments, the value\n      for this field and the entire value object. This permits validation to\n      encompass multiple fields. The function should return a string message\n      describing the validation issue, if any.")
+    }), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func]).description("Validation rule when used within a grommet Form. Provide a regular\n      expression or a function. If a\n      function is provided, it will be called with two arguments, the value\n      for this field and the entire value object. This permits validation to\n      encompass multiple fields. The function should return a string message\n      describing the validation issue, if any.")
   };
   return DocumentedFormField;
 };
@@ -54325,9 +54409,7 @@ function (_PureComponent) {
         /* eslint-disable react/no-find-dom-node */
         var beginRect = Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["findDOMNode"])(_this.firstPageItemRef.current).getBoundingClientRect();
         var endRect = Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["findDOMNode"])(_this.lastPageItemRef.current).getBoundingClientRect();
-        /* eslint-enable react/no-find-dom-node */
-
-        var nextPageHeight = endRect.y + endRect.height - beginRect.y; // Check if the items are arranged in a single column or not.
+        var nextPageHeight = endRect.top + endRect.height - beginRect.top; // Check if the items are arranged in a single column or not.
 
         var multiColumn = nextPageHeight / step < endRect.height;
         var pageArea = endRect.height * endRect.width * step; // In case the pageHeight is smaller than the visible area,
@@ -56345,19 +56427,10 @@ var Menu =
 function (_Component) {
   _inheritsLoose(Menu, _Component);
 
-  function Menu() {
+  function Menu(props) {
     var _this;
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      activeItemIndex: -1,
-      open: false
-    });
+    _this = _Component.call(this, props) || this;
 
     _defineProperty(_assertThisInitialized(_this), "buttonRefs", {});
 
@@ -56425,6 +56498,10 @@ function (_Component) {
       }
     });
 
+    _this.state = {
+      activeItemIndex: -1,
+      open: props.open || false
+    };
     return _this;
   }
 
@@ -56606,7 +56683,7 @@ var doc = function doc(Menu) {
     }),
     dropBackground: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].shape({
       color: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string,
-      opacity: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['weak', 'medium', 'strong']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool])
+      opacity: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].number, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['weak', 'medium', 'strong'])])
     })]).description('Background color when drop is active'),
     dropTarget: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object.description("Target where the drop will be aligned to. This should be\n      a React reference. Typically, this is not required as the drop will be\n      aligned to the Menu itself by default."),
     dropProps: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object.description('Any valid Drop prop.'),
@@ -56621,6 +56698,7 @@ var doc = function doc(Menu) {
       openMenu: 'Open Menu',
       closeMenu: 'Close Menu'
     }),
+    open: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description('Whether the state of the component should be open').defaultValue(false),
     size: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['small', 'medium', 'large', 'xlarge']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string]).description('The size of the menu.').defaultValue('medium')
   });
   return DocumentedMenu;
@@ -58225,21 +58303,47 @@ function (_Component) {
     };
     var boxDirection = direction === 'vertical' ? 'row' : 'column';
     var type = theme.rangeSelector && theme.rangeSelector.edge && theme.rangeSelector.edge.type || 'disc';
+    var node;
+
+    if (type === 'bar') {
+      node = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], {
+        flex: true,
+        justifySelf: "stretch",
+        width: size + "px",
+        background: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])(color || 'control', theme),
+        border: focused ? {
+          color: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])('focus', theme)
+        } : undefined
+      });
+    } else if (type === 'disc') {
+      node = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], {
+        width: size + (focused ? 2 : 0) + "px",
+        height: size + (focused ? 2 : 0) + "px",
+        round: "full",
+        background: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])(color || 'control', theme),
+        border: focused ? {
+          color: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])('focus', theme)
+        } : undefined
+      });
+    } else {
+      node = type;
+    }
+
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Keyboard__WEBPACK_IMPORTED_MODULE_5__["Keyboard"], keyboardProps, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], {
       direction: boxDirection,
       style: {
         flex: '0 0 1px'
       },
       overflow: "visible",
-      align: "center"
+      align: "center",
+      justify: "center"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], _extends({
       ref: forwardRef,
       direction: boxDirection,
-      justify: type === 'bar' ? 'stretch' : 'center',
+      justify: "center",
       align: "center",
       basis: "full",
       fill: fill,
-      margin: type === 'bar' ? undefined : 'xsmall',
       style: {
         cursor: cursor,
         minWidth: size,
@@ -58256,22 +58360,7 @@ function (_Component) {
           focused: false
         });
       }
-    }, rest), type === 'bar' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], {
-      flex: true,
-      width: size + "px",
-      background: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])(color || 'control', theme),
-      border: focused ? {
-        color: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])('focus', theme)
-      } : undefined
-    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_4__["Box"], {
-      width: size + (focused ? 2 : 0) + "px",
-      height: size + (focused ? 2 : 0) + "px",
-      round: "full",
-      background: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])(color || 'control', theme),
-      border: focused ? {
-        color: Object(_utils__WEBPACK_IMPORTED_MODULE_6__["normalizeColor"])('focus', theme)
-      } : undefined
-    }))));
+    }, rest), node)));
   };
 
   return EdgeControl;
@@ -58691,8 +58780,8 @@ var themeDoc = {
     defaultValue: 'light-4'
   },
   'rangeSelector.edge.type': {
-    description: 'The edge style type.',
-    type: "'bar' | 'disc'",
+    description: 'The edge control type.',
+    type: "'bar' | 'disc' | node",
     defaultValue: undefined
   },
   'global.spacing': {
@@ -59283,14 +59372,12 @@ function (_Component) {
       size: size,
       onClick: disabled === true ? undefined : this.onOpen
     }))), SelectIcon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
-      margin: {
-        horizontal: 'small'
-      },
+      margin: theme.select.icons.margin,
       flex: false,
       style: {
         minWidth: 'auto'
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SelectIcon, {
+    }, Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(SelectIcon) ? SelectIcon : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SelectIcon, {
       color: iconColor,
       size: size
     })))));
@@ -59950,7 +60037,7 @@ var doc = function doc(Select) {
     dropTarget: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object.description("Target where the options drop will be aligned to. This should be\n      a React reference. Typically, this is not required as the drop will be\n      aligned to the Select itself by default."),
     dropProps: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object.description('Any valid Drop prop.'),
     focusIndicator: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Whether when 'plain' it should receive a focus outline."),
-    icon: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func]).description('A custom icon to be used when rendering the select. You can use false to not render an icon at all.'),
+    icon: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].node]).description('A custom icon to be used when rendering the select. You can use false to not render an icon at all.'),
     labelKey: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func]).description("When the options array contains objects, this property indicates how\n      to determine the label of each option. If a string is\n      provided, it is used as the key to retrieve each option's label.\n      If a function is provided, it is called with the option and the\n      return value indicates the label."),
     messages: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].shape({
       multiple: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string
@@ -59961,7 +60048,7 @@ var doc = function doc(Select) {
     onOpen: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func.description('Function that will be called when the Select drop opens.'),
     onSearch: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func.description("Function that will be called when the user types in the search input.\n      If this property is not provided, no search field will be rendered."),
     options: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].arrayOf(react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].element, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].object])).description("Options can be either a string or an object. If an object is used, use\n      children callback in order to render anything based on the current item.").isRequired,
-    open: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Initial state of the select component"),
+    open: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Control the state of the component."),
     placeholder: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].node]).description('Placeholder text to use when no value is provided.'),
     plain: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description('Whether this is a plain Select input with no border or padding.'),
     searchPlaceholder: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string.description('Placeholder text to use in the search box when the search input is empty.'),
@@ -59999,6 +60086,11 @@ var themeDoc = {
   'select.control.extend': {
     description: 'Any additional style for the control of the Select component.',
     type: 'string | (props) => {}',
+    defaultValue: undefined
+  },
+  'select.icons.margin': {
+    description: 'The margin used for Select icons.',
+    type: 'string | object',
     defaultValue: undefined
   },
   'select.icons.color': {
@@ -61923,10 +62015,13 @@ var colorStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])([
 var weightStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["font-weight:", ";"], function (props) {
   return props.weight;
 });
+var wordBreakStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["word-break:", ";"], function (props) {
+  return props.wordBreak;
+});
 var StyledText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
   displayName: "StyledText",
   componentId: "sc-1sadyjn-0"
-})(["", " ", " ", " ", " ", " ", " ", ""], _utils__WEBPACK_IMPORTED_MODULE_1__["genericStyles"], function (props) {
+})(["", " ", " ", " ", " ", " ", " ", " ", ""], _utils__WEBPACK_IMPORTED_MODULE_1__["genericStyles"], function (props) {
   return sizeStyle(props);
 }, function (props) {
   return props.textAlign && textAlignStyle;
@@ -61936,6 +62031,8 @@ var StyledText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.
   return props.colorProp && colorStyle;
 }, function (props) {
   return props.weight && weightStyle;
+}, function (props) {
+  return props.wordBreak && wordBreakStyle;
 }, function (props) {
   return props.theme.text && props.theme.text.extend;
 });
@@ -62018,7 +62115,8 @@ var doc = function doc(Text) {
     as: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].string, react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].func]).description("The DOM tag or react component to use for the element.").defaultValue('span'),
     textAlign: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['start', 'center', 'end']).description('How to align the text inside the component.').defaultValue('start'),
     truncate: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].bool.description("Restrict the text to a single line and truncate with ellipsis if it\nis too long to all fit.").defaultValue(false),
-    weight: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['normal', 'bold']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].number]).description('Font weight')
+    weight: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOfType([react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['normal', 'bold']), react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].number]).description('Font weight'),
+    wordBreak: react_desc__WEBPACK_IMPORTED_MODULE_0__["PropTypes"].oneOf(['normal', 'break-all', 'keep-all', 'break-word']).description('Whether words should break when reaching the end of a line.').defaultValue('normal')
   });
   return DocumentedText;
 };
@@ -62579,20 +62677,25 @@ function (_Component) {
       }
     });
 
-    _defineProperty(_assertThisInitialized(_this), "onClickSuggestion", function (suggestion) {
+    _defineProperty(_assertThisInitialized(_this), "onClickSuggestion", function (suggestion, event) {
       var _this$props5 = _this.props,
           forwardRef = _this$props5.forwardRef,
           onSelect = _this$props5.onSelect;
 
       _this.setState({
-        showDrop: false
+        showDrop: false,
+        activeSuggestionIndex: -1
       });
 
       if (onSelect) {
-        onSelect({
-          target: (forwardRef || _this.inputRef).current,
-          suggestion: suggestion
-        });
+        // TODO: needed for backwards compatibility sake
+
+        /* eslint-disable no-param-reassign */
+        event.suggestion = suggestion;
+        event.target = (forwardRef || _this.inputRef).current;
+        /* eslint-enable no-param-reassign */
+
+        onSelect(event);
       }
     });
 
@@ -62604,19 +62707,22 @@ function (_Component) {
       var activeSuggestionIndex = _this.state.activeSuggestionIndex;
 
       _this.setState({
-        showDrop: false
+        showDrop: false,
+        activeSuggestionIndex: -1
       });
 
       if (activeSuggestionIndex >= 0) {
         event.preventDefault(); // prevent submitting forms
+        // TODO: needed for backwards compatibility sake
 
-        var suggestion = suggestions[activeSuggestionIndex];
+        /* eslint-disable no-param-reassign */
+
+        event.suggestion = suggestions[activeSuggestionIndex];
+        event.target = (forwardRef || _this.inputRef).current;
+        /* eslint-enable no-param-reassign */
 
         if (onSelect) {
-          onSelect({
-            target: (forwardRef || _this.inputRef).current,
-            suggestion: suggestion
-          });
+          onSelect(event);
         }
       }
     });
@@ -62691,8 +62797,8 @@ function (_Component) {
           active: activeSuggestionIndex === index || selectedSuggestionIndex === index,
           fill: true,
           hoverIndicator: "background",
-          onClick: function onClick() {
-            return _this.onClickSuggestion(suggestion);
+          onClick: function onClick(event) {
+            _this.onClickSuggestion(suggestion, event);
           }
         }, plain ? renderLabel(suggestion) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Box__WEBPACK_IMPORTED_MODULE_5__["Box"], {
           align: "start",
@@ -65892,6 +65998,9 @@ var generate = function generate(baseSpacing, scale) {
       },
       icons: {
         // color: { dark: undefined, light: undefined },
+        margin: {
+          horizontal: 'small'
+        },
         down: grommet_icons_icons_FormDown__WEBPACK_IMPORTED_MODULE_5__["FormDown"]
       },
       options: {
@@ -66575,10 +66684,46 @@ var parseHexToRGB = function parseHexToRGB(color) {
   color.match(/[A-Za-z0-9]{2}/g).map(function (v) {
     return parseInt(v, 16);
   });
+}; // From: https://stackoverflow.com/a/9493060/8513067
+// Converts an HSL color value to RGB. Conversion formula
+// adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+// Assumes h, s, and l are contained in the set [0, 1] and
+// returns r, g, and b in the set [0, 255].
+
+
+var hslToRGB = function hslToRGB(h, s, l) {
+  var r;
+  var g;
+  var b;
+
+  if (s === 0 || s === '0') {
+    // achromatic
+    r = l;
+    g = l;
+    b = l;
+  } else {
+    var hue2rgb = function hue2rgb(p, q, inT) {
+      var t = inT;
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 0.16666667) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 0.66666667) return p + (q - p) * (0.66666667 - t) * 6;
+      return p;
+    };
+
+    var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    var p = 2 * l - q;
+    r = hue2rgb(p, q, h + 0.33333333);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 0.33333333);
+  }
+
+  return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 };
 
 var canExtractRGBArray = function canExtractRGBArray(color) {
-  return /^#/.test(color) || /^rgb/.test(color);
+  return /^#/.test(color) || /^rgb/.test(color) || /^hsl/.test(color);
 };
 
 var getRGBArray = function getRGBArray(color) {
@@ -66587,7 +66732,19 @@ var getRGBArray = function getRGBArray(color) {
   }
 
   if (/^rgb/.test(color)) {
-    return color.match(/rgba?\((\s?[0-9]*\s?),(\s?[0-9]*\s?),(\s?[0-9]*\s?).*?\)/).splice(1);
+    return color.match(/rgba?\(\s?([0-9]*)\s?,\s?([0-9]*)\s?,\s?([0-9]*)\s?.*?\)/).splice(1);
+  }
+
+  if (/^hsl/.test(color)) {
+    // e.g. hsl(240, 60%, 50%)
+    var _color$match$splice$m = color.match(/hsla?\(\s?([0-9]*)\s?,\s?([0-9]*)%?\s?,\s?([0-9]*)%?\s?.*?\)/).splice(1).map(function (v) {
+      return parseInt(v, 10);
+    }),
+        h = _color$match$splice$m[0],
+        s = _color$match$splice$m[1],
+        l = _color$match$splice$m[2];
+
+    return hslToRGB(h / 360.0, s / 100.0, l / 100.0);
   }
 
   return color;
@@ -67155,7 +67312,7 @@ var focusStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])([
 }, function (props) {
   return Object(_colors__WEBPACK_IMPORTED_MODULE_1__["normalizeColor"])(props.theme.global.focus.border.color, props.theme);
 });
-var inputStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["box-sizing:border-box;font-size:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
+var inputStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["box-sizing:border-box;font-size:inherit;font-family:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
   return Object(_mixins__WEBPACK_IMPORTED_MODULE_2__["parseMetricToNum"])(props.theme.global.input.padding) - Object(_mixins__WEBPACK_IMPORTED_MODULE_2__["parseMetricToNum"])(props.theme.global.control.border.width);
 }, function (props) {
   return props.theme.global.input.weight && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["font-weight:", ";"], props.theme.global.input.weight);
@@ -67947,7 +68104,8 @@ var generate = function generate(baseSpacing, scale) {
     },
     grommet: {},
     heading: {
-      font: {// family: undefined
+      font: {
+        family: 'Roboto',
       },
       level: {
         1: {
@@ -67960,7 +68118,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(24))
         },
         2: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(2)),
@@ -67978,7 +68137,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(6))
         },
         4: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(0)),
@@ -67987,7 +68147,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(0))
         },
         5: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-0.5)),
@@ -67996,7 +68157,8 @@ var generate = function generate(baseSpacing, scale) {
           xlarge: _extends({}, fontSizing(-0.5))
         },
         6: {
-          font: {// family: undefined,
+          font: {
+            family: 'Roboto',
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-1)),
@@ -68101,6 +68263,9 @@ var generate = function generate(baseSpacing, scale) {
       },
       icons: {
         // color: { dark: undefined, light: undefined },
+        margin: {
+          horizontal: 'small'
+        },
         down: _FormDown.FormDown
       },
       options: {
@@ -68342,18 +68507,14 @@ var dark = (0, _object.deepFreeze)({
       }
     },
     font: {
-      family: "'Roboto', sans-serif"
-    },
-    heading: {
-      extend: "font-family: 'Poppins', sans-serif;"
+      family: 'Arial'
     },
     input: {
       weight: 700
     }
   },
   anchor: {
-    color: 'control',
-    weight: 500
+    color: 'control'
   },
   layer: {
     background: backgroundColor,
@@ -68842,10 +69003,46 @@ var parseHexToRGB = function parseHexToRGB(color) {
   color.match(/[A-Za-z0-9]{2}/g).map(function (v) {
     return parseInt(v, 16);
   });
+}; // From: https://stackoverflow.com/a/9493060/8513067
+// Converts an HSL color value to RGB. Conversion formula
+// adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+// Assumes h, s, and l are contained in the set [0, 1] and
+// returns r, g, and b in the set [0, 255].
+
+
+var hslToRGB = function hslToRGB(h, s, l) {
+  var r;
+  var g;
+  var b;
+
+  if (s === 0 || s === '0') {
+    // achromatic
+    r = l;
+    g = l;
+    b = l;
+  } else {
+    var hue2rgb = function hue2rgb(p, q, inT) {
+      var t = inT;
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 0.16666667) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 0.66666667) return p + (q - p) * (0.66666667 - t) * 6;
+      return p;
+    };
+
+    var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    var p = 2 * l - q;
+    r = hue2rgb(p, q, h + 0.33333333);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 0.33333333);
+  }
+
+  return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 };
 
 var canExtractRGBArray = function canExtractRGBArray(color) {
-  return /^#/.test(color) || /^rgb/.test(color);
+  return /^#/.test(color) || /^rgb/.test(color) || /^hsl/.test(color);
 };
 
 var getRGBArray = function getRGBArray(color) {
@@ -68854,7 +69051,19 @@ var getRGBArray = function getRGBArray(color) {
   }
 
   if (/^rgb/.test(color)) {
-    return color.match(/rgba?\((\s?[0-9]*\s?),(\s?[0-9]*\s?),(\s?[0-9]*\s?).*?\)/).splice(1);
+    return color.match(/rgba?\(\s?([0-9]*)\s?,\s?([0-9]*)\s?,\s?([0-9]*)\s?.*?\)/).splice(1);
+  }
+
+  if (/^hsl/.test(color)) {
+    // e.g. hsl(240, 60%, 50%)
+    var _color$match$splice$m = color.match(/hsla?\(\s?([0-9]*)\s?,\s?([0-9]*)%?\s?,\s?([0-9]*)%?\s?.*?\)/).splice(1).map(function (v) {
+      return parseInt(v, 10);
+    }),
+        h = _color$match$splice$m[0],
+        s = _color$match$splice$m[1],
+        l = _color$match$splice$m[2];
+
+    return hslToRGB(h / 360.0, s / 100.0, l / 100.0);
   }
 
   return color;
@@ -69442,7 +69651,7 @@ var focusStyle = (0, _styledComponents.css)(["> circle,> ellipse,> line,> path,>
   return (0, _colors.normalizeColor)(props.theme.global.focus.border.color, props.theme);
 });
 exports.focusStyle = focusStyle;
-var inputStyle = (0, _styledComponents.css)(["box-sizing:border-box;font-size:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
+var inputStyle = (0, _styledComponents.css)(["box-sizing:border-box;font-size:inherit;font-family:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
   return (0, _mixins.parseMetricToNum)(props.theme.global.input.padding) - (0, _mixins.parseMetricToNum)(props.theme.global.control.border.width);
 }, function (props) {
   return props.theme.global.input.weight && (0, _styledComponents.css)(["font-weight:", ";"], props.theme.global.input.weight);
@@ -93094,20 +93303,25 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout */ "./pages/components/layout.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _register__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../register */ "./pages/register.js");
-/* harmony import */ var _itemForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../itemForm */ "./pages/itemForm.js");
-/* harmony import */ var _items__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../items */ "./pages/items.js");
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout */ "./pages/components/layout.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _register__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../register */ "./pages/register.js");
+/* harmony import */ var _itemForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../itemForm */ "./pages/itemForm.js");
+/* harmony import */ var _items__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../items */ "./pages/items.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../index */ "./pages/index.js");
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/header.js";
+
+
 
 
 
@@ -93124,107 +93338,111 @@ var linkStyle = {
 };
 
 var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     as: "/p/".concat(props.id),
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Anchor"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Anchor"], {
     color: "neutral-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, props.title));
 };
 
 var Header = function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Grommet"], {
-    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_8__["dark"],
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Grommet"], {
+    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_10__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Box"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Box"], {
     direction: "row-responsive",
     fit: "cover",
     pad: "small",
+    background: "neutral-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tabs"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tab"], {
-    title: "HOME",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tabs"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tab"], {
-    title: "ALL ITEMS",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
+    title: "HOME",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Layer"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
+    title: "ALL ITEMS",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_items__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Layer"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tab"], {
-    title: "ADD ITEM",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_items__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_itemForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
+    title: "ADD ITEM",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tab"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_itemForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "LOGIN",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Tab"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Tab"], {
     title: "REGISTER",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
-  })))));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "36998399",
+    __self: this
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9oZWFkZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaURZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi9sYXlvdXQnO1xuaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCc7XG5pbXBvcnQgUmVnaXN0ZXIgZnJvbSAnLi4vcmVnaXN0ZXInO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSAnLi4vaXRlbUZvcm0nO1xuaW1wb3J0IEl0ZW1zIGZyb20gJy4uL2l0ZW1zJztcbmltcG9ydCBJbmRleCBmcm9tICcuLi9pbmRleCc7XG5pbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBHcm9tbWV0LCBBbmNob3IsIEJveCwgQWNjb3JkaW9uLCBBY2NvcmRpb25QYW5lbCwgRHJvcEJ1dHRvbiwgVGFicywgVGFiLCBMYXllciwgQnV0dG9uLCBGb3JtRmllbGQsIFRleHRJbnB1dCwgU2VsZWN0LCBUZXh0QXJlYSwgb25DbGlja091dHNpZGUgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3QgbGlua1N0eWxlID0ge1xuICAgIG1hcmdpblJpZ2h0OiAxNSxcbiAgICB0ZXh0RGVjb3JhdGlvbjogXCJub25lXCJcbn1cblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gICAgPExpbmsgYXM9e2AvcC8ke3Byb3BzLmlkfWB9IGhyZWY9e2AvcG9zdD90aXRsZT0ke3Byb3BzLnRpdGxlfWB9PlxuICAgICAgICA8QW5jaG9yIGNvbG9yPVwibmV1dHJhbC0yXCI+e3Byb3BzLnRpdGxlfTwvQW5jaG9yPjwvTGluaz5cbilcblxuXG5jb25zdCBIZWFkZXIgPSAoKSA9PiAoXG4gICAgPEdyb21tZXQgdGhlbWU9e2Rhcmt9PlxuXG4gICAgICAgIDxCb3ggZGlyZWN0aW9uPVwicm93LXJlc3BvbnNpdmVcIiBmaXQ9XCJjb3ZlclwiIHBhZD1cInNtYWxsXCIgYmFja2dyb3VuZD1cIm5ldXRyYWwtM1wiPlxuXG4gICAgICAgICAgICB7LyogVEFCUyBPUFRJT04gKi99XG4gICAgICAgICAgICA8VGFicz5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiSE9NRVwiIC8+XG4gICAgICAgICAgICAgICAgPFRhYiB0aXRsZT1cIkFMTCBJVEVNU1wiPlxuICAgICAgICAgICAgICAgICAgICA8TGF5ZXI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8SXRlbXMgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9MYXllcj5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiQUREIElURU1cIj5cbiAgICAgICAgICAgICAgICAgICAgPEFkZEl0ZW0gLz5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiTE9HSU5cIj5cbiAgICAgICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgICAgICA8VGFiIHRpdGxlPVwiUkVHSVNURVJcIj5cbiAgICAgICAgICAgICAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICAgICAgICAgICAgPC9UYWI+XG4gICAgICAgICAgICA8L1RhYnM+XG5cbiAgICAgICAgPC9Cb3g+XG5cbiAgICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgICAgICBgQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG8nKTtcbiAgICAgICAgXG4gICAgICAgIGgxIHtcbiAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIH07XG4gICAgICAgIFxuICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9YFxuICAgICAgICB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0ID5cbilcblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyOyJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -93280,7 +93498,7 @@ var Layout = function Layout(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: wrapperStyle,
-    className: "jsx-390146280",
+    className: "jsx-36998399",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -93288,7 +93506,7 @@ var Layout = function Layout(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: headerStyle,
-    className: "jsx-390146280",
+    className: "jsx-36998399",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -93302,16 +93520,16 @@ var Layout = function Layout(props) {
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: layoutWidth,
-    className: "jsx-390146280",
+    className: "jsx-36998399",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
   }, props.children)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "390146280",
+    id: "36998399",
     __self: this
-  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-390146280{font-family:'Roboto',sans-serif;font-weight:bold;}ul.jsx-390146280{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNZLEFBQzhELEFBR2xCLEFBS1gsc0JBQ1gsVUFMTSxDQU1uQixnQkFMQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3Qgd3JhcHBlclN0eWxlID0ge1xuICAgIG1hcmdpbkxlZnQ6IDAsXG4gICAgbWFyZ2luUmlnaHQ6IDAsXG4gICAgYmFja2dyb3VuZENvbG9yOiBcIiMxMTExMTFcIixcbn1cbmNvbnN0IGhlYWRlclN0eWxlID0ge1xuICAgIG1hcmdpbjogMTUsXG4gICAgZGlzcGxheTogXCJmbGV4XCIsXG4gICAgYWxpZ25Db250ZW50OiBcImNlbnRlclwiXG59O1xuXG5jb25zdCBsYXlvdXRXaWR0aCA9IHtcbiAgICBtYXJnaW46IDAsXG4gICAgcGFkZGluZzogMFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2hlYWRlclN0eWxlfT5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+e1xuICAgICAgICAgICAgYEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvJyk7XG4gICAgICAgIFxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9O1xuICAgICAgICBcbiAgICAgICAgdWwge1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgIH1gXG4gICAgICAgIH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICA8L0dyb21tZXQ+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IExheW91dDsiXX0= */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/layout.js */"));
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3Qgd3JhcHBlclN0eWxlID0ge1xuICAgIG1hcmdpbkxlZnQ6IDAsXG4gICAgbWFyZ2luUmlnaHQ6IDAsXG4gICAgYmFja2dyb3VuZENvbG9yOiBcIiMxMTExMTFcIixcbn1cbmNvbnN0IGhlYWRlclN0eWxlID0ge1xuICAgIG1hcmdpbjogMTUsXG4gICAgZGlzcGxheTogXCJmbGV4XCIsXG4gICAgYWxpZ25Db250ZW50OiBcImNlbnRlclwiXG59O1xuXG5jb25zdCBsYXlvdXRXaWR0aCA9IHtcbiAgICBtYXJnaW46IDAsXG4gICAgcGFkZGluZzogMFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2hlYWRlclN0eWxlfT5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+e1xuICAgICAgICAgICAgYEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvJyk7XG4gICAgICAgIFxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9O1xuICAgICAgICBcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICB1bCB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgfWBcbiAgICAgICAgfVxuICAgICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbilcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0OyJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/components/layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -93328,16 +93546,18 @@ var Layout = function Layout(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/generator */ "./node_modules/@babel/generator/lib/index.js");
-/* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_generator__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! grommet */ "./node_modules/grommet/es6/index.js");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! grommet/themes */ "./node_modules/grommet/themes/index.js");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/generator */ "./node_modules/@babel/generator/lib/index.js");
+/* harmony import */ var _babel_generator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_generator__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js";
 
 
@@ -93346,8 +93566,9 @@ var _jsxFileName = "/Users/sjuntilla/Documents/devleague/consume-more-stuff/page
 
 
 
+
 var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     as: "/p/".concat(props.id),
     href: "/post?title=".concat(props.title),
     __source: {
@@ -93355,7 +93576,7 @@ var PostLink = function PostLink(props) {
       lineNumber: 8
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Anchor"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Anchor"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -93365,20 +93586,20 @@ var PostLink = function PostLink(props) {
 };
 
 function Index() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Grommet"], {
-    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_4__["dark"],
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Grommet"], {
+    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_5__["dark"],
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
     key: "banner",
     pad: "large",
     animation: "fadeIn",
@@ -93391,7 +93612,7 @@ function Index() {
       lineNumber: 16
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
     key: "heading",
     elevation: "xxsmall",
     __source: {
@@ -93399,8 +93620,8 @@ function Index() {
       lineNumber: 17
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
-    color: "brand",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
+    color: "accent-3",
     size: "large",
     pad: "xxsmall",
     __source: {
@@ -93408,7 +93629,7 @@ function Index() {
       lineNumber: 18
     },
     __self: this
-  }, "silk code."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+  }, "silk code."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
     key: "blurb",
     pad: "xxsmall",
     height: "small",
@@ -93419,14 +93640,14 @@ function Index() {
       lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Text"], {
-    color: "accent-3",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Text"], {
+    color: "accent-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+  }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
     key: "type",
     align: "start",
     pad: "hair",
@@ -93436,7 +93657,7 @@ function Index() {
       lineNumber: 24
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
     color: "accent-2",
     margin: "small",
     __source: {
@@ -93444,7 +93665,7 @@ function Index() {
       lineNumber: 25
     },
     __self: this
-  }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Carousel"], {
+  }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Carousel"], {
     play: "30000",
     background: "backgroundColor",
     height: "small",
@@ -93454,7 +93675,7 @@ function Index() {
       lineNumber: 26
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
     fit: "cover",
     src: "https://i.imgur.com/W6fcu6b.png",
     __source: {
@@ -93462,7 +93683,7 @@ function Index() {
       lineNumber: 27
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
     fit: "cover",
     src: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg",
     __source: {
@@ -93470,7 +93691,7 @@ function Index() {
       lineNumber: 28
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
     fit: "cover",
     src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*",
     __source: {
@@ -93478,7 +93699,10 @@ function Index() {
       lineNumber: 29
     },
     __self: this
-  })))));
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "36998399",
+    __self: this
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zanVudGlsbGEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNRLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc2p1bnRpbGxhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tICcuL2NvbXBvbmVudHMvbGF5b3V0JztcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XG5pbXBvcnQgeyBHcm9tbWV0LCBIZWFkaW5nLCBBbmNob3IsIE1lbnUsIEJveCwgVGV4dCwgQ2xvY2ssIENhcm91c2VsLCBJbWFnZSB9IGZyb20gJ2dyb21tZXQnO1xuaW1wb3J0IHsgZGFyayB9IGZyb20gJ2dyb21tZXQvdGhlbWVzJztcbmltcG9ydCBnZW5lcmF0ZSBmcm9tICdAYmFiZWwvZ2VuZXJhdG9yJztcblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gIDxMaW5rIGFzPXtgL3AvJHtwcm9wcy5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwcm9wcy50aXRsZX1gfT5cbiAgICA8QW5jaG9yPntwcm9wcy50aXRsZX08L0FuY2hvcj48L0xpbms+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEluZGV4KCkge1xuICByZXR1cm4gKFxuICAgIDxHcm9tbWV0IHRoZW1lPXtkYXJrfT5cbiAgICAgIDxMYXlvdXQ+XG4gICAgICAgIDxCb3gga2V5PVwiYmFubmVyXCIgcGFkPVwibGFyZ2VcIiBhbmltYXRpb249XCJmYWRlSW5cIiBiYWNrZ3JvdW5kPXt7IGltYWdlOiBcInVybChodHRwczovL2kuaW1ndXIuY29tL0puUHI4SHMucG5nKVwiLCBzaXplOiBcImNvdmVyXCIgfX0+XG4gICAgICAgICAgPEJveCBrZXk9XCJoZWFkaW5nXCIgZWxldmF0aW9uPVwieHhzbWFsbFwiPlxuICAgICAgICAgICAgPEhlYWRpbmcgY29sb3I9XCJhY2NlbnQtM1wiIHNpemU9XCJsYXJnZVwiIHBhZD1cInh4c21hbGxcIj5zaWxrIGNvZGUuPC9IZWFkaW5nPlxuICAgICAgICAgICAgPEJveCBrZXk9XCJibHVyYlwiIHBhZD1cInh4c21hbGxcIiBoZWlnaHQ9XCJzbWFsbFwiIHdpZHRoPVwibGFyZ2VcIiBhbGlnblNlbGY9XCJzdGFydFwiPlxuICAgICAgICAgICAgICA8VGV4dCBjb2xvcj1cImFjY2VudC00XCI+TG9yZW0gS2hhbGVkIElwc3VtIGlzIGEgbWFqb3Iga2V5IHRvIHN1Y2Nlc3MuIFRvIGJlIHN1Y2Nlc3NmdWwgeW914oCZdmUgZ290IHRvIHdvcmsgaGFyZCwgdG8gbWFrZSBoaXN0b3J5LCBzaW1wbGUsIHlvdeKAmXZlIGdvdCB0byBtYWtlIGl0LiBJbiBsaWZlIHRoZXJlIHdpbGwgYmUgcm9hZCBibG9ja3MgYnV0IHdlIHdpbGwgb3ZlciBjb21lIGl0LiBMaWZlIGlzIHdoYXQgeW91IG1ha2UgaXQsIHNvIGxldOKAmXMgbWFrZSBpdC4gQmxlc3MgdXAuIFRoZXkgd2lsbCB0cnkgdG8gY2xvc2UgdGhlIGRvb3Igb24geW91LCBqdXN0IG9wZW4gaXQuIExvb2sgYXQgdGhlIHN1bnNldCwgbGlmZSBpcyBhbWF6aW5nLCBsaWZlIGlzIGJlYXV0aWZ1bCwgbGlmZSBpcyB3aGF0IHlvdSBtYWtlIGl0LiBNYWpvciBrZXksIGRvbuKAmXQgZmFsbCBmb3IgdGhlIHRyYXAsIHN0YXkgZm9jdXNlZC4gSXTigJlzIHRoZSBvbmVzIGNsb3Nlc3QgdG8geW91IHRoYXQgd2FudCB0byBzZWUgeW91IGZhaWwuIENvbmdyYXR1bGF0aW9ucywgeW91IHBsYXllZCB5b3Vyc2VsZi4gRmluZCBwZWFjZSwgbGlmZSBpcyBsaWtlIGEgd2F0ZXIgZmFsbCwgeW914oCZdmUgZ290dGEgZmxvdy48L1RleHQ+XG4gICAgICAgICAgICA8L0JveD5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgPC9Cb3g+XG4gICAgICAgIDxCb3gga2V5PVwidHlwZVwiIGFsaWduPVwic3RhcnRcIiBwYWQ9XCJoYWlyXCIgb3ZlcmZsb3c9XCJoaWRkZW5cIj5cbiAgICAgICAgICA8SGVhZGluZyBjb2xvcj1cImFjY2VudC0yXCIgbWFyZ2luPVwic21hbGxcIj5GZWF0dXJlZCBJdGVtczwvSGVhZGluZz5cbiAgICAgICAgICA8Q2Fyb3VzZWwgcGxheT1cIjMwMDAwXCIgYmFja2dyb3VuZD1cImJhY2tncm91bmRDb2xvclwiIGhlaWdodD1cInNtYWxsXCIgZmlsbD5cbiAgICAgICAgICAgIDxJbWFnZSBmaXQ9XCJjb3ZlclwiIHNyYz1cImh0dHBzOi8vaS5pbWd1ci5jb20vVzZmY3U2Yi5wbmdcIiAvPlxuICAgICAgICAgICAgPEltYWdlIGZpdD1cImNvdmVyXCIgc3JjPVwiaHR0cHM6Ly9kMTdmbnE5ZGt6OWhnai5jbG91ZGZyb250Lm5ldC91cGxvYWRzLzIwMTgvMDQvUG9tZXJhbmlhbl8wMi5qcGdcIiAvPlxuICAgICAgICAgICAgPEltYWdlIGZpdD1cImNvdmVyXCIgc3JjPVwiaHR0cHM6Ly9oaXBzLmhlYXJzdGFwcHMuY29tL2htZy1wcm9kLnMzLmFtYXpvbmF3cy5jb20vaW1hZ2VzL2NhdC1xdW90ZXMtMTU0MzU5OTM5Mi5qcGc/Y3JvcD0xLjAweHc6MC43NTl4aDswLDAmcmVzaXplPTQ4MDoqXCIgLz5cbiAgICAgICAgICA8L0Nhcm91c2VsPlxuICAgICAgICA8L0JveD5cbiAgICAgIDwvTGF5b3V0PlxuICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgIGBAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bycpO1xuICAgICAgICBcbiAgICAgICAgaDEge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgfTtcbiAgICAgICAgXG4gICAgICAgIGJvZHkge1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgdWwge1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgIH1gXG4gICAgICB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbiAgKVxufSJdfQ== */\n/*@ sourceURL=/Users/sjuntilla/Documents/devleague/consume-more-stuff/pages/index.js */"));
 }
 
 /***/ }),
@@ -93640,7 +93864,7 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         type: "submit",
-        label: "AddItem",
+        label: "Add Item",
         primary: true,
         __source: {
           fileName: _jsxFileName,
@@ -93712,7 +93936,8 @@ var Items = function Items(_ref) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
     key: "wrapper",
-    direction: "row-responsive",
+    direction: "row",
+    wrap: "true",
     alignContent: "between",
     __source: {
       fileName: _jsxFileName,
@@ -93723,8 +93948,8 @@ var Items = function Items(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"], {
       basis: "medium",
       animation: "fadeIn",
-      background: "neutral-4",
-      elevation: "small",
+      background: "dark-1",
+      elevation: "xxsmall",
       gap: "small",
       margin: "medium",
       __source: {
@@ -93733,13 +93958,14 @@ var Items = function Items(_ref) {
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardTitle, {
-      color: "neutral-1",
+      color: "neutral-2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 18
       },
       __self: this
     }, item.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardContent, {
+      color: "dark-1",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 19
@@ -94002,7 +94228,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsjuntilla%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************************/
@@ -94025,5 +94251,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

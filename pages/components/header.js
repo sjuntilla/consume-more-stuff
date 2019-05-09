@@ -4,6 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import Register from '../register';
 import AddItem from '../itemForm';
 import Items from '../items';
+import Index from '../index';
 import { Component } from 'react';
 import { Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
 import { dark } from 'grommet/themes';
@@ -23,7 +24,7 @@ const PostLink = props => (
 const Header = () => (
     <Grommet theme={dark}>
 
-        <Box direction="row-responsive" fit="cover" pad="small">
+        <Box direction="row-responsive" fit="cover" pad="small" background="neutral-3">
 
             {/* TABS OPTION */}
             <Tabs>
@@ -44,7 +45,25 @@ const Header = () => (
             </Tabs>
 
         </Box>
-    </Grommet>
+
+        <style jsx>{
+            `@import url('https://fonts.googleapis.com/css?family=Roboto');
+        
+        h1 {
+          font-family: 'Roboto', sans-serif;
+          font-weight: bold;
+        };
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+                }
+        ul {
+          background-color: #ddd;
+          margin: 5px;
+        }`
+        }
+        </style>
+    </Grommet >
 )
 
 export default Header;
