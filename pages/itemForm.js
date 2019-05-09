@@ -27,8 +27,8 @@ class AddItem extends Component {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: this.state.name,
-                description: this.state.description,
+                name: this.state.name.toLowerCase(),
+                description: this.state.description.toLowerCase(),
                 price: this.state.price,
                 category: this.state.category.toLowerCase()
             })

@@ -3744,8 +3744,8 @@ function (_Component) {
           "Content-Type": "application/json"
         },
         body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-          name: this.state.name,
-          description: this.state.description,
+          name: this.state.name.toLowerCase(),
+          description: this.state.description.toLowerCase(),
           price: this.state.price,
           category: this.state.category.toLowerCase()
         })
