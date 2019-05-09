@@ -57,7 +57,7 @@ class Login extends Component {
             <Layer
                 position="right"
                 width="large"
-                full="vertical"
+
                 modal={false}
                 animate={true}
                 onClickOutside={this.onClose}

@@ -1,4 +1,4 @@
-import Layout from './components/layout';
+import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
 import { Box, Form, FormField, Select, Button, Layer, Grommet } from "grommet";
@@ -11,9 +11,9 @@ class AddItem extends Component {
             name: "",
             description: "",
             price: "",
-            category: "",
+            category: ""
             // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
-        }
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -34,7 +34,7 @@ class AddItem extends Component {
             })
         })
             .then(() => {
-                console.log("ADDED ITEM TOOOOOO ITEM LIST")
+                console.log("ADDED ITEM TOOOOOO ITEM LIST");
             })
             .catch(err => {
                 console.log(err);
@@ -51,7 +51,6 @@ class AddItem extends Component {
             <Layer
                 position="right"
                 width="large"
-                full="vertical"
                 modal={false}
                 animate="true"
                 onClickOutside={this.onClose}
@@ -124,7 +123,6 @@ class AddItem extends Component {
                         )} */}
 
                         <Button type="submit" label="Add Item" primary={true} />
-
                     </Form>
                 </Box>
             </Layer>
