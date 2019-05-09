@@ -61,6 +61,7 @@ render() {
                 required={true}
                 />
             <FormField onChange={this.handleChange} 
+                type="password"
                 name="password"
                 label="password"
                 required={true}
