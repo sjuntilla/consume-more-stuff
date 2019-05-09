@@ -12,6 +12,7 @@
     "express": "^4.16.4",
     "express-session": "^1.16.1",
     "grommet": "^2.6.6",
+    "grommet-controls": "^1.1.19",
     "grommet-icons": "^4.2.0",
     "isomorphic-unfetch": "^3.0.0",
     "knex": "^0.16.5",

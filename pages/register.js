@@ -2,6 +2,9 @@ import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
 import { Box, Button, CheckBox, Form, FormField, Select } from "grommet";
+
+
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -79,10 +82,12 @@ class Register extends Component {
         />
         <FormField
           onChange={this.handleChange}
+          type="password"
           name="password"
           label="Password"
           required={true}
         />
+        
         <Button type="submit" label="Register" primary={true} />
       </Form>
 
