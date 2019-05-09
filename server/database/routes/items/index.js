@@ -9,22 +9,27 @@ router.route("/items").get((req, res) => {
   });
 });
 
-router.route("/items").post(isAuthenticated, (req, res) => {
+router.route("/items").post((req, res) => {
+  const created_at = new Date();
+  //TBD user_id connection with item id
+  const user_id = 1;
   const { name, description, price, category } = req.body;
-  console.log("POOOOOOOOOST");
+  // console.log("POOOOOOOOOST");
   return new req.database.Item({
     name,
+    user_id,
     description,
     price,
-    category
+    category,
+    created_at
   })
     .save()
     .then(item => {
-      console.log("HITTTTTTTTTTTTTTTT");
+      // console.log("HITTTTTTTTTTTTTTTT")
       return res.json({ success: true });
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.sendStatus(500);
     });
 });
