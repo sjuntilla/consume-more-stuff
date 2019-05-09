@@ -12,6 +12,7 @@ class AddItem extends Component {
       description: "",
       price: "",
       category: ""
+      // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,7 +30,7 @@ class AddItem extends Component {
         name: this.state.name,
         description: this.state.description,
         price: this.state.price,
-        category: this.state.category
+        category: this.state.category.toLowerCase()
       })
     })
       .then(() => {
@@ -47,45 +48,75 @@ class AddItem extends Component {
   };
   render() {
     return (
-      <Layer
-        position="right"
-        width="large"
-        full="vertical"
-        modal={false}
-        animate="true"
-        onClickOutside={this.onClose}
-        onEsc={this.onClose}
-      >
-        <Box pad="large">
-          <Form onSubmit={this.handleSubmit}>
-            <FormField
-              onChange={this.handleChange}
-              name="name"
-              label="Product Name"
-              required={true}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="description"
-              label="Product Description"
-              required={true}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="price"
-              label="Product Price"
-              required={true}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="category"
-              label="Category"
-              required={true}
-            />
-            <Button type="submit" label="Add Item" primary={true} />
-          </Form>
-        </Box>
-      </Layer>
+      <Layout>
+        <Form onSubmit={this.handleSubmit}>
+          <FormField
+            onChange={this.handleChange}
+            name="name"
+            label="Product Name"
+            required={true}
+          />
+          <FormField
+            onChange={this.handleChange}
+            name="description"
+            label="Product Description"
+            required={true}
+          />
+          <FormField
+            onChange={this.handleChange}
+            name="price"
+            label="Product Price"
+            required={true}
+          />
+          <Select
+            placeholder="Category"
+            onChange={this.handleChange}
+            value={this.state.category}
+            options={["WELLNESS", "OFFICE", "ACCESSORIES"]}
+            onChange={({ option }) => this.setState({ category: option })}
+            name="category"
+            required={true}
+          />
+          {/* <Select
+                        multiple
+                        closeOnChange={false}
+                        placeholder="select an option..."
+                        selected={selected}
+                        options={options}
+                        dropHeight="medium"
+                        onClose={() =>
+                            this.setState({
+                                options: options.sort((p1, p2) => {
+                                    const p1Exists = selected.includes(p1);
+                                    const p2Exists = selected.includes(p2);
+
+                                    if (!p1Exists && p2Exists) {
+                                        return 1;
+                                    }
+                                    if (p1Exists && !p2Exists) {
+                                        return -1;
+                                    }
+                                    return p1.localeCompare(p2, undefined, {
+                                        numeric: true,
+                                        sensitivity: "base"
+                                    });
+                                })
+                            })
+                        }
+                        onChange={({ selected: nextSelected }) => {
+                            this.setState({ selected: nextSelected });
+                        }}
+                    >
+                        {(option, index) => (
+                            <Option
+                                value={option}
+                                selected={selected.indexOf(index) !== -1}
+                            />
+                        )} */}
+
+          <Button type="submit" label="AddItem" primary={true} />
+        </Form>
+      </Layout>
     );
   }
 }
