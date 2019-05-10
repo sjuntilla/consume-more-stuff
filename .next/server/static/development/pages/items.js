@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5696,14 +5696,14 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
-  !*** multi ./pages/index.js ***!
+  !*** multi ./pages/items.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/sylvia/Documents/devleague/consume-more-stuff/pages/items.js */"./pages/items.js");
 
 
 /***/ }),
@@ -5863,4 +5863,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=items.js.map

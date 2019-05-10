@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/items.js"],{
 
 /***/ "./node_modules/@babel/generator/lib/buffer.js":
 /*!*****************************************************!*\
@@ -77839,21 +77839,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js!./":
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
-  \**********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var page = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/items", function() {
+      var page = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/items.js */ "./pages/items.js", function() {
+          if(!next.router.components["/items"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
+          next.router.update("/items", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -97413,14 +97413,14 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
-/*!**************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************************************/
+/***/ 2:
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fsylvia%2FDocuments%2Fdevleague%2Fconsume-more-stuff%2Fpages%2Fitems.js!./");
 
 
 /***/ }),
@@ -97436,5 +97436,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[2,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=items.js.map

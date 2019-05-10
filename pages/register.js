@@ -1,8 +1,16 @@
 import React from "react";
 import { Component } from "react";
-import { Box, Button, CheckBox, Form, FormField, Select, Layer, onClickOutside } from "grommet";
+import {
+  Box,
+  Button,
+  CheckBox,
+  Form,
+  FormField,
+  Select,
+  Layer,
+  onClickOutside
+} from "grommet";
 class Register extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -16,8 +24,6 @@ class Register extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -57,7 +63,6 @@ class Register extends Component {
     const { layerType } = this.state;
 
     return (
-
       <Layer
         position="right"
         width="large"
@@ -96,6 +101,7 @@ class Register extends Component {
             <FormField
               onChange={this.handleChange}
               name="password"
+              type="password"
               label="Password"
               required={true}
             />
@@ -103,7 +109,6 @@ class Register extends Component {
           </Form>
         </Box>
       </Layer>
-
     );
   }
 }
