@@ -46,27 +46,27 @@ class AddItem extends Component {
   //   this.setState({ name })
   // }
 
-  // deleteItem() {
-  //   fetch("http://localhost:8080/api/items", {
-  //     method: "DELETE",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       name: this.state.name.toLowerCase(),
-  //       description: this.state.description.toLowerCase(),
-  //       price: this.state.price,
-  //       category: this.state.category.toLowerCase()
-  //     })
-  //   })
-  //     .then(() => {
-  //       console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }
+  deleteItem() {
+    fetch("http://localhost:8080/api/items", {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: this.state.name.toLowerCase(),
+        description: this.state.description.toLowerCase(),
+        price: this.state.price,
+        category: this.state.category.toLowerCase()
+      })
+    })
+      .then(() => {
+        console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
   handleChange = e => {
     this.setState({
