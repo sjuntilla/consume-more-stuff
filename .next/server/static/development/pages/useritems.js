@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4493,14 +4493,14 @@ var PostLink = function PostLink(props) {
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Anchor"], {
     color: "neutral-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 37
     },
     __self: this
   }, props.title));
@@ -4511,7 +4511,7 @@ var Header = function Header() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_12__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Box"], {
@@ -4521,97 +4521,105 @@ var Header = function Header() {
     background: "neutral-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 43
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tabs"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "HOME",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 52
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "ALL ITEMS",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Layer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_items__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 54
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "ADD ITEM",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_itemForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 58
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "LOGIN",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 61
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "REGISTER",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 63
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 64
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
     title: "USER ITEMS",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 66
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_useritems__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 67
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/items",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    className: "jsx-1883600651",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, "useritems")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1883600651",
     __self: this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1883600651{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1883600651{font-family:\"Roboto\",sans-serif;}ul.jsx-1883600651{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kamF2YW5jYWNrbGV5L0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFETyxBQUVzRSxBQUcxQixBQUtBLEFBR1gsc0JBQ1gsVUFSTSxBQUtuQixDQUlBLGdCQVJBIiwiZmlsZSI6Ii9Vc2Vycy9kamF2YW5jYWNrbGV5L0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi9sYXlvdXQnO1xuaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCc7XG5pbXBvcnQgUmVnaXN0ZXIgZnJvbSAnLi4vcmVnaXN0ZXInO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSAnLi4vaXRlbUZvcm0nO1xuaW1wb3J0IEl0ZW1zIGZyb20gJy4uL2l0ZW1zJztcbmltcG9ydCBVc2VySXRlbXMgZnJvbSAnLi4vdXNlcml0ZW1zJztcbmltcG9ydCBJbmRleCBmcm9tICcuLi9pbmRleCc7XG5pbXBvcnQgTG9naW4gZnJvbSAnLi4vbG9naW4nO1xuaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgR3JvbW1ldCwgQW5jaG9yLCBCb3gsIEFjY29yZGlvbiwgQWNjb3JkaW9uUGFuZWwsIERyb3BCdXR0b24sIFRhYnMsIFRhYiwgTGF5ZXIsIEJ1dHRvbiwgRm9ybUZpZWxkLCBUZXh0SW5wdXQsIFNlbGVjdCwgVGV4dEFyZWEsIG9uQ2xpY2tPdXRzaWRlIH0gZnJvbSAnZ3JvbW1ldCc7XG5pbXBvcnQgeyBkYXJrIH0gZnJvbSAnZ3JvbW1ldC90aGVtZXMnO1xuXG5cbmNvbnN0IGxpbmtTdHlsZSA9IHtcbiAgbWFyZ2luUmlnaHQ6IDE1LFxuICB0ZXh0RGVjb3JhdGlvbjogXCJub25lXCJcbn07XG5cbmNvbnN0IFBvc3RMaW5rID0gcHJvcHMgPT4gKFxuICA8TGluayBhcz17YC9wLyR7cHJvcHMuaWR9YH0gaHJlZj17YC9wb3N0P3RpdGxlPSR7cHJvcHMudGl0bGV9YH0+XG4gICAgPEFuY2hvciBjb2xvcj1cIm5ldXRyYWwtMlwiPntwcm9wcy50aXRsZX08L0FuY2hvcj5cbiAgPC9MaW5rPlxuKTtcblxuY29uc3QgSGVhZGVyID0gKCkgPT4gKFxuICA8R3JvbW1ldCB0aGVtZT17ZGFya30+XG5cbiAgICA8Qm94IGRpcmVjdGlvbj1cInJvdy1yZXNwb25zaXZlXCIgZml0PVwiY292ZXJcIiBwYWQ9XCJzbWFsbFwiIGJhY2tncm91bmQ9XCJuZXV0cmFsLTNcIiAvPlxuXG4gICAgey8qIFRBQlMgT1BUSU9OICovfVxuICAgIDxUYWJzPlxuICAgICAgPFRhYiB0aXRsZT1cIkhPTUVcIiAvPlxuICAgICAgPFRhYiB0aXRsZT1cIkFMTCBJVEVNU1wiPlxuICAgICAgICA8TGF5ZXI+XG4gICAgICAgICAgPEl0ZW1zIC8+XG4gICAgICAgIDwvTGF5ZXI+XG4gICAgICA8L1RhYj5cbiAgICAgIDxUYWIgdGl0bGU9XCJBREQgSVRFTVwiPlxuICAgICAgICA8QWRkSXRlbSAvPlxuICAgICAgPC9UYWI+XG4gICAgICA8VGFiIHRpdGxlPVwiTE9HSU5cIj5cbiAgICAgICAgPExvZ2luIC8+XG4gICAgICA8L1RhYj5cbiAgICAgIDxUYWIgdGl0bGU9XCJSRUdJU1RFUlwiPlxuICAgICAgICA8UmVnaXN0ZXIgLz5cbiAgICAgIDwvVGFiPlxuICAgICAgPFRhYiB0aXRsZT1cIlVTRVIgSVRFTVNcIj5cbiAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICA8L1RhYj5cbiAgICA8L1RhYnM+XG5cbiAgICA8c3R5bGUganN4PlxuICAgICAge2BcbiAgICAgICAgQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvXCIpO1xuXG4gICAgICAgIGgxIHtcbiAgICAgICAgICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgfVxuXG4gICAgICAgIGJvZHkge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICB9XG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9XG4gICAgICBgfVxuICAgIDwvc3R5bGU+XG4gIDwvR3JvbW1ldD5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IEhlYWRlcjtcbiJdfQ== */\n/*@ sourceURL=/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
+  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1883600651{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1883600651{font-family:\"Roboto\",sans-serif;}ul.jsx-1883600651{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kamF2YW5jYWNrbGV5L0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTJFTyxBQUVzRSxBQUcxQixBQUtBLEFBR1gsc0JBQ1gsVUFSTSxBQUtuQixDQUlBLGdCQVJBIiwiZmlsZSI6Ii9Vc2Vycy9kamF2YW5jYWNrbGV5L0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvaGVhZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuaW1wb3J0IExheW91dCBmcm9tIFwiLi9sYXlvdXRcIjtcbmltcG9ydCBmZXRjaCBmcm9tIFwiaXNvbW9ycGhpYy11bmZldGNoXCI7XG5pbXBvcnQgUmVnaXN0ZXIgZnJvbSBcIi4uL3JlZ2lzdGVyXCI7XG5pbXBvcnQgQWRkSXRlbSBmcm9tIFwiLi4vaXRlbUZvcm1cIjtcbmltcG9ydCBJdGVtcyBmcm9tIFwiLi4vaXRlbXNcIjtcbmltcG9ydCBVc2VySXRlbXMgZnJvbSBcIi4uL3VzZXJpdGVtc1wiO1xuaW1wb3J0IEluZGV4IGZyb20gXCIuLi9pbmRleFwiO1xuaW1wb3J0IExvZ2luIGZyb20gXCIuLi9sb2dpblwiO1xuaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQge1xuICBHcm9tbWV0LFxuICBBbmNob3IsXG4gIEJveCxcbiAgQWNjb3JkaW9uLFxuICBBY2NvcmRpb25QYW5lbCxcbiAgRHJvcEJ1dHRvbixcbiAgVGFicyxcbiAgVGFiLFxuICBMYXllcixcbiAgQnV0dG9uLFxuICBGb3JtRmllbGQsXG4gIFRleHRJbnB1dCxcbiAgU2VsZWN0LFxuICBUZXh0QXJlYSxcbiAgb25DbGlja091dHNpZGVcbn0gZnJvbSBcImdyb21tZXRcIjtcbmltcG9ydCB7IGRhcmsgfSBmcm9tIFwiZ3JvbW1ldC90aGVtZXNcIjtcblxuY29uc3QgbGlua1N0eWxlID0ge1xuICBtYXJnaW5SaWdodDogMTUsXG4gIHRleHREZWNvcmF0aW9uOiBcIm5vbmVcIlxufTtcblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gIDxMaW5rIGFzPXtgL3AvJHtwcm9wcy5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwcm9wcy50aXRsZX1gfT5cbiAgICA8QW5jaG9yIGNvbG9yPVwibmV1dHJhbC0yXCI+e3Byb3BzLnRpdGxlfTwvQW5jaG9yPlxuICA8L0xpbms+XG4pO1xuXG5jb25zdCBIZWFkZXIgPSAoKSA9PiAoXG4gIDxHcm9tbWV0IHRoZW1lPXtkYXJrfT5cbiAgICA8Qm94XG4gICAgICBkaXJlY3Rpb249XCJyb3ctcmVzcG9uc2l2ZVwiXG4gICAgICBmaXQ9XCJjb3ZlclwiXG4gICAgICBwYWQ9XCJzbWFsbFwiXG4gICAgICBiYWNrZ3JvdW5kPVwibmV1dHJhbC0zXCJcbiAgICAvPlxuXG4gICAgey8qIFRBQlMgT1BUSU9OICovfVxuICAgIDxUYWJzPlxuICAgICAgPFRhYiB0aXRsZT1cIkhPTUVcIiAvPlxuICAgICAgPFRhYiB0aXRsZT1cIkFMTCBJVEVNU1wiPlxuICAgICAgICA8SXRlbXMgLz5cbiAgICAgIDwvVGFiPlxuXG4gICAgICA8VGFiIHRpdGxlPVwiQUREIElURU1cIj5cbiAgICAgICAgPEFkZEl0ZW0gLz5cbiAgICAgIDwvVGFiPlxuICAgICAgPFRhYiB0aXRsZT1cIkxPR0lOXCI+XG4gICAgICAgIDxMb2dpbiAvPlxuICAgICAgPC9UYWI+XG4gICAgICA8VGFiIHRpdGxlPVwiUkVHSVNURVJcIj5cbiAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICA8L1RhYj5cbiAgICAgIDxUYWIgdGl0bGU9XCJVU0VSIElURU1TXCI+XG4gICAgICAgIDxVc2VySXRlbXMgLz5cbiAgICAgIDwvVGFiPlxuICAgIDwvVGFicz5cblxuICAgIDxMaW5rIGhyZWY9XCIvaXRlbXNcIj5cbiAgICAgIDxhPnVzZXJpdGVtczwvYT5cbiAgICA8L0xpbms+XG5cbiAgICA8c3R5bGUganN4PlxuICAgICAge2BcbiAgICAgICAgQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvXCIpO1xuXG4gICAgICAgIGgxIHtcbiAgICAgICAgICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgfVxuXG4gICAgICAgIGJvZHkge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICB9XG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9XG4gICAgICBgfVxuICAgIDwvc3R5bGU+XG4gIDwvR3JvbW1ldD5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IEhlYWRlcjtcbiJdfQ== */\n/*@ sourceURL=/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -4901,6 +4909,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet */ "grommet");
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! grommet-icons */ "grommet-icons");
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet_icons__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -4910,6 +4920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/itemForm.js";
+
 
 
 
@@ -4958,34 +4969,10 @@ function (_Component) {
           description: this.state.description.toLowerCase(),
           price: this.state.price,
           category: this.state.category.toLowerCase()
-        })
+        }),
+        credentials: "include"
       }).then(function () {
         console.log("ADDED ITEM TOOOOOO ITEM LIST");
-      }).catch(function (err) {
-        console.log(err);
-      });
-    } // delete = item => {
-    //   const name = this.state.name.filter(itemName => item !== itemName.name)
-    //   this.setState({ name })
-    // }
-
-  }, {
-    key: "deleteItem",
-    value: function deleteItem() {
-      fetch("http://localhost:8080/api/items", {
-        method: "DELETE",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-          name: this.state.name.toLowerCase(),
-          description: this.state.description.toLowerCase(),
-          price: this.state.price,
-          category: this.state.category.toLowerCase()
-        })
-      }).then(function () {
-        console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
       }).catch(function (err) {
         console.log(err);
       });
@@ -5006,21 +4993,21 @@ function (_Component) {
         onEsc: this.onClose,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Box"], {
         pad: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5030,7 +5017,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 66
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5040,7 +5027,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 72
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5050,7 +5037,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 78
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Select"], (_React$createElement = {
@@ -5065,23 +5052,21 @@ function (_Component) {
         });
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "name", "category"), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "required", true), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__source", {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 84
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__self", this), _React$createElement)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_11__["AddCircle"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }),
         type: "submit",
         label: "Add Item",
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
-        type: "delete",
-        label: "Delete Item",
-        primary: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 94
         },
         __self: this
       }))));
@@ -5322,8 +5307,9 @@ function (_Component) {
       console.log("STAATEE", this.state);
       fetch("http://localhost:8080/api/login", {
         method: "POST",
+        credentials: "include",
         headers: {
-          "Accept": "application/json",
+          Accept: "application/json",
           "Content-Type": "application/json"
         },
         body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -5379,7 +5365,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Button"], {
@@ -5388,7 +5374,7 @@ function (_Component) {
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 71
         },
         __self: this
       }));
@@ -5604,32 +5590,29 @@ function (_Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! grommet */ "grommet");
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! grommet-controls */ "grommet-controls");
-/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_controls__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! grommet */ "grommet");
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! grommet-controls */ "grommet-controls");
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(grommet_controls__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! grommet-icons */ "grommet-icons");
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_icons__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! bluebird */ "bluebird");
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_10__);
 
 
-
-
-var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/useritems.js",
-    _this = undefined;
+var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/useritems.js";
 
 
 
@@ -5642,31 +5625,31 @@ var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/
 
 var UserItems = function UserItems(_ref) {
   var items = _ref.items;
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Grommet"], {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Grommet"], {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_9__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Box"], {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
     key: "wrapper",
     direction: "row",
     wrap: "true",
     alignContent: "between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }, items.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_8__["Card"], {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"], {
       basis: "medium",
       animation: "fadeIn",
       background: "dark-1",
@@ -5675,59 +5658,93 @@ var UserItems = function UserItems(_ref) {
       margin: "medium",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 19
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_8__["Card"].CardTitle, {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardTitle, {
       color: "neutral-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, item.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_8__["Card"].CardContent, {
-      color: "dark-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Text"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }, item.description), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Text"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 27
       },
       __self: this
-    }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_7__["Text"], {
+    }, item.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardContent, {
+      color: "dark-1",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 28
       },
       __self: this
-    }, item.category)));
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, item.description), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, item.category), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      icon: react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_8__["Edit"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }),
+      label: "Edit",
+      onClick: function onClick() {
+        console.log('--->EDIT BUTTON FIRED');
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      icon: react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_8__["FormTrash"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }),
+      label: "Delete",
+      onClick: function onClick() {
+        console.log('--->DELETE BUTTON FIRED');
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })));
   }))));
 };
 
 UserItems.getInitialProps =
 /*#__PURE__*/
 function () {
-  var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(_ref2) {
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref2) {
     var req, res, json;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             req = _ref2.req;
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("http://localhost:8080/api/items");
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("http://localhost:8080/api/items");
 
           case 3:
             res = _context.sent;
@@ -5751,37 +5768,13 @@ function () {
   return function (_x) {
     return _ref3.apply(this, arguments);
   };
-}(); //THIS ALLOWS CLIENT TO DELETE ITEMS VIA BROWSER//
-
-
-removedItem = function removedItem(id) {
-  var headers = {
-    'Content-Type': 'application/json'
-  };
-  var itemData = {
-    items: id
-  }; // console.log("THIS IS THE CARD DATA", cardData)
-
-  isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("/kanban", {
-    method: 'DELETE',
-    body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(itemData),
-    headers: headers
-  }).then(function (res) {
-    return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('http://localhost:8080/api/items').then(function (res) {
-      return res.json();
-    }).then(function (body) {
-      _this.setState({
-        items: body
-      });
-    });
-  });
-};
+}();
 
 /* harmony default export */ __webpack_exports__["default"] = (UserItems);
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./pages/useritems.js ***!
   \**********************************/
@@ -5834,6 +5827,17 @@ module.exports = require("grommet");
 /***/ (function(module, exports) {
 
 module.exports = require("grommet-controls");
+
+/***/ }),
+
+/***/ "grommet-icons":
+/*!********************************!*\
+  !*** external "grommet-icons" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("grommet-icons");
 
 /***/ }),
 

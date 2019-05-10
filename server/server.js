@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const userRoutes = require("./database/routes/users");
 const itemRoutes = require("./database/routes/items");
@@ -61,6 +62,7 @@ nextApp.prepare().then(() => {
     );
     next();
   });
+  app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
   app.use("/api", userRoutes);
   app.use("/api", itemRoutes);
