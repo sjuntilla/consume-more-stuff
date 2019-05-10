@@ -1,5 +1,5 @@
 import Layout from "./components/layout";
-import Search from "./components/search";
+// import Search from "./components/search";
 
 import Link from "next/link";
 import {
@@ -38,7 +38,7 @@ export default function Index() {
           <Box key="heading" elevation="xxsmall">
             <Heading color="accent-3" size="large" pad="xxsmall">
               silk code.
-              <Search />
+              {/* <Search /> */}
             </Heading>
             <Box
               key="blurb"

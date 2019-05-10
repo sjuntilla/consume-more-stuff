@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const next = require("next");
 
 passport.serializeUser((user, done) => {
+  console.log("serializingUser", user);
   done(null, {
     email: user.email,
     junk: "randomData"
@@ -13,6 +14,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((user, done) => {
+  console.log("deserializingUser", user);
   User.where({ email: user.email })
     .fetch()
     .then(user => {
@@ -90,8 +92,8 @@ router.route("/register").post((req, res) => {
     })
     .then(user => {
       console.log("Registration successful!");
-      // res.redirect("/");
-      return user.toJSON();
+      //   res.redirect("/");
+      res.send(user.toJSON());
     })
     .catch(err => {
       console.log(err);
@@ -105,7 +107,7 @@ router.post(
   passport.authenticate("local", { failureRedirect: "/" }),
   (req, res) => {
     console.log("req.body", req.body);
-    console.log("session key", req.session.key);
+    console.log("session key", req.session);
     const email = req.body.email;
     User.where({ email })
       .fetch()
@@ -118,8 +120,14 @@ router.post(
           username: user.username
         };
         req.session.user = req.body;
+        req.logIn(user, err => {
+          if (err) {
+            return next(err);
+          } else {
+            res.json(userData);
+          }
+        });
         console.log("session user", req.session.user);
-        res.json(userData);
       })
       .catch(err => {
         console.log(err);
