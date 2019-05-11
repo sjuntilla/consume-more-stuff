@@ -19,7 +19,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/items": [
+    "/register": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

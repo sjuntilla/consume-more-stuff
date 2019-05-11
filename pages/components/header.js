@@ -68,7 +68,7 @@ const Header = () => (
             </Tab>
         </Tabs> */}
 
-        <VerticalMenu
+        <VerticalMenu pad="xxsmall"
             items={[
                 {
                     id: 'main',
@@ -88,7 +88,6 @@ const Header = () => (
                 }
             ]}
         />
-
         <style jsx>
             {`
         @import url("https://fonts.googleapis.com/css?family=Roboto");
