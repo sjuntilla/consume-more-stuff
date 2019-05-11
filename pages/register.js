@@ -74,9 +74,9 @@ class Register extends Component {
     const { layerType } = this.state;
 
     return (
-      <Grommet theme={materialdark}>
+      <Grommet theme={dark}>
         <Layout>
-          <Box pad="large" background="neutral-4" width="medium">
+          <Box pad="large" background="backgroundColor" width="medium">
             <Form onSubmit={this.handleSubmit}>
               <FormField
                 onChange={this.handleChange}
