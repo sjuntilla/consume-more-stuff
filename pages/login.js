@@ -1,7 +1,7 @@
 import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
-import { Redirect } from "react-router";
+import Router from 'next/router';
 import {
   Grommet,
   Box,
@@ -59,10 +59,10 @@ class Login extends Component {
   };
 
   render() {
-    const { isAuthenticated } = this.props;
-    if (isAuthenticated) {
-      return <Redirect to="/items" />;
-    }
+    // const { isAuthenticated } = this.props;
+    // if (isAuthenticated) {
+    //   return <Redirect to="/items" />;
+    // }
 
     return (
       <Grommet theme={dark}>
@@ -82,7 +82,7 @@ class Login extends Component {
                 label="password"
                 required={true}
               />
-              <Button type="submit" label="Sign In" primary={true} />
+              <Button onClick={() => Router.push('/items')} type="submit" label="Sign In" primary={true} />
             </Form>
           </Box>
         </Layout>
