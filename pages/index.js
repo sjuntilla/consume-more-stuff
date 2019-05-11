@@ -13,13 +13,13 @@ import {
   Carousel,
   Image
 } from "grommet";
-import { dark } from "grommet/themes";
+// import { dark } from "grommet/themes";
+import { materialdark } from "grommet-controls/themes";
 import generate from "@babel/generator";
-
 
 const Index = () => {
   return (
-    <Grommet theme={dark}>
+    <Grommet theme={materialdark}>
       <Layout>
         <Box
           key="banner"
@@ -81,6 +81,6 @@ const Index = () => {
       </Layout>
     </Grommet>
   );
-}
+};
 
 export default Index;

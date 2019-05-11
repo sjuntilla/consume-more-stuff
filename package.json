@@ -53,5 +53,7 @@
     "not dead",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.3.2"
+  }
 }

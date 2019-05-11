@@ -12,7 +12,8 @@ import {
   Grommet
 } from "grommet";
 import { dark } from "grommet/themes";
-import Layout from './components/layout';
+import { materialdark } from "grommet-controls/themes";
+import Layout from "./components/layout";
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -66,7 +67,7 @@ class Register extends Component {
     const { layerType } = this.state;
 
     return (
-      <Grommet theme={dark}>
+      <Grommet theme={materialdark}>
         <Layout>
           <Box pad="large" background="neutral-4" width="medium">
             <Form onSubmit={this.handleSubmit}>
@@ -104,7 +105,8 @@ class Register extends Component {
               <Button type="submit" label="Register" primary={true} />
             </Form>
           </Box>
-        </Layout></Grommet>
+        </Layout>
+      </Grommet>
     );
   }
 }
