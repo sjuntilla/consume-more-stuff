@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5315,10 +5315,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router */ "react-router");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! grommet */ "grommet");
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet */ "grommet");
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -5330,7 +5328,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/login.js";
 
 
-
+ // import { Redirect } from "react-router";
 
 
 
@@ -5385,27 +5383,18 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var isAuthenticated = this.props.isAuthenticated;
-
-      if (isAuthenticated) {
-        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_10__["Redirect"], {
-          to: "/items",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 53
-          },
-          __self: this
-        });
-      }
-
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Form"], {
+      // const { isAuthenticated } = this.props;
+      // if (isAuthenticated) {
+      //   return <Redirect to="/items" />;
+      // }
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 57
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["FormField"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
         onChange: this.handleChange,
         name: "email",
         label: "email",
@@ -5415,7 +5404,7 @@ function (_Component) {
           lineNumber: 58
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["FormField"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
         onChange: this.handleChange,
         type: "password",
         name: "password",
@@ -5426,7 +5415,7 @@ function (_Component) {
           lineNumber: 64
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         type: "submit",
         label: "Sign In",
         primary: true,
@@ -5808,7 +5797,7 @@ function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -5938,17 +5927,6 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-router":
-/*!*******************************!*\
-  !*** external "react-router" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router");
 
 /***/ }),
 

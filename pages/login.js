@@ -1,7 +1,7 @@
 import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 import { Box, Button, CheckBox, Form, FormField, Select } from "grommet";
 
 class Login extends Component {
@@ -48,10 +48,10 @@ class Login extends Component {
   };
 
   render() {
-    const { isAuthenticated } = this.props;
-    if (isAuthenticated) {
-      return <Redirect to="/items" />;
-    }
+    // const { isAuthenticated } = this.props;
+    // if (isAuthenticated) {
+    //   return <Redirect to="/items" />;
+    // }
 
     return (
       <Form onSubmit={this.handleSubmit}>
