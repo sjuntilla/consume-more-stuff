@@ -17,10 +17,11 @@ router.post("/items", (req, res) => {
   const created_at = new Date();
   //TBD user_id connection with item id
   const user_id = 1;
-  const { name, description, price, category } = req.body;
+  const { name, url, description, price, category } = req.body;
   console.log("POOOOOOOOOST");
   return new req.database.Item({
     name,
+    url,
     user_id,
     description,
     price,

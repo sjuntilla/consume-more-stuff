@@ -1,33 +1,36 @@
 import Header from './header'
-import { Grommet } from 'grommet';
+import { Grommet, Box } from 'grommet';
+import { Sidebar } from 'grommet-controls';
 import { dark } from 'grommet/themes';
 
 
+
 const wrapperStyle = {
-    marginLeft: 0,
-    marginRight: 0,
-    backgroundColor: "#111111",
-}
-const headerStyle = {
-    margin: 15,
     display: "flex",
-    alignContent: "center"
-};
+    flexDirection: "row nowrap",
+    backgroundColor: "#111111",
+    justifyContent: "space-around"
+}
 
 const layoutWidth = {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
     margin: 0,
-    padding: 0
+    justifyContent: "center",
 }
 
 const Layout = props => (
 
     <Grommet theme={dark} full>
         <div style={wrapperStyle}>
-            <div style={headerStyle}>
+            <Sidebar title="// SILK CODE" collapsible={false} width="medium" vertical="full" pad="xxsmall" background="backgroundColor">
                 <Header />
-            </div>
+            </Sidebar>
             <div style={layoutWidth}>
-                {props.children}
+                <Box style={{ width: "cover" }}>
+                    {props.children}
+                </Box>
             </div>
         </div>
         <style jsx>{

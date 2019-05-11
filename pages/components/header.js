@@ -9,71 +9,85 @@ import Index from "../index";
 import Login from "../login";
 import { Component } from "react";
 import {
-  Grommet,
-  Anchor,
-  Box,
-  Accordion,
-  AccordionPanel,
-  DropButton,
-  Tabs,
-  Tab,
-  Layer,
-  Button,
-  FormField,
-  TextInput,
-  Select,
-  TextArea,
-  onClickOutside
+    Grommet,
+    Anchor,
+    Box,
+    Accordion,
+    AccordionPanel,
+    DropButton,
+    Tabs,
+    Tab,
+    Layer,
+    Button,
+    FormField,
+    TextInput,
+    Select,
+    TextArea,
+    onClickOutside
 } from "grommet";
 import { dark } from "grommet/themes";
+import { VerticalMenu } from "grommet-controls";
 
 const linkStyle = {
-  marginRight: 15,
-  textDecoration: "none"
+    marginRight: 15,
+    textDecoration: "none"
 };
 
 const PostLink = props => (
-  <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-    <Anchor color="neutral-2">{props.title}</Anchor>
-  </Link>
+    <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
+        <Anchor color="neutral-2">{props.title}</Anchor>
+    </Link>
 );
 
 const Header = () => (
-  <Grommet theme={dark}>
-    <Box
-      direction="row-responsive"
-      fit="cover"
-      pad="small"
-      background="neutral-3"
-    />
+    <Grommet theme={dark}>
+        <Box
+            fit="cover"
+            pad="small">
 
-    {/* TABS OPTION */}
-    <Tabs>
-      <Tab title="HOME" />
-      <Tab title="ALL ITEMS">
-        <Items />
-      </Tab>
+            {/* TABS OPTION */}
+            {/* <Tabs>
+            <Tab title="HOME" />
+            <Tab title="ALL ITEMS">
+                <Items />
+            </Tab>
 
-      <Tab title="ADD ITEM">
-        <AddItem />
-      </Tab>
-      <Tab title="LOGIN">
-        <Login />
-      </Tab>
-      <Tab title="REGISTER">
-        <Register />
-      </Tab>
-      <Tab title="USER ITEMS">
-        <UserItems />
-      </Tab>
-    </Tabs>
+            <Tab title="ADD ITEM">
+                <AddItem />
+            </Tab>
+            <Tab title="LOGIN">
+                <Login />
+            </Tab>
+            <Tab title="REGISTER">
+                <Register />
+            </Tab>
+            <Tab title="USER ITEMS">
+                <UserItems />
+            </Tab>
+        </Tabs> */}
 
-    <Link href="/items">
-      <a>useritems</a>
-    </Link>
+            <VerticalMenu pad="xxsmall"
+                items={[
+                    {
+                        id: 'main',
+                        label: 'NAVIGATION',
 
-    <style jsx>
-      {`
+                        items: [{
+                            id: 'home',
+                            label: 'HOME',
+                            href: '/'
+                        },
+                        {
+                            id: 'items',
+                            label: 'ITEMS',
+                            href: '/items'
+                        }
+                        ]
+                    }
+                ]}
+            />
+            <style jsx>
+                {`
         @import url("https://fonts.googleapis.com/css?family=Roboto");
 
         h1 {
@@ -89,8 +103,9 @@ const Header = () => (
           margin: 5px;
         }
       `}
-    </style>
-  </Grommet>
+            </style>
+        </Box>
+    </Grommet>
 );
 
 export default Header;
