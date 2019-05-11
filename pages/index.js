@@ -79,24 +79,6 @@ const Index = () => {
           </Carousel>
         </Box>
       </Layout>
-      <style jsx>
-        {`
-          @import url("https://fonts.googleapis.com/css?family=Roboto");
-
-          h1 {
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-          }
-
-          body {
-            font-family: "Roboto", sans-serif;
-          }
-          ul {
-            background-color: #ddd;
-            margin: 5px;
-          }
-        `}
-      </style>
     </Grommet>
   );
 }

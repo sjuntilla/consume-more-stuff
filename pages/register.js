@@ -51,6 +51,7 @@ class Register extends Component {
     })
       .then(() => {
         console.log("added to database");
+        alert("Thank you for registering, " + this.state.first_name + "! You will now be redirected to log in with your registered email and password. :) ")
       })
       // .then(function(response) {
       //   console.log(response);
@@ -66,6 +67,9 @@ class Register extends Component {
       [e.target.name]: e.target.value
     });
   };
+  
+  
+
   render() {
     const { layerType } = this.state;
 
@@ -105,7 +109,7 @@ class Register extends Component {
                 label="Password"
                 required={true}
               />
-              <Button onClick={() => Router.push('/items')} type="submit" label="Register" primary={true}  />
+              <Button onClick={() => Router.push('/login')} type="submit" label="Register" primary={true}  />
             </Form>
           </Box>
         </Layout></Grommet>
