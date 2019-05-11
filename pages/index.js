@@ -16,13 +16,8 @@ import {
 import { dark } from "grommet/themes";
 import generate from "@babel/generator";
 
-const PostLink = props => (
-  <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-    <Anchor>{props.title}</Anchor>
-  </Link>
-);
 
-export default function Index() {
+const Index = () => {
   return (
     <Grommet theme={dark}>
       <Layout>
@@ -105,3 +100,5 @@ export default function Index() {
     </Grommet>
   );
 }
+
+export default Index;

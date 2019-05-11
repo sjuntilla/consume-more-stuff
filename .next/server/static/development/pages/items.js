@@ -4467,7 +4467,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! grommet-controls */ "grommet-controls");
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(grommet_controls__WEBPACK_IMPORTED_MODULE_13__);
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/header.js";
+
 
 
 
@@ -4493,14 +4496,14 @@ var PostLink = function PostLink(props) {
     href: "/post?title=".concat(props.title),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Anchor"], {
     color: "neutral-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, props.title));
@@ -4511,107 +4514,42 @@ var Header = function Header() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_12__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Box"], {
     direction: "row-responsive",
     fit: "cover",
     pad: "small",
-    background: "neutral-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tabs"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_13__["VerticalMenu"], {
+    pad: "xxsmall",
+    items: [{
+      id: 'main',
+      label: 'NAVIGATION',
+      items: [{
+        id: 'home',
+        label: 'HOME',
+        href: '/'
+      }, {
+        id: 'items',
+        label: 'ITEMS',
+        href: '/items'
+      }]
+    }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 71
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "HOME",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "ALL ITEMS",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Layer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_items__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "ADD ITEM",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_itemForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "LOGIN",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "REGISTER",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Tab"], {
-    title: "USER ITEMS",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_register__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1883600651",
     __self: this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1883600651{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1883600651{font-family:\"Roboto\",sans-serif;}ul.jsx-1883600651{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9oZWFkZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd0VPLEFBRXNFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL3N5bHZpYS9Eb2N1bWVudHMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9jb21wb25lbnRzL2hlYWRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCBMYXlvdXQgZnJvbSBcIi4vbGF5b3V0XCI7XG5pbXBvcnQgZmV0Y2ggZnJvbSBcImlzb21vcnBoaWMtdW5mZXRjaFwiO1xuaW1wb3J0IFJlZ2lzdGVyIGZyb20gXCIuLi9yZWdpc3RlclwiO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSBcIi4uL2l0ZW1Gb3JtXCI7XG5pbXBvcnQgSXRlbXMgZnJvbSBcIi4uL2l0ZW1zXCI7XG5pbXBvcnQgVXNlckl0ZW1zIGZyb20gXCIuLi91c2VyaXRlbXNcIjtcbmltcG9ydCBJbmRleCBmcm9tIFwiLi4vaW5kZXhcIjtcbmltcG9ydCBMb2dpbiBmcm9tIFwiLi4vbG9naW5cIjtcbmltcG9ydCB7IENvbXBvbmVudCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHtcbiAgR3JvbW1ldCxcbiAgQW5jaG9yLFxuICBCb3gsXG4gIEFjY29yZGlvbixcbiAgQWNjb3JkaW9uUGFuZWwsXG4gIERyb3BCdXR0b24sXG4gIFRhYnMsXG4gIFRhYixcbiAgTGF5ZXIsXG4gIEJ1dHRvbixcbiAgRm9ybUZpZWxkLFxuICBUZXh0SW5wdXQsXG4gIFNlbGVjdCxcbiAgVGV4dEFyZWEsXG4gIG9uQ2xpY2tPdXRzaWRlXG59IGZyb20gXCJncm9tbWV0XCI7XG5pbXBvcnQgeyBkYXJrIH0gZnJvbSBcImdyb21tZXQvdGhlbWVzXCI7XG5cbmNvbnN0IGxpbmtTdHlsZSA9IHtcbiAgbWFyZ2luUmlnaHQ6IDE1LFxuICB0ZXh0RGVjb3JhdGlvbjogXCJub25lXCJcbn07XG5cbmNvbnN0IFBvc3RMaW5rID0gcHJvcHMgPT4gKFxuICA8TGluayBhcz17YC9wLyR7cHJvcHMuaWR9YH0gaHJlZj17YC9wb3N0P3RpdGxlPSR7cHJvcHMudGl0bGV9YH0+XG4gICAgPEFuY2hvciBjb2xvcj1cIm5ldXRyYWwtMlwiPntwcm9wcy50aXRsZX08L0FuY2hvcj5cbiAgPC9MaW5rPlxuKTtcblxuY29uc3QgSGVhZGVyID0gKCkgPT4gKFxuICA8R3JvbW1ldCB0aGVtZT17ZGFya30+XG4gICAgPEJveFxuICAgICAgZGlyZWN0aW9uPVwicm93LXJlc3BvbnNpdmVcIlxuICAgICAgZml0PVwiY292ZXJcIlxuICAgICAgcGFkPVwic21hbGxcIlxuICAgICAgYmFja2dyb3VuZD1cIm5ldXRyYWwtM1wiXG4gICAgLz5cblxuICAgIHsvKiBUQUJTIE9QVElPTiAqL31cbiAgICA8VGFicz5cbiAgICAgIDxUYWIgdGl0bGU9XCJIT01FXCIgLz5cbiAgICAgIDxUYWIgdGl0bGU9XCJBTEwgSVRFTVNcIj5cbiAgICAgICAgPExheWVyPlxuICAgICAgICAgIDxJdGVtcyAvPlxuICAgICAgICA8L0xheWVyPlxuICAgICAgPC9UYWI+XG4gICAgICA8VGFiIHRpdGxlPVwiQUREIElURU1cIj5cbiAgICAgICAgPEFkZEl0ZW0gLz5cbiAgICAgIDwvVGFiPlxuICAgICAgPFRhYiB0aXRsZT1cIkxPR0lOXCI+XG4gICAgICAgIDxMb2dpbiAvPlxuICAgICAgPC9UYWI+XG4gICAgICA8VGFiIHRpdGxlPVwiUkVHSVNURVJcIj5cbiAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICA8L1RhYj5cbiAgICAgIDxUYWIgdGl0bGU9XCJVU0VSIElURU1TXCI+XG4gICAgICAgIDxSZWdpc3RlciAvPlxuICAgICAgPC9UYWI+XG4gICAgPC9UYWJzPlxuXG4gICAgPHN0eWxlIGpzeD5cbiAgICAgIHtgXG4gICAgICAgIEBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90b1wiKTtcblxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIH1cblxuICAgICAgICBib2R5IHtcbiAgICAgICAgICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgICAgICAgfVxuICAgICAgICB1bCB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgfVxuICAgICAgYH1cbiAgICA8L3N0eWxlPlxuICA8L0dyb21tZXQ+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XG4iXX0= */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
+  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1883600651{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1883600651{font-family:\"Roboto\",sans-serif;}ul.jsx-1883600651{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9oZWFkZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMkZhLEFBRXNFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL3N5bHZpYS9Eb2N1bWVudHMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9jb21wb25lbnRzL2hlYWRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCBMYXlvdXQgZnJvbSBcIi4vbGF5b3V0XCI7XG5pbXBvcnQgZmV0Y2ggZnJvbSBcImlzb21vcnBoaWMtdW5mZXRjaFwiO1xuaW1wb3J0IFJlZ2lzdGVyIGZyb20gXCIuLi9yZWdpc3RlclwiO1xuaW1wb3J0IEFkZEl0ZW0gZnJvbSBcIi4uL2l0ZW1Gb3JtXCI7XG5pbXBvcnQgSXRlbXMgZnJvbSBcIi4uL2l0ZW1zXCI7XG5pbXBvcnQgVXNlckl0ZW1zIGZyb20gXCIuLi91c2VyaXRlbXNcIjtcbmltcG9ydCBJbmRleCBmcm9tIFwiLi4vaW5kZXhcIjtcbmltcG9ydCBMb2dpbiBmcm9tIFwiLi4vbG9naW5cIjtcbmltcG9ydCB7IENvbXBvbmVudCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHtcbiAgICBHcm9tbWV0LFxuICAgIEFuY2hvcixcbiAgICBCb3gsXG4gICAgQWNjb3JkaW9uLFxuICAgIEFjY29yZGlvblBhbmVsLFxuICAgIERyb3BCdXR0b24sXG4gICAgVGFicyxcbiAgICBUYWIsXG4gICAgTGF5ZXIsXG4gICAgQnV0dG9uLFxuICAgIEZvcm1GaWVsZCxcbiAgICBUZXh0SW5wdXQsXG4gICAgU2VsZWN0LFxuICAgIFRleHRBcmVhLFxuICAgIG9uQ2xpY2tPdXRzaWRlXG59IGZyb20gXCJncm9tbWV0XCI7XG5pbXBvcnQgeyBkYXJrIH0gZnJvbSBcImdyb21tZXQvdGhlbWVzXCI7XG5pbXBvcnQgeyBWZXJ0aWNhbE1lbnUgfSBmcm9tIFwiZ3JvbW1ldC1jb250cm9sc1wiO1xuXG5jb25zdCBsaW5rU3R5bGUgPSB7XG4gICAgbWFyZ2luUmlnaHQ6IDE1LFxuICAgIHRleHREZWNvcmF0aW9uOiBcIm5vbmVcIlxufTtcblxuY29uc3QgUG9zdExpbmsgPSBwcm9wcyA9PiAoXG4gICAgPExpbmsgYXM9e2AvcC8ke3Byb3BzLmlkfWB9IGhyZWY9e2AvcG9zdD90aXRsZT0ke3Byb3BzLnRpdGxlfWB9PlxuICAgICAgICA8QW5jaG9yIGNvbG9yPVwibmV1dHJhbC0yXCI+e3Byb3BzLnRpdGxlfTwvQW5jaG9yPlxuICAgIDwvTGluaz5cbik7XG5cbmNvbnN0IEhlYWRlciA9ICgpID0+IChcbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30+XG4gICAgICAgIDxCb3hcbiAgICAgICAgICAgIGRpcmVjdGlvbj1cInJvdy1yZXNwb25zaXZlXCJcbiAgICAgICAgICAgIGZpdD1cImNvdmVyXCJcbiAgICAgICAgICAgIHBhZD1cInNtYWxsXCJcbiAgICAgICAgLz5cblxuICAgICAgICB7LyogVEFCUyBPUFRJT04gKi99XG4gICAgICAgIHsvKiA8VGFicz5cbiAgICAgICAgICAgIDxUYWIgdGl0bGU9XCJIT01FXCIgLz5cbiAgICAgICAgICAgIDxUYWIgdGl0bGU9XCJBTEwgSVRFTVNcIj5cbiAgICAgICAgICAgICAgICA8SXRlbXMgLz5cbiAgICAgICAgICAgIDwvVGFiPlxuXG4gICAgICAgICAgICA8VGFiIHRpdGxlPVwiQUREIElURU1cIj5cbiAgICAgICAgICAgICAgICA8QWRkSXRlbSAvPlxuICAgICAgICAgICAgPC9UYWI+XG4gICAgICAgICAgICA8VGFiIHRpdGxlPVwiTE9HSU5cIj5cbiAgICAgICAgICAgICAgICA8TG9naW4gLz5cbiAgICAgICAgICAgIDwvVGFiPlxuICAgICAgICAgICAgPFRhYiB0aXRsZT1cIlJFR0lTVEVSXCI+XG4gICAgICAgICAgICAgICAgPFJlZ2lzdGVyIC8+XG4gICAgICAgICAgICA8L1RhYj5cbiAgICAgICAgICAgIDxUYWIgdGl0bGU9XCJVU0VSIElURU1TXCI+XG4gICAgICAgICAgICAgICAgPFVzZXJJdGVtcyAvPlxuICAgICAgICAgICAgPC9UYWI+XG4gICAgICAgIDwvVGFicz4gKi99XG5cbiAgICAgICAgPFZlcnRpY2FsTWVudSBwYWQ9XCJ4eHNtYWxsXCJcbiAgICAgICAgICAgIGl0ZW1zPXtbXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBpZDogJ21haW4nLFxuICAgICAgICAgICAgICAgICAgICBsYWJlbDogJ05BVklHQVRJT04nLFxuXG4gICAgICAgICAgICAgICAgICAgIGl0ZW1zOiBbe1xuICAgICAgICAgICAgICAgICAgICAgICAgaWQ6ICdob21lJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVsOiAnSE9NRScsXG4gICAgICAgICAgICAgICAgICAgICAgICBocmVmOiAnLydcbiAgICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgaWQ6ICdpdGVtcycsXG4gICAgICAgICAgICAgICAgICAgICAgICBsYWJlbDogJ0lURU1TJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIGhyZWY6ICcvaXRlbXMnXG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIF19XG4gICAgICAgIC8+XG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAgICB7YFxuICAgICAgICBAaW1wb3J0IHVybChcImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG9cIik7XG5cbiAgICAgICAgaDEge1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9XG5cbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgIH1cbiAgICAgICAgdWwge1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgIH1cbiAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0PlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyO1xuIl19 */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/header.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -4634,17 +4572,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./pages/components/header.js");
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! grommet */ "grommet");
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! grommet-controls */ "grommet-controls");
+/* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(grommet_controls__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/layout.js";
 
 
 
 
 
+
 var wrapperStyle = {
-  marginLeft: 0,
-  marginRight: 0,
+  display: "flex",
+  flexDirection: "row nowrap",
   backgroundColor: "#111111"
 };
 var headerStyle = {
@@ -4653,17 +4594,19 @@ var headerStyle = {
   alignContent: "center"
 };
 var layoutWidth = {
+  display: "flex",
+  flexDirection: "column",
   margin: 0,
-  padding: 0
+  justifyContent: "center"
 };
 
 var Layout = function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Grommet"], {
-    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_4__["dark"],
+    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_5__["dark"],
     full: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -4671,21 +4614,23 @@ var Layout = function Layout(props) {
     className: "jsx-36998399",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    style: headerStyle,
-    className: "jsx-36998399",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_4__["Sidebar"], {
+    title: "// SILK CODE",
+    collapsible: false,
+    width: "small",
+    pad: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -4693,13 +4638,22 @@ var Layout = function Layout(props) {
     className: "jsx-36998399",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 33
     },
     __self: this
-  }, props.children)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    style: {
+      width: "cover"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, props.children))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "36998399",
     __self: this
-  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUNZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc3lsdmlhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQgfSBmcm9tICdncm9tbWV0JztcbmltcG9ydCB7IGRhcmsgfSBmcm9tICdncm9tbWV0L3RoZW1lcyc7XG5cblxuY29uc3Qgd3JhcHBlclN0eWxlID0ge1xuICAgIG1hcmdpbkxlZnQ6IDAsXG4gICAgbWFyZ2luUmlnaHQ6IDAsXG4gICAgYmFja2dyb3VuZENvbG9yOiBcIiMxMTExMTFcIixcbn1cbmNvbnN0IGhlYWRlclN0eWxlID0ge1xuICAgIG1hcmdpbjogMTUsXG4gICAgZGlzcGxheTogXCJmbGV4XCIsXG4gICAgYWxpZ25Db250ZW50OiBcImNlbnRlclwiXG59O1xuXG5jb25zdCBsYXlvdXRXaWR0aCA9IHtcbiAgICBtYXJnaW46IDAsXG4gICAgcGFkZGluZzogMFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2hlYWRlclN0eWxlfT5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+e1xuICAgICAgICAgICAgYEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvJyk7XG4gICAgICAgIFxuICAgICAgICBoMSB7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICB9O1xuICAgICAgICBcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICB1bCB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgfWBcbiAgICAgICAgfVxuICAgICAgICA8L3N0eWxlPlxuICAgIDwvR3JvbW1ldD5cbilcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0OyJdfQ== */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/layout.js */"));
+  }, "@import url('https://fonts.googleapis.com/css?family=Roboto');h1.jsx-36998399{font-family:'Roboto',sans-serif;font-weight:bold;}body.jsx-36998399{font-family:'Roboto',sans-serif;}ul.jsx-36998399{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvY29tcG9uZW50cy9sYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBdUNZLEFBQzhELEFBR2xCLEFBS0UsQUFHYixzQkFDWCxVQVJNLEFBS1gsQ0FJUixnQkFSQSIsImZpbGUiOiIvVXNlcnMvc3lsdmlhL0RvY3VtZW50cy9kZXZsZWFndWUvY29uc3VtZS1tb3JlLXN0dWZmL3BhZ2VzL2NvbXBvbmVudHMvbGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tICcuL2hlYWRlcidcbmltcG9ydCB7IEdyb21tZXQsIEJveCB9IGZyb20gJ2dyb21tZXQnO1xuaW1wb3J0IHsgU2lkZWJhciB9IGZyb20gJ2dyb21tZXQtY29udHJvbHMnO1xuaW1wb3J0IHsgZGFyayB9IGZyb20gJ2dyb21tZXQvdGhlbWVzJztcblxuXG5cbmNvbnN0IHdyYXBwZXJTdHlsZSA9IHtcbiAgICBkaXNwbGF5OiBcImZsZXhcIixcbiAgICBmbGV4RGlyZWN0aW9uOiBcInJvdyBub3dyYXBcIixcbiAgICBiYWNrZ3JvdW5kQ29sb3I6IFwiIzExMTExMVwiLFxufVxuY29uc3QgaGVhZGVyU3R5bGUgPSB7XG4gICAgbWFyZ2luOiAxNSxcbiAgICBkaXNwbGF5OiBcImZsZXhcIixcbiAgICBhbGlnbkNvbnRlbnQ6IFwiY2VudGVyXCJcbn07XG5cbmNvbnN0IGxheW91dFdpZHRoID0ge1xuICAgIGRpc3BsYXk6IFwiZmxleFwiLFxuICAgIGZsZXhEaXJlY3Rpb246IFwiY29sdW1uXCIsXG4gICAgbWFyZ2luOiAwLFxuICAgIGp1c3RpZnlDb250ZW50OiBcImNlbnRlclwiLFxufVxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG5cbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30gZnVsbD5cbiAgICAgICAgPGRpdiBzdHlsZT17d3JhcHBlclN0eWxlfT5cbiAgICAgICAgICAgIDxTaWRlYmFyIHRpdGxlPVwiLy8gU0lMSyBDT0RFXCIgY29sbGFwc2libGU9e2ZhbHNlfSB3aWR0aD1cInNtYWxsXCIgcGFkPVwieHhzbWFsbFwiPlxuICAgICAgICAgICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgICAgIDwvU2lkZWJhcj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e2xheW91dFdpZHRofT5cbiAgICAgICAgICAgICAgICA8Qm94IHN0eWxlPXt7IHdpZHRoOiBcImNvdmVyXCIgfX0+XG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cbiAgICAgICAgICAgICAgICA8L0JveD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPHN0eWxlIGpzeD57XG4gICAgICAgICAgICBgQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Sb2JvdG8nKTtcbiAgICAgICAgXG4gICAgICAgIGgxIHtcbiAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIH07XG4gICAgICAgIFxuICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgIHVsIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICB9YFxuICAgICAgICB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXQ7Il19 */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/components/layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -4715,7 +4669,6 @@ var Layout = function Layout(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -4739,36 +4692,18 @@ var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/i
 
 
 
-var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    as: "/p/".concat(props.id),
-    href: "/post?title=".concat(props.title),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Anchor"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, props.title));
-};
-
-function Index() {
+var Index = function Index() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Grommet"], {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_5__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -4781,7 +4716,7 @@ function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -4789,7 +4724,7 @@ function Index() {
     elevation: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
@@ -4798,7 +4733,7 @@ function Index() {
     pad: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 34
     },
     __self: this
   }, "silk code."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -4809,14 +4744,14 @@ function Index() {
     alignSelf: "start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Text"], {
     color: "accent-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 45
     },
     __self: this
   }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Box"], {
@@ -4826,7 +4761,7 @@ function Index() {
     overflow: "hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
@@ -4834,7 +4769,7 @@ function Index() {
     margin: "small",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 61
     },
     __self: this
   }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Carousel"], {
@@ -4844,7 +4779,7 @@ function Index() {
     fill: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -4852,7 +4787,7 @@ function Index() {
     src: "https://i.imgur.com/W6fcu6b.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 70
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -4860,7 +4795,7 @@ function Index() {
     src: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 71
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_4__["Image"], {
@@ -4868,14 +4803,16 @@ function Index() {
     src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 75
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1435639402",
     __self: this
-  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1435639402{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1435639402{font-family:\"Roboto\",sans-serif;}ul.jsx-1435639402{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBdUZTLEFBRXdFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL3N5bHZpYS9Eb2N1bWVudHMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSBcIi4vY29tcG9uZW50cy9sYXlvdXRcIjtcbi8vIGltcG9ydCBTZWFyY2ggZnJvbSBcIi4vY29tcG9uZW50cy9zZWFyY2hcIjtcblxuaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuaW1wb3J0IHtcbiAgR3JvbW1ldCxcbiAgSGVhZGluZyxcbiAgQW5jaG9yLFxuICBNZW51LFxuICBCb3gsXG4gIFRleHQsXG4gIENsb2NrLFxuICBDYXJvdXNlbCxcbiAgSW1hZ2Vcbn0gZnJvbSBcImdyb21tZXRcIjtcbmltcG9ydCB7IGRhcmsgfSBmcm9tIFwiZ3JvbW1ldC90aGVtZXNcIjtcbmltcG9ydCBnZW5lcmF0ZSBmcm9tIFwiQGJhYmVsL2dlbmVyYXRvclwiO1xuXG5jb25zdCBQb3N0TGluayA9IHByb3BzID0+IChcbiAgPExpbmsgYXM9e2AvcC8ke3Byb3BzLmlkfWB9IGhyZWY9e2AvcG9zdD90aXRsZT0ke3Byb3BzLnRpdGxlfWB9PlxuICAgIDxBbmNob3I+e3Byb3BzLnRpdGxlfTwvQW5jaG9yPlxuICA8L0xpbms+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJbmRleCgpIHtcbiAgcmV0dXJuIChcbiAgICA8R3JvbW1ldCB0aGVtZT17ZGFya30+XG4gICAgICA8TGF5b3V0PlxuICAgICAgICA8Qm94XG4gICAgICAgICAga2V5PVwiYmFubmVyXCJcbiAgICAgICAgICBwYWQ9XCJsYXJnZVwiXG4gICAgICAgICAgYW5pbWF0aW9uPVwiZmFkZUluXCJcbiAgICAgICAgICBiYWNrZ3JvdW5kPXt7XG4gICAgICAgICAgICBpbWFnZTogXCJ1cmwoaHR0cHM6Ly9pLmltZ3VyLmNvbS9KblByOEhzLnBuZylcIixcbiAgICAgICAgICAgIHNpemU6IFwiY292ZXJcIlxuICAgICAgICAgIH19XG4gICAgICAgID5cbiAgICAgICAgICA8Qm94IGtleT1cImhlYWRpbmdcIiBlbGV2YXRpb249XCJ4eHNtYWxsXCI+XG4gICAgICAgICAgICA8SGVhZGluZyBjb2xvcj1cImFjY2VudC0zXCIgc2l6ZT1cImxhcmdlXCIgcGFkPVwieHhzbWFsbFwiPlxuICAgICAgICAgICAgICBzaWxrIGNvZGUuXG4gICAgICAgICAgICAgIHsvKiA8U2VhcmNoIC8+ICovfVxuICAgICAgICAgICAgPC9IZWFkaW5nPlxuICAgICAgICAgICAgPEJveFxuICAgICAgICAgICAgICBrZXk9XCJibHVyYlwiXG4gICAgICAgICAgICAgIHBhZD1cInh4c21hbGxcIlxuICAgICAgICAgICAgICBoZWlnaHQ9XCJzbWFsbFwiXG4gICAgICAgICAgICAgIHdpZHRoPVwibGFyZ2VcIlxuICAgICAgICAgICAgICBhbGlnblNlbGY9XCJzdGFydFwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxUZXh0IGNvbG9yPVwiYWNjZW50LTRcIj5cbiAgICAgICAgICAgICAgICBMb3JlbSBLaGFsZWQgSXBzdW0gaXMgYSBtYWpvciBrZXkgdG8gc3VjY2Vzcy4gVG8gYmUgc3VjY2Vzc2Z1bFxuICAgICAgICAgICAgICAgIHlvdeKAmXZlIGdvdCB0byB3b3JrIGhhcmQsIHRvIG1ha2UgaGlzdG9yeSwgc2ltcGxlLCB5b3XigJl2ZSBnb3QgdG9cbiAgICAgICAgICAgICAgICBtYWtlIGl0LiBJbiBsaWZlIHRoZXJlIHdpbGwgYmUgcm9hZCBibG9ja3MgYnV0IHdlIHdpbGwgb3ZlciBjb21lXG4gICAgICAgICAgICAgICAgaXQuIExpZmUgaXMgd2hhdCB5b3UgbWFrZSBpdCwgc28gbGV04oCZcyBtYWtlIGl0LiBCbGVzcyB1cC4gVGhleVxuICAgICAgICAgICAgICAgIHdpbGwgdHJ5IHRvIGNsb3NlIHRoZSBkb29yIG9uIHlvdSwganVzdCBvcGVuIGl0LiBMb29rIGF0IHRoZVxuICAgICAgICAgICAgICAgIHN1bnNldCwgbGlmZSBpcyBhbWF6aW5nLCBsaWZlIGlzIGJlYXV0aWZ1bCwgbGlmZSBpcyB3aGF0IHlvdVxuICAgICAgICAgICAgICAgIG1ha2UgaXQuIE1ham9yIGtleSwgZG9u4oCZdCBmYWxsIGZvciB0aGUgdHJhcCwgc3RheSBmb2N1c2VkLiBJdOKAmXNcbiAgICAgICAgICAgICAgICB0aGUgb25lcyBjbG9zZXN0IHRvIHlvdSB0aGF0IHdhbnQgdG8gc2VlIHlvdSBmYWlsLlxuICAgICAgICAgICAgICAgIENvbmdyYXR1bGF0aW9ucywgeW91IHBsYXllZCB5b3Vyc2VsZi4gRmluZCBwZWFjZSwgbGlmZSBpcyBsaWtlIGFcbiAgICAgICAgICAgICAgICB3YXRlciBmYWxsLCB5b3XigJl2ZSBnb3R0YSBmbG93LlxuICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICA8L0JveD5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgPC9Cb3g+XG4gICAgICAgIDxCb3gga2V5PVwidHlwZVwiIGFsaWduPVwic3RhcnRcIiBwYWQ9XCJoYWlyXCIgb3ZlcmZsb3c9XCJoaWRkZW5cIj5cbiAgICAgICAgICA8SGVhZGluZyBjb2xvcj1cImFjY2VudC0yXCIgbWFyZ2luPVwic21hbGxcIj5cbiAgICAgICAgICAgIEZlYXR1cmVkIEl0ZW1zXG4gICAgICAgICAgPC9IZWFkaW5nPlxuICAgICAgICAgIDxDYXJvdXNlbFxuICAgICAgICAgICAgcGxheT1cIjMwMDAwXCJcbiAgICAgICAgICAgIGJhY2tncm91bmQ9XCJiYWNrZ3JvdW5kQ29sb3JcIlxuICAgICAgICAgICAgaGVpZ2h0PVwic21hbGxcIlxuICAgICAgICAgICAgZmlsbFxuICAgICAgICAgID5cbiAgICAgICAgICAgIDxJbWFnZSBmaXQ9XCJjb3ZlclwiIHNyYz1cImh0dHBzOi8vaS5pbWd1ci5jb20vVzZmY3U2Yi5wbmdcIiAvPlxuICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgIGZpdD1cImNvdmVyXCJcbiAgICAgICAgICAgICAgc3JjPVwiaHR0cHM6Ly9kMTdmbnE5ZGt6OWhnai5jbG91ZGZyb250Lm5ldC91cGxvYWRzLzIwMTgvMDQvUG9tZXJhbmlhbl8wMi5qcGdcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDxJbWFnZVxuICAgICAgICAgICAgICBmaXQ9XCJjb3ZlclwiXG4gICAgICAgICAgICAgIHNyYz1cImh0dHBzOi8vaGlwcy5oZWFyc3RhcHBzLmNvbS9obWctcHJvZC5zMy5hbWF6b25hd3MuY29tL2ltYWdlcy9jYXQtcXVvdGVzLTE1NDM1OTkzOTIuanBnP2Nyb3A9MS4wMHh3OjAuNzU5eGg7MCwwJnJlc2l6ZT00ODA6KlwiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvQ2Fyb3VzZWw+XG4gICAgICAgIDwvQm94PlxuICAgICAgPC9MYXlvdXQ+XG4gICAgICA8c3R5bGUganN4PlxuICAgICAgICB7YFxuICAgICAgICAgIEBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90b1wiKTtcblxuICAgICAgICAgIGgxIHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgICAgICAgICB9XG4gICAgICAgICAgdWwge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9Hcm9tbWV0PlxuICApO1xufVxuIl19 */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js */"));
-}
+  }, "@import url(\"https://fonts.googleapis.com/css?family=Roboto\");h1.jsx-1435639402{font-family:\"Roboto\",sans-serif;font-weight:bold;}body.jsx-1435639402{font-family:\"Roboto\",sans-serif;}ul.jsx-1435639402{background-color:#ddd;margin:5px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zeWx2aWEvRG9jdW1lbnRzL2RldmxlYWd1ZS9jb25zdW1lLW1vcmUtc3R1ZmYvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0ZTLEFBRXdFLEFBRzFCLEFBS0EsQUFHWCxzQkFDWCxVQVJNLEFBS25CLENBSUEsZ0JBUkEiLCJmaWxlIjoiL1VzZXJzL3N5bHZpYS9Eb2N1bWVudHMvZGV2bGVhZ3VlL2NvbnN1bWUtbW9yZS1zdHVmZi9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSBcIi4vY29tcG9uZW50cy9sYXlvdXRcIjtcbi8vIGltcG9ydCBTZWFyY2ggZnJvbSBcIi4vY29tcG9uZW50cy9zZWFyY2hcIjtcblxuaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuaW1wb3J0IHtcbiAgR3JvbW1ldCxcbiAgSGVhZGluZyxcbiAgQW5jaG9yLFxuICBNZW51LFxuICBCb3gsXG4gIFRleHQsXG4gIENsb2NrLFxuICBDYXJvdXNlbCxcbiAgSW1hZ2Vcbn0gZnJvbSBcImdyb21tZXRcIjtcbmltcG9ydCB7IGRhcmsgfSBmcm9tIFwiZ3JvbW1ldC90aGVtZXNcIjtcbmltcG9ydCBnZW5lcmF0ZSBmcm9tIFwiQGJhYmVsL2dlbmVyYXRvclwiO1xuXG5cbmNvbnN0IEluZGV4ID0gKCkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxHcm9tbWV0IHRoZW1lPXtkYXJrfT5cbiAgICAgIDxMYXlvdXQ+XG4gICAgICAgIDxCb3hcbiAgICAgICAgICBrZXk9XCJiYW5uZXJcIlxuICAgICAgICAgIHBhZD1cImxhcmdlXCJcbiAgICAgICAgICBhbmltYXRpb249XCJmYWRlSW5cIlxuICAgICAgICAgIGJhY2tncm91bmQ9e3tcbiAgICAgICAgICAgIGltYWdlOiBcInVybChodHRwczovL2kuaW1ndXIuY29tL0puUHI4SHMucG5nKVwiLFxuICAgICAgICAgICAgc2l6ZTogXCJjb3ZlclwiXG4gICAgICAgICAgfX1cbiAgICAgICAgPlxuICAgICAgICAgIDxCb3gga2V5PVwiaGVhZGluZ1wiIGVsZXZhdGlvbj1cInh4c21hbGxcIj5cbiAgICAgICAgICAgIDxIZWFkaW5nIGNvbG9yPVwiYWNjZW50LTNcIiBzaXplPVwibGFyZ2VcIiBwYWQ9XCJ4eHNtYWxsXCI+XG4gICAgICAgICAgICAgIHNpbGsgY29kZS5cbiAgICAgICAgICAgICAgey8qIDxTZWFyY2ggLz4gKi99XG4gICAgICAgICAgICA8L0hlYWRpbmc+XG4gICAgICAgICAgICA8Qm94XG4gICAgICAgICAgICAgIGtleT1cImJsdXJiXCJcbiAgICAgICAgICAgICAgcGFkPVwieHhzbWFsbFwiXG4gICAgICAgICAgICAgIGhlaWdodD1cInNtYWxsXCJcbiAgICAgICAgICAgICAgd2lkdGg9XCJsYXJnZVwiXG4gICAgICAgICAgICAgIGFsaWduU2VsZj1cInN0YXJ0XCJcbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgPFRleHQgY29sb3I9XCJhY2NlbnQtNFwiPlxuICAgICAgICAgICAgICAgIExvcmVtIEtoYWxlZCBJcHN1bSBpcyBhIG1ham9yIGtleSB0byBzdWNjZXNzLiBUbyBiZSBzdWNjZXNzZnVsXG4gICAgICAgICAgICAgICAgeW914oCZdmUgZ290IHRvIHdvcmsgaGFyZCwgdG8gbWFrZSBoaXN0b3J5LCBzaW1wbGUsIHlvdeKAmXZlIGdvdCB0b1xuICAgICAgICAgICAgICAgIG1ha2UgaXQuIEluIGxpZmUgdGhlcmUgd2lsbCBiZSByb2FkIGJsb2NrcyBidXQgd2Ugd2lsbCBvdmVyIGNvbWVcbiAgICAgICAgICAgICAgICBpdC4gTGlmZSBpcyB3aGF0IHlvdSBtYWtlIGl0LCBzbyBsZXTigJlzIG1ha2UgaXQuIEJsZXNzIHVwLiBUaGV5XG4gICAgICAgICAgICAgICAgd2lsbCB0cnkgdG8gY2xvc2UgdGhlIGRvb3Igb24geW91LCBqdXN0IG9wZW4gaXQuIExvb2sgYXQgdGhlXG4gICAgICAgICAgICAgICAgc3Vuc2V0LCBsaWZlIGlzIGFtYXppbmcsIGxpZmUgaXMgYmVhdXRpZnVsLCBsaWZlIGlzIHdoYXQgeW91XG4gICAgICAgICAgICAgICAgbWFrZSBpdC4gTWFqb3Iga2V5LCBkb27igJl0IGZhbGwgZm9yIHRoZSB0cmFwLCBzdGF5IGZvY3VzZWQuIEl04oCZc1xuICAgICAgICAgICAgICAgIHRoZSBvbmVzIGNsb3Nlc3QgdG8geW91IHRoYXQgd2FudCB0byBzZWUgeW91IGZhaWwuXG4gICAgICAgICAgICAgICAgQ29uZ3JhdHVsYXRpb25zLCB5b3UgcGxheWVkIHlvdXJzZWxmLiBGaW5kIHBlYWNlLCBsaWZlIGlzIGxpa2UgYVxuICAgICAgICAgICAgICAgIHdhdGVyIGZhbGwsIHlvdeKAmXZlIGdvdHRhIGZsb3cuXG4gICAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICAgIDwvQm94PlxuICAgICAgICAgIDwvQm94PlxuICAgICAgICA8L0JveD5cbiAgICAgICAgPEJveCBrZXk9XCJ0eXBlXCIgYWxpZ249XCJzdGFydFwiIHBhZD1cImhhaXJcIiBvdmVyZmxvdz1cImhpZGRlblwiPlxuICAgICAgICAgIDxIZWFkaW5nIGNvbG9yPVwiYWNjZW50LTJcIiBtYXJnaW49XCJzbWFsbFwiPlxuICAgICAgICAgICAgRmVhdHVyZWQgSXRlbXNcbiAgICAgICAgICA8L0hlYWRpbmc+XG4gICAgICAgICAgPENhcm91c2VsXG4gICAgICAgICAgICBwbGF5PVwiMzAwMDBcIlxuICAgICAgICAgICAgYmFja2dyb3VuZD1cImJhY2tncm91bmRDb2xvclwiXG4gICAgICAgICAgICBoZWlnaHQ9XCJzbWFsbFwiXG4gICAgICAgICAgICBmaWxsXG4gICAgICAgICAgPlxuICAgICAgICAgICAgPEltYWdlIGZpdD1cImNvdmVyXCIgc3JjPVwiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XNmZjdTZiLnBuZ1wiIC8+XG4gICAgICAgICAgICA8SW1hZ2VcbiAgICAgICAgICAgICAgZml0PVwiY292ZXJcIlxuICAgICAgICAgICAgICBzcmM9XCJodHRwczovL2QxN2ZucTlka3o5aGdqLmNsb3VkZnJvbnQubmV0L3VwbG9hZHMvMjAxOC8wNC9Qb21lcmFuaWFuXzAyLmpwZ1wiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgIGZpdD1cImNvdmVyXCJcbiAgICAgICAgICAgICAgc3JjPVwiaHR0cHM6Ly9oaXBzLmhlYXJzdGFwcHMuY29tL2htZy1wcm9kLnMzLmFtYXpvbmF3cy5jb20vaW1hZ2VzL2NhdC1xdW90ZXMtMTU0MzU5OTM5Mi5qcGc/Y3JvcD0xLjAweHc6MC43NTl4aDswLDAmcmVzaXplPTQ4MDoqXCJcbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9DYXJvdXNlbD5cbiAgICAgICAgPC9Cb3g+XG4gICAgICA8L0xheW91dD5cbiAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgIHtgXG4gICAgICAgICAgQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvXCIpO1xuXG4gICAgICAgICAgaDEge1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIH1cbiAgICAgICAgICB1bCB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L0dyb21tZXQ+XG4gICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IEluZGV4O1xuIl19 */\n/*@ sourceURL=/Users/sylvia/Documents/devleague/consume-more-stuff/pages/index.js */"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
@@ -4902,6 +4839,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet */ "grommet");
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! grommet-icons */ "grommet-icons");
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet_icons__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -4911,6 +4850,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/itemForm.js";
+
 
 
 
@@ -4968,32 +4908,7 @@ function (_Component) {
       }).catch(function (err) {
         console.log(err);
       });
-    } // delete = item => {
-    //   const name = this.state.name.filter(itemName => item !== itemName.name)
-    //   this.setState({ name })
-    // }
-    // deleteItem() {
-    //   fetch("http://localhost:8080/api/items", {
-    //     method: "DELETE",
-    //     headers: {
-    //       Accept: "application/json",
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //       name: this.state.name.toLowerCase(),
-    //       description: this.state.description.toLowerCase(),
-    //       price: this.state.price,
-    //       category: this.state.category.toLowerCase()
-    //     })
-    //   })
-    //     .then(() => {
-    //       console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -5010,21 +4925,21 @@ function (_Component) {
         onEsc: this.onClose,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Box"], {
         pad: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 66
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5034,17 +4949,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
-        onChange: this.handleChange,
-        name: "url",
-        label: "URL of Product Image",
-        required: false,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5054,7 +4959,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 74
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
@@ -5064,7 +4969,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 80
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Select"], (_React$createElement = {
@@ -5079,23 +4984,21 @@ function (_Component) {
         });
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "name", "category"), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "required", true), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__source", {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 86
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_React$createElement, "__self", this), _React$createElement)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_11__["AddCircle"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96
+          },
+          __self: this
+        }),
         type: "submit",
         label: "Add Item",
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
-        type: "delete",
-        label: "Delete Item",
-        primary: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 96
         },
         __self: this
       }))));
@@ -5136,9 +5039,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bluebird */ "bluebird");
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var grommet_controls_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet-controls/components */ "grommet-controls/components");
+/* harmony import */ var grommet_controls_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet_controls_components__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! grommet-icons */ "grommet-icons");
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet_icons__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/types */ "@babel/types");
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_babel_types__WEBPACK_IMPORTED_MODULE_12__);
 
 
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/items.js";
+
+
+
 
 
 
@@ -5154,23 +5066,22 @@ var Items = function Items(_ref) {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_8__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
-    key: "wrapper",
     direction: "row",
     wrap: "true",
     alignContent: "between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }, items.map(function (item) {
@@ -5183,21 +5094,21 @@ var Items = function Items(_ref) {
       margin: "medium",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 19
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardTitle, {
-      color: "neutral-2",
+      color: "brand",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 27
       },
       __self: this
     }, item.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardContent, {
       color: "dark-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 28
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
@@ -5210,7 +5121,7 @@ var Items = function Items(_ref) {
       round: "small",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 29
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
@@ -5218,7 +5129,7 @@ var Items = function Items(_ref) {
       width: "medium",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 34
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Image"], {
@@ -5226,25 +5137,25 @@ var Items = function Items(_ref) {
       src: item.url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 35
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 39
       },
       __self: this
     }, item.description), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 40
       },
       __self: this
     }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     }, item.category)));
@@ -5315,8 +5226,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet */ "grommet");
-/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router */ "react-router");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_router__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! grommet */ "grommet");
+/* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -5328,7 +5241,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/login.js";
 
 
- // import { Redirect } from "react-router";
+
 
 
 
@@ -5383,28 +5296,57 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      // const { isAuthenticated } = this.props;
-      // if (isAuthenticated) {
-      //   return <Redirect to="/items" />;
-      // }
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Form"], {
-        onSubmit: this.handleSubmit,
+      var isAuthenticated = this.props.isAuthenticated;
+
+      if (isAuthenticated) {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_10__["Redirect"], {
+          to: "/items",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          },
+          __self: this
+        });
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Layer"], {
+        position: "right",
+        width: "large",
+        full: "vertical",
+        modal: false,
+        animate: true,
+        onClickOutside: this.onClose,
+        onEsc: this.onClose,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 57
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Box"], {
+        pad: "large",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Form"], {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["FormField"], {
         onChange: this.handleChange,
         name: "email",
         label: "email",
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 68
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["FormField"], {
         onChange: this.handleChange,
         type: "password",
         name: "password",
@@ -5412,19 +5354,19 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 74
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Button"], {
         type: "submit",
         label: "Sign In",
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 81
         },
         __self: this
-      }));
+      }))));
     }
   }]);
 
@@ -5457,6 +5399,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! grommet */ "grommet");
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/layout */ "./pages/components/layout.js");
 
 
 
@@ -5466,6 +5411,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/register.js";
+
+
 
 
 
@@ -5531,31 +5478,33 @@ function (_Component) {
     key: "render",
     value: function render() {
       var layerType = this.state.layerType;
-      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Layer"], {
-        position: "right",
-        width: "large",
-        full: "vertical",
-        modal: false,
-        animate: "true",
-        onClickOutside: this.onClose,
-        onEsc: this.onClose,
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Grommet"], {
+        theme: grommet_themes__WEBPACK_IMPORTED_MODULE_10__["dark"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 69
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Box"], {
         pad: "large",
+        background: "neutral-4",
+        width: "medium",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 71
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Form"], {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 72
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -5565,7 +5514,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 73
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -5575,7 +5524,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 79
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -5585,7 +5534,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 85
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -5595,7 +5544,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 91
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["FormField"], {
@@ -5606,7 +5555,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 97
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Button"], {
@@ -5615,10 +5564,10 @@ function (_Component) {
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 104
         },
         __self: this
-      }))));
+      })))));
     }
   }]);
 
@@ -5652,10 +5601,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(grommet__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! grommet-controls */ "grommet-controls");
 /* harmony import */ var grommet_controls__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(grommet_controls__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
-/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bluebird */ "bluebird");
-/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! grommet-icons */ "grommet-icons");
+/* harmony import */ var grommet_icons__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(grommet_icons__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! grommet/themes */ "grommet/themes");
+/* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! bluebird */ "bluebird");
+/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_10__);
 
 
 var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/useritems.js";
@@ -5668,19 +5619,20 @@ var _jsxFileName = "/Users/sylvia/Documents/devleague/consume-more-stuff/pages/u
 
 
 
+
 var UserItems = function UserItems(_ref) {
   var items = _ref.items;
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Grommet"], {
-    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_8__["dark"],
+    theme: grommet_themes__WEBPACK_IMPORTED_MODULE_9__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Box"], {
@@ -5690,7 +5642,7 @@ var UserItems = function UserItems(_ref) {
     alignContent: "between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }, items.map(function (item) {
@@ -5703,42 +5655,76 @@ var UserItems = function UserItems(_ref) {
       margin: "medium",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 19
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardTitle, {
       color: "neutral-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 27
       },
       __self: this
     }, item.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Card"].CardContent, {
       color: "dark-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 28
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 29
       },
       __self: this
     }, item.description), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 30
       },
       __self: this
     }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Text"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 31
       },
       __self: this
-    }, item.category)));
+    }, item.category), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      icon: react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_8__["Edit"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }),
+      label: "Edit",
+      onClick: function onClick() {
+        console.log('--->EDIT BUTTON FIRED');
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      icon: react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_8__["FormTrash"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }),
+      label: "Delete",
+      onClick: function onClick() {
+        console.log('--->DELETE BUTTON FIRED');
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })));
   }))));
 };
 
@@ -5779,19 +5765,7 @@ function () {
   return function (_x) {
     return _ref3.apply(this, arguments);
   };
-}(); //THIS ALLOWS CLIENT TO DELETE ITEMS VIA BROWSER//
-// removedItem = id => {
-//     const headers = { 'Content-Type': 'application/json' };
-//     let itemData = { items: id };
-//     // console.log("THIS IS THE CARD DATA", cardData)
-//     fetch(`/kanban`, { method: 'DELETE', body: JSON.stringify(itemData), headers })
-//         .then(res => {
-//             return fetch('http://localhost:8080/api/items')
-//                 .then((res) => { return res.json() })
-//                 .then((body) => { this.setState({ items: body }) })
-//         })
-// }
-
+}();
 
 /* harmony default export */ __webpack_exports__["default"] = (UserItems);
 
@@ -5817,6 +5791,17 @@ module.exports = __webpack_require__(/*! /Users/sylvia/Documents/devleague/consu
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/generator");
+
+/***/ }),
+
+/***/ "@babel/types":
+/*!*******************************!*\
+  !*** external "@babel/types" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/types");
 
 /***/ }),
 
@@ -5850,6 +5835,28 @@ module.exports = require("grommet");
 /***/ (function(module, exports) {
 
 module.exports = require("grommet-controls");
+
+/***/ }),
+
+/***/ "grommet-controls/components":
+/*!**********************************************!*\
+  !*** external "grommet-controls/components" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("grommet-controls/components");
+
+/***/ }),
+
+/***/ "grommet-icons":
+/*!********************************!*\
+  !*** external "grommet-icons" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("grommet-icons");
 
 /***/ }),
 
@@ -5927,6 +5934,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-router":
+/*!*******************************!*\
+  !*** external "react-router" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router");
 
 /***/ }),
 

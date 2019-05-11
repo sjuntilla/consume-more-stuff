@@ -2,133 +2,103 @@ import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
 import { Box, Form, FormField, Select, Button, Layer, Grommet } from "grommet";
+import { AddCircle } from "grommet-icons";
 //should only show when user is logged in
 
 class AddItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      url: "",
-      description: "",
-      price: "",
-      category: ""
-      // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "",
+            url: "",
+            description: "",
+            price: "",
+            category: ""
+            // categories: ["WELLNESS", "OFFICE", "ACCESSORIES"]
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log("-----> ITEM STATE", this.state);
+        fetch("http://localhost:8080/api/items", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: this.state.name.toLowerCase(),
+                url: this.state.url,
+                description: this.state.description.toLowerCase(),
+                price: this.state.price,
+                category: this.state.category.toLowerCase()
+            }),
+            credentials: "include"
+        })
+            .then(() => {
+                console.log("ADDED ITEM TOOOOOO ITEM LIST");
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log("-----> ITEM STATE", this.state);
-    fetch("http://localhost:8080/api/items", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: this.state.name.toLowerCase(),
-        url: this.state.url,
-        description: this.state.description.toLowerCase(),
-        price: this.state.price,
-        category: this.state.category.toLowerCase()
-      }),
-      credentials: "include"
-    })
-      .then(() => {
-        console.log("ADDED ITEM TOOOOOO ITEM LIST");
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
+    render() {
+        return (
+            <Layer
+                position="right"
+                width="large"
+                full="vertical"
+                modal={false}
+                animate="true"
+                onClickOutside={this.onClose}
+                onEsc={this.onClose}
+            >
+                <Box pad="large">
+                    <Form onSubmit={this.handleSubmit}>
+                        <FormField
+                            onChange={this.handleChange}
+                            name="name"
+                            label="Product Name"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="description"
+                            label="Product Description"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="price"
+                            label="Product Price"
+                            required={true}
+                        />
+                        <Select
+                            placeholder="Category"
+                            onChange={this.handleChange}
+                            value={this.state.category}
+                            options={["WELLNESS", "OFFICE", "ACCESSORIES"]}
+                            onChange={({ option }) => this.setState({ category: option })}
+                            name="category"
+                            required={true}
+                        />
 
-  // delete = item => {
-  //   const name = this.state.name.filter(itemName => item !== itemName.name)
-  //   this.setState({ name })
-  // }
+                        <Button icon={<AddCircle />} type="submit" label="Add Item" primary={true} />
 
-  // deleteItem() {
-  //   fetch("http://localhost:8080/api/items", {
-  //     method: "DELETE",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       name: this.state.name.toLowerCase(),
-  //       description: this.state.description.toLowerCase(),
-  //       price: this.state.price,
-  //       category: this.state.category.toLowerCase()
-  //     })
-  //   })
-  //     .then(() => {
-  //       console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }
-
-  handleChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
-  render() {
-    return (
-      <Layer
-        position="right"
-        width="large"
-        full="vertical"
-        modal={false}
-        animate="true"
-        onClickOutside={this.onClose}
-        onEsc={this.onClose}
-      >
-        <Box pad="large">
-          <Form onSubmit={this.handleSubmit}>
-            <FormField
-              onChange={this.handleChange}
-              name="name"
-              label="Product Name"
-              required={true}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="url"
-              label="URL of Product Image"
-              required={false}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="description"
-              label="Product Description"
-              required={true}
-            />
-            <FormField
-              onChange={this.handleChange}
-              name="price"
-              label="Product Price"
-              required={true}
-            />
-            <Select
-              placeholder="Category"
-              onChange={this.handleChange}
-              value={this.state.category}
-              options={["WELLNESS", "OFFICE", "ACCESSORIES"]}
-              onChange={({ option }) => this.setState({ category: option })}
-              name="category"
-              required={true}
-            />
-
-            <Button type="submit" label="Add Item" primary={true} />
-            <Button type="delete" label="Delete Item" primary={true} />
-          </Form>
-        </Box>
-      </Layer>
-    );
-  }
+                    </Form>
+                </Box>
+            </Layer>
+        );
+    }
 }
 export default AddItem;
