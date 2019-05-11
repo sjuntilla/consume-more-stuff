@@ -2,6 +2,7 @@ import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
 import { Box, Form, FormField, Select, Button, Layer, Grommet } from "grommet";
+import { AddCircle } from "grommet-icons";
 //should only show when user is logged in
 
 class AddItem extends Component {
@@ -44,38 +45,13 @@ class AddItem extends Component {
             });
     }
 
-    // delete = item => {
-    //   const name = this.state.name.filter(itemName => item !== itemName.name)
-    //   this.setState({ name })
-    // }
-
-    // deleteItem() {
-    //   fetch("http://localhost:8080/api/items", {
-    //     method: "DELETE",
-    //     headers: {
-    //       Accept: "application/json",
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //       name: this.state.name.toLowerCase(),
-    //       description: this.state.description.toLowerCase(),
-    //       price: this.state.price,
-    //       category: this.state.category.toLowerCase()
-    //     })
-    //   })
-    //     .then(() => {
-    //       console.log("DEEEEEELETEDDDDDD ITEM TOOOOOO ITEM LIST");
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // }
 
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
     };
+
     render() {
         return (
             <Layer
@@ -94,12 +70,6 @@ class AddItem extends Component {
                             name="name"
                             label="Product Name"
                             required={true}
-                        />
-                        <FormField
-                            onChange={this.handleChange}
-                            name="url"
-                            label="URL of Product Image"
-                            required={false}
                         />
                         <FormField
                             onChange={this.handleChange}
@@ -123,8 +93,8 @@ class AddItem extends Component {
                             required={true}
                         />
 
-                        <Button type="submit" label="Add Item" primary={true} />
-                        <Button type="delete" label="Delete Item" primary={true} />
+                        <Button icon={<AddCircle />} type="submit" label="Add Item" primary={true} />
+
                     </Form>
                 </Box>
             </Layer>

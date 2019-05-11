@@ -54,22 +54,34 @@ class Login extends Component {
         }
 
         return (
-            <Form onSubmit={this.handleSubmit}>
-                <FormField
-                    onChange={this.handleChange}
-                    name="email"
-                    label="email"
-                    required={true}
-                />
-                <FormField
-                    onChange={this.handleChange}
-                    type="password"
-                    name="password"
-                    label="password"
-                    required={true}
-                />
-                <Button type="submit" label="Sign In" primary={true} />
-            </Form>
+            <Layer
+                position="right"
+                width="large"
+                full="vertical"
+                modal={false}
+                animate={true}
+                onClickOutside={this.onClose}
+                onEsc={this.onClose}
+            >
+                <Box pad="large">
+                    <Form onSubmit={this.handleSubmit}>
+                        <FormField
+                            onChange={this.handleChange}
+                            name="email"
+                            label="email"
+                            required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            type="password"
+                            name="password"
+                            label="password"
+                            required={true}
+                        />
+                        <Button type="submit" label="Sign In" primary={true} />
+                    </Form>
+                </Box>
+            </Layer>
         );
     }
 }

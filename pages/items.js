@@ -2,10 +2,13 @@ import Layout from "./components/layout";
 import fetch from "isomorphic-unfetch";
 
 import Link from "next/link";
-import { Grommet, Heading, Anchor, Text, Box, Layer, Image } from "grommet";
+import { Grommet, Heading, Anchor, Text, Box, Layer, Image, Button } from "grommet";
 import { Card } from "grommet-controls";
 import { dark } from "grommet/themes";
 import { Disposer } from "bluebird";
+import { IconButton } from "grommet-controls/components";
+import { SubtractCircle } from "grommet-icons";
+import { isContinueStatement } from "@babel/types";
 
 const Items = ({ items }) => {
   return (
@@ -23,16 +26,16 @@ const Items = ({ items }) => {
             >
               <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
               <Card.CardContent color="dark-1">
-              <Box
-              direction="row"
-              border={{ color: 'brand', size: 'large' }}
-              pad="medium"
-              round="small">
-              <Box height="small" width="medium">
-              <Image
-               fit="cover"
-              src={item.url }/>
-                </Box></Box>
+                <Box
+                  direction="row"
+                  border={{ color: 'brand', size: 'large' }}
+                  pad="medium"
+                  round="small">
+                  <Box height="small" width="medium">
+                    <Image
+                      fit="cover"
+                      src={item.url} />
+                  </Box></Box>
                 <Text>{item.description}</Text>
                 <Text>${item.price}</Text>
                 <Text>{item.category}</Text>

@@ -7,12 +7,13 @@ const auth = require("../users");
 //items routes
 
 router.route("/items").get((req, res) => {
+  console.log("GET AAAAAAAAAALLLLLLLLLLLLLL")
   return new req.database.Item().fetchAll().then(item => {
     res.json(item);
   });
 });
 
-router.post("/items", isAuthenticated, (req, res) => {
+router.post("/items", (req, res) => {
   const created_at = new Date();
   //TBD user_id connection with item id
   const user_id = 1;
@@ -54,14 +55,14 @@ router.route("/items").delete((req, res) => {
     });
 });
 
-function isAuthenticated(req, res, done) {
-  if (req.isAuthenticated()) {
-    done();
-  } else {
-    const msg = `Not authenticated!`;
-    console.log(msg);
-    res.redirect("/");
-  }
-}
+// function isAuthenticated(req, res, done) {
+//   if (req.isAuthenticated()) {
+//     done();
+//   } else {
+//     const msg = `Not authenticated!`;
+//     console.log(msg);
+//     res.redirect("/");
+//   }
+// }
 
 module.exports = router;

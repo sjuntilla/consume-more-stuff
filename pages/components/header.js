@@ -26,6 +26,7 @@ import {
     onClickOutside
 } from "grommet";
 import { dark } from "grommet/themes";
+import { VerticalMenu } from "grommet-controls";
 
 const linkStyle = {
     marginRight: 15,
@@ -44,17 +45,15 @@ const Header = () => (
             direction="row-responsive"
             fit="cover"
             pad="small"
-            background="neutral-3"
         />
 
         {/* TABS OPTION */}
-        <Tabs>
+        {/* <Tabs>
             <Tab title="HOME" />
             <Tab title="ALL ITEMS">
-                <Layer>
-                    <Items />
-                </Layer>
+                <Items />
             </Tab>
+
             <Tab title="ADD ITEM">
                 <AddItem />
             </Tab>
@@ -65,9 +64,30 @@ const Header = () => (
                 <Register />
             </Tab>
             <Tab title="USER ITEMS">
-                <Register />
+                <UserItems />
             </Tab>
-        </Tabs>
+        </Tabs> */}
+
+        <VerticalMenu
+            items={[
+                {
+                    id: 'main',
+                    label: 'NAVIGATION',
+
+                    items: [{
+                        id: 'home',
+                        label: 'HOME',
+                        href: '/'
+                    },
+                    {
+                        id: 'items',
+                        label: 'ITEMS',
+                        href: '/items'
+                    }
+                    ]
+                }
+            ]}
+        />
 
         <style jsx>
             {`
