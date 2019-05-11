@@ -33,7 +33,7 @@ const Layout = props => (
                 </Box>
             </div>
         </div>
-        <style jsx>{
+        <style jsx global>{
             `@import url('https://fonts.googleapis.com/css?family=Roboto');
         
         h1 {
@@ -44,9 +44,6 @@ const Layout = props => (
         body {
             font-family: 'Roboto', sans-serif;
                 }
-        ul {
-          background-color: #ddd;
-          margin: 5px;
         }`
         }
         </style>
