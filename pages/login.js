@@ -1,7 +1,7 @@
 import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
-import { Redirect } from "react-router";
+import Router from 'next/router';
 import { Box, Button, CheckBox, Form, FormField, Select, Layer } from "grommet";
 
 class Login extends Component {
@@ -78,7 +78,7 @@ class Login extends Component {
                             label="password"
                             required={true}
                         />
-                        <Button type="submit" label="Sign In" primary={true} />
+                        <Button onClick={() => Router.push('/items')} type="submit" label="Sign In" primary={true} />
                     </Form>
                 </Box>
             </Layer>

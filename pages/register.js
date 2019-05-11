@@ -13,6 +13,10 @@ import {
 } from "grommet";
 import { dark } from "grommet/themes";
 import Layout from './components/layout';
+import Router from 'next/router';
+
+
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -101,7 +105,7 @@ class Register extends Component {
                 label="Password"
                 required={true}
               />
-              <Button type="submit" label="Register" primary={true} />
+              <Button onClick={() => Router.push('/items')} type="submit" label="Register" primary={true}  />
             </Form>
           </Box>
         </Layout></Grommet>

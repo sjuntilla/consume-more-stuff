@@ -42,13 +42,11 @@ const PostLink = props => (
 const Header = () => (
     <Grommet theme={dark}>
         <Box
-            direction="row-responsive"
             fit="cover"
-            pad="small"
-        />
+            pad="small">
 
-        {/* TABS OPTION */}
-        {/* <Tabs>
+            {/* TABS OPTION */}
+            {/* <Tabs>
             <Tab title="HOME" />
             <Tab title="ALL ITEMS">
                 <Items />
@@ -68,28 +66,28 @@ const Header = () => (
             </Tab>
         </Tabs> */}
 
-        <VerticalMenu pad="xxsmall"
-            items={[
-                {
-                    id: 'main',
-                    label: 'NAVIGATION',
-
-                    items: [{
-                        id: 'home',
-                        label: 'HOME',
-                        href: '/'
-                    },
+            <VerticalMenu pad="xxsmall"
+                items={[
                     {
-                        id: 'items',
-                        label: 'ITEMS',
-                        href: '/items'
+                        id: 'main',
+                        label: 'NAVIGATION',
+
+                        items: [{
+                            id: 'home',
+                            label: 'HOME',
+                            href: '/'
+                        },
+                        {
+                            id: 'items',
+                            label: 'ITEMS',
+                            href: '/items'
+                        }
+                        ]
                     }
-                    ]
-                }
-            ]}
-        />
-        <style jsx>
-            {`
+                ]}
+            />
+            <style jsx>
+                {`
         @import url("https://fonts.googleapis.com/css?family=Roboto");
 
         h1 {
@@ -105,7 +103,8 @@ const Header = () => (
           margin: 5px;
         }
       `}
-        </style>
+            </style>
+        </Box>
     </Grommet>
 );
 

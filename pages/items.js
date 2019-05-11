@@ -14,15 +14,15 @@ const Items = ({ items }) => {
   return (
     <Grommet theme={dark}>
       <Layout>
-        <Box direction="row" wrap="true" alignContent="between">
+        <Box direction="row" wrap="true" alignContent="around" pad="large">
           {items.map(item => (
             <Card
               basis="medium"
               animation="fadeIn"
               background="dark-1"
               elevation="xxsmall"
-              gap="small"
-              margin="medium"
+              gap="medium"
+              margin="small"
             >
               <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
               <Card.CardContent color="dark-1">
