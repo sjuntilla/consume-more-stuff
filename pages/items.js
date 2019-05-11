@@ -2,27 +2,49 @@ import Layout from "./components/layout";
 import fetch from "isomorphic-unfetch";
 
 import Link from "next/link";
-import { Grommet, Heading, Anchor, Text, Box, Layer, Button } from "grommet";
+import {
+  Grommet,
+  Heading,
+  Anchor,
+  Text,
+  Box,
+  Layer,
+  Image,
+  Button
+} from "grommet";
 import { Card } from "grommet-controls";
 import { dark } from "grommet/themes";
 import { Disposer } from "bluebird";
+import { IconButton } from "grommet-controls/components";
+import { SubtractCircle } from "grommet-icons";
+import { isContinueStatement } from "@babel/types";
 
 const Items = ({ items }) => {
   return (
     <Grommet theme={dark}>
       <Layout>
-        <Box key="wrapper" direction="row" wrap="true" alignContent="between">
+        <Box direction="row" wrap="true" alignContent="around" pad="large">
           {items.map(item => (
             <Card
               basis="medium"
               animation="fadeIn"
               background="dark-1"
               elevation="xxsmall"
-              gap="small"
-              margin="medium"
+              gap="medium"
+              margin="small"
             >
-              <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
+              <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
               <Card.CardContent color="dark-1">
+                <Box
+                  direction="row"
+                  border={{ color: "brand", size: "large" }}
+                  pad="medium"
+                  round="small"
+                >
+                  <Box height="small" width="medium">
+                    <Image fit="cover" src={item.url} />
+                  </Box>
+                </Box>
                 <Text>{item.description}</Text>
                 <Text>${item.price}</Text>
                 <Text>{item.category}</Text>

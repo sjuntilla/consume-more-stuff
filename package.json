@@ -30,6 +30,7 @@
     "react-scripts": "3.0.0",
     "redis": "^2.8.0",
     "styled-components": "^4.2.0",
+    "styled-jsx": "^3.2.1",
     "typeface-roboto": "0.0.54"
   },
   "scripts": {

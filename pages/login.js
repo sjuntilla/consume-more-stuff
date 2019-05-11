@@ -2,7 +2,18 @@ import Layout from "./components/layout";
 import React from "react";
 import { Component } from "react";
 import { Redirect } from "react-router";
-import { Box, Button, CheckBox, Form, FormField, Select } from "grommet";
+import {
+  Grommet,
+  Box,
+  Button,
+  CheckBox,
+  Form,
+  FormField,
+  Select,
+  Layer
+} from "grommet";
+
+import { dark } from "grommet/themes";
 
 class Login extends Component {
   constructor(props) {
@@ -54,22 +65,28 @@ class Login extends Component {
     }
 
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <FormField
-          onChange={this.handleChange}
-          name="email"
-          label="email"
-          required={true}
-        />
-        <FormField
-          onChange={this.handleChange}
-          type="password"
-          name="password"
-          label="password"
-          required={true}
-        />
-        <Button type="submit" label="Sign In" primary={true} />
-      </Form>
+      <Grommet theme={dark}>
+        <Layout>
+          <Box style={{ width: 400, height: 400 }} justify="center">
+            <Form onSubmit={this.handleSubmit}>
+              <FormField
+                onChange={this.handleChange}
+                name="email"
+                label="email"
+                required={true}
+              />
+              <FormField
+                onChange={this.handleChange}
+                type="password"
+                name="password"
+                label="password"
+                required={true}
+              />
+              <Button type="submit" label="Sign In" primary={true} />
+            </Form>
+          </Box>
+        </Layout>
+      </Grommet>
     );
   }
 }

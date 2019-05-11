@@ -1,4 +1,6 @@
 import Layout from "./components/layout";
+// import Search from "./components/search";
+
 import Link from "next/link";
 import {
   Grommet,
@@ -14,13 +16,8 @@ import {
 import { dark } from "grommet/themes";
 import generate from "@babel/generator";
 
-const PostLink = props => (
-  <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-    <Anchor>{props.title}</Anchor>
-  </Link>
-);
 
-export default function Index() {
+const Index = () => {
   return (
     <Grommet theme={dark}>
       <Layout>
@@ -36,6 +33,7 @@ export default function Index() {
           <Box key="heading" elevation="xxsmall">
             <Heading color="accent-3" size="large" pad="xxsmall">
               silk code.
+              {/* <Search /> */}
             </Heading>
             <Box
               key="blurb"
@@ -81,24 +79,8 @@ export default function Index() {
           </Carousel>
         </Box>
       </Layout>
-      <style jsx>
-        {`
-          @import url("https://fonts.googleapis.com/css?family=Roboto");
-
-          h1 {
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-          }
-
-          body {
-            font-family: "Roboto", sans-serif;
-          }
-          ul {
-            background-color: #ddd;
-            margin: 5px;
-          }
-        `}
-      </style>
     </Grommet>
   );
 }
+
+export default Index;

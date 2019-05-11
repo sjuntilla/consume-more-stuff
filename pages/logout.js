@@ -21,13 +21,9 @@ class Logout extends Component {
         Accept: "application/json",
         "Content-Type": "application/json"
       }
-    })
-      .then(() => {
-        location.href = "/";
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    }).catch(err => {
+      console.log(err);
+    });
   }
 
   render() {

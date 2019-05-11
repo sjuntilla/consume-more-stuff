@@ -27,6 +27,7 @@ import {
   onClickOutside
 } from "grommet";
 import { dark } from "grommet/themes";
+import { VerticalMenu } from "grommet-controls";
 
 const linkStyle = {
   marginRight: 15,
@@ -41,54 +42,84 @@ const PostLink = props => (
 
 const Header = () => (
   <Grommet theme={dark}>
-    <Box
-      direction="row-responsive"
-      fit="cover"
-      pad="small"
-      background="neutral-3"
-    />
+    <Box fit="cover" pad="small">
+      {/* TABS OPTION */}
+      {/* <Tabs>
+            <Tab title="HOME" />
+            <Tab title="ALL ITEMS">
+                <Items />
+            </Tab>
 
-    {/* TABS OPTION */}
-    <Tabs>
-      <Tab title="HOME" />
-      <Tab title="ALL ITEMS">
-        <Layer>
-          <Items />
-        </Layer>
-      </Tab>
-      <Tab title="ADD ITEM">
-        <AddItem />
-      </Tab>
-      <Tab title="LOGIN">
-        <Login />
-      </Tab>
-      <Tab title="REGISTER">
-        <Register />
-      </Tab>
-      <Tab title="USER ITEMS">
-        <Register />
-      </Tab>
+            <Tab title="ADD ITEM">
+                <AddItem />
+            </Tab>
+            <Tab title="LOGIN">
+                <Login />
+            </Tab>
+            <Tab title="REGISTER">
+                <Register />
+            </Tab>
+            <Tab title="USER ITEMS">
+                <UserItems />
+            </Tab>
+        </Tabs> */}
+
+      <VerticalMenu
+        pad="xxsmall"
+        activeItem={{ id: "home" }}
+        items={[
+          {
+            id: "main",
+            label: "NAVIGATION",
+
+            items: [
+              {
+                id: "home",
+                label: "HOME",
+                href: "/"
+              },
+              {
+                id: "register",
+                label: "REGISTER",
+                href: "/register"
+              },
+              {
+                id: "login",
+                label: "LOGIN",
+                href: "/login"
+              }
+            ]
+          },
+          {
+            id: "items",
+            label: "ITEMS",
+            items: [
+              { id: "allitems", label: "ALL ITEMS", href: "/items" },
+              { id: "add", label: "ADD ITEM", href: "/itemform" }
+            ]
+          }
+        ]}
+      />
       <Logout />
-    </Tabs>
+      <style jsx>
+        {`
+          @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-    <style jsx>
-      {`
-        @import url("https://fonts.googleapis.com/css?family=Roboto");
+          h1 {
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+          }
 
-        h1 {
-          font-family: "Roboto", sans-serif;
-          font-weight: bold;
-        }
-
-        body {
-          font-family: "Roboto", sans-serif;
-        }
-        ul {
-          background-color: #ddd;
-          margin: 5px;
-        }
-      `}
-    </style>
+          body {
+            font-family: "Roboto", sans-serif;
+          }
+          ul {
+            background-color: #ddd;
+            margin: 5px;
+          }
+        `}
+      </style>
+    </Box>
   </Grommet>
 );
 
