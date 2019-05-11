@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import { Grommet, Heading, Anchor, Text, Box, Layer, Button } from "grommet";
 import { Card } from "grommet-controls";
-import { FormTrash, Edit } from 'grommet-icons';
+import { FormTrash, Edit } from "grommet-icons";
 import { dark } from "grommet/themes";
 import { Disposer } from "bluebird";
 
@@ -27,20 +27,21 @@ class UserItems extends Component {
       description: "",
       price: "",
       category: ""
-    }
+    };
   }
 
   componentDidMount = e => {
     fetch("http://localhost:8080/api/items")
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(itemsData => {
-        this.setState({ items: itemsData })
-      }).catch(err => {
-        console.log(err)
+        this.setState({ items: itemsData });
       })
-  }
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   // componentDidMount = e => {
   //   e.preventDefault();
@@ -68,8 +69,6 @@ class UserItems extends Component {
   //     });
   // }
 
-
-
   render() {
     const { items } = this.state;
 
@@ -94,12 +93,16 @@ class UserItems extends Component {
                   <Button
                     icon={<Edit />}
                     label="Edit"
-                    onClick={() => { console.log('--->EDIT BUTTON FIRED') }}
+                    onClick={() => {
+                      console.log("--->EDIT BUTTON FIRED");
+                    }}
                   />
                   <Button
                     icon={<FormTrash />}
                     label="Delete"
-                    onClick={() => { console.log('--->DELETE BUTTON FIRED') }}
+                    onClick={() => {
+                      console.log("--->DELETE BUTTON FIRED");
+                    }}
                   />
                 </Card.CardContent>
               </Card>
@@ -110,6 +113,5 @@ class UserItems extends Component {
     );
   }
 }
-
 
 export default UserItems;

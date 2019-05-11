@@ -4719,13 +4719,13 @@ var Index = function Index() {
     theme: grommet_themes__WEBPACK_IMPORTED_MODULE_4__["dark"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -4738,7 +4738,7 @@ var Index = function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -4746,7 +4746,7 @@ var Index = function Index() {
     elevation: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
@@ -4755,7 +4755,7 @@ var Index = function Index() {
     pad: "xxsmall",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, "silk code."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -4766,14 +4766,14 @@ var Index = function Index() {
     alignSelf: "start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Text"], {
-    color: "accent-4",
+    color: "accent-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, "Lorem Khaled Ipsum is a major key to success. To be successful you\u2019ve got to work hard, to make history, simple, you\u2019ve got to make it. In life there will be road blocks but we will over come it. Life is what you make it, so let\u2019s make it. Bless up. They will try to close the door on you, just open it. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Major key, don\u2019t fall for the trap, stay focused. It\u2019s the ones closest to you that want to see you fail. Congratulations, you played yourself. Find peace, life is like a water fall, you\u2019ve gotta flow.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Box"], {
@@ -4783,7 +4783,7 @@ var Index = function Index() {
     overflow: "hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
@@ -4791,7 +4791,7 @@ var Index = function Index() {
     margin: "small",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 60
     },
     __self: this
   }, "Featured Items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Carousel"], {
@@ -4801,7 +4801,7 @@ var Index = function Index() {
     fill: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -4809,7 +4809,7 @@ var Index = function Index() {
     src: "https://i.imgur.com/W6fcu6b.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -4817,7 +4817,7 @@ var Index = function Index() {
     src: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -4825,7 +4825,7 @@ var Index = function Index() {
     src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cat-quotes-1543599392.jpg?crop=1.00xw:0.759xh;0,0&resize=480:*",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 74
     },
     __self: this
   })))));
@@ -5628,7 +5628,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Box"], {
         pad: "large",
-        background: "neutral-4",
+        background: "backgroundColor",
         width: "medium",
         __source: {
           fileName: _jsxFileName,
@@ -5695,7 +5695,7 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         onClick: function onClick() {
-          return next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push('/login');
+          return next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("/login");
         },
         type: "submit",
         label: "Register",
@@ -5842,13 +5842,13 @@ function (_Component) {
         theme: grommet_themes__WEBPACK_IMPORTED_MODULE_14__["dark"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 77
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Box"], {
@@ -5858,7 +5858,7 @@ function (_Component) {
         alignContent: "between",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         },
         __self: this
       }, items.map(function (item) {
@@ -5871,73 +5871,73 @@ function (_Component) {
           margin: "medium",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 80
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_12__["Card"].CardTitle, {
           color: "neutral-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89
+            lineNumber: 88
           },
           __self: this
         }, item.name), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_12__["Card"].CardContent, {
           color: "dark-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90
+            lineNumber: 89
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 90
           },
           __self: this
         }, item.description), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 91
           },
           __self: this
         }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 92
           },
           __self: this
         }, item.category), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Button"], {
           icon: react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_13__["Edit"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 95
+              lineNumber: 94
             },
             __self: this
           }),
           label: "Edit",
           onClick: function onClick() {
-            console.log('--->EDIT BUTTON FIRED');
+            console.log("--->EDIT BUTTON FIRED");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 93
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_11__["Button"], {
           icon: react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_13__["FormTrash"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 100
+              lineNumber: 101
             },
             __self: this
           }),
           label: "Delete",
           onClick: function onClick() {
-            console.log('--->DELETE BUTTON FIRED');
+            console.log("--->DELETE BUTTON FIRED");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 100
           },
           __self: this
         })));
