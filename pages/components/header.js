@@ -7,6 +7,7 @@ import Items from "../items";
 import UserItems from "../useritems";
 import Index from "../index";
 import Login from "../login";
+import Logout from "../logout";
 import { Component } from "react";
 import {
   Grommet,
@@ -67,6 +68,7 @@ const Header = () => (
       <Tab title="USER ITEMS">
         <Register />
       </Tab>
+      <Logout />
     </Tabs>
 
     <style jsx>

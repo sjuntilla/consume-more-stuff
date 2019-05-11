@@ -13,6 +13,7 @@ require("dotenv").config();
 const next = require("next");
 const dev = process.env.NODE_DEV !== "production";
 const nextApp = next({ dev });
+const handle = nextApp.getRequestHandler();
 
 const PORT = process.env.PORT;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
@@ -70,6 +71,11 @@ nextApp.prepare().then(() => {
   //smoke test
   app.get("/api/smoke", (req, res) => {
     res.json({ smoke: "test" });
+  });
+
+  app.get("/", (req, res) => {
+    nextApp.render(req, res, "/index");
+    // res.render("index");
   });
 
   // start server
