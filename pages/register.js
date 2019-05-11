@@ -100,6 +100,7 @@ class Register extends Component {
             <FormField
               onChange={this.handleChange}
               name="password"
+              type="password"
               label="Password"
               required={true}
             />

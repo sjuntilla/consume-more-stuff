@@ -9,6 +9,7 @@ class AddItem extends Component {
         super(props);
         this.state = {
             name: "",
+            url: "",
             description: "",
             price: "",
             category: ""
@@ -28,10 +29,12 @@ class AddItem extends Component {
             },
             body: JSON.stringify({
                 name: this.state.name.toLowerCase(),
+                url: this.state.url,
                 description: this.state.description.toLowerCase(),
                 price: this.state.price,
                 category: this.state.category.toLowerCase()
-            })
+            }),
+            credentials: "include"
         })
             .then(() => {
                 console.log("ADDED ITEM TOOOOOO ITEM LIST");
@@ -91,6 +94,12 @@ class AddItem extends Component {
                             name="name"
                             label="Product Name"
                             required={true}
+                        />
+                        <FormField
+                            onChange={this.handleChange}
+                            name="url"
+                            label="URL of Product Image"
+                            required={false}
                         />
                         <FormField
                             onChange={this.handleChange}

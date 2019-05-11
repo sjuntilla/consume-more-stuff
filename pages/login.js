@@ -17,72 +17,60 @@ class Login extends Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log("STAATEE", this.state);
-        fetch("http://localhost:8080/api/login",
-            {
-                method: "POST",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password
-                })
+        fetch("http://localhost:8080/api/login", {
+            method: "POST",
+            credentials: "include",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: this.state.email,
+                password: this.state.password
             })
-            .then((res) => {
-                return res.json()
+        })
+            .then(res => {
+                return res.json();
                 // console.log("LOGGED INNNNNN");
             })
-            .then((data) => {
-                console.log(data)
+            .then(data => {
+                console.log(data);
             })
             .catch(err => {
                 console.log(err);
-            })
+            });
     }
 
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
-    }
+    };
 
     render() {
         const { isAuthenticated } = this.props;
         if (isAuthenticated) {
-            return <Redirect to='/items' />
+            return <Redirect to="/items" />;
         }
 
         return (
-            <Layer
-                position="right"
-                width="large"
-
-                modal={false}
-                animate={true}
-                onClickOutside={this.onClose}
-                onEsc={this.onClose}
-            >
-                <Box pad="large">
-                    <Form onSubmit={this.handleSubmit} >
-                        <FormField onChange={this.handleChange}
-                            name="email"
-                            label="email"
-                            required={true}
-                        />
-                        <FormField onChange={this.handleChange}
-                            type="password"
-                            name="password"
-                            label="password"
-                            required={true}
-                        />
-                        <Button type="submit" label="Sign In" primary={true}
-                        />
-
-                    </Form>
-                </Box>
-            </Layer>
-        )
+            <Form onSubmit={this.handleSubmit}>
+                <FormField
+                    onChange={this.handleChange}
+                    name="email"
+                    label="email"
+                    required={true}
+                />
+                <FormField
+                    onChange={this.handleChange}
+                    type="password"
+                    name="password"
+                    label="password"
+                    required={true}
+                />
+                <Button type="submit" label="Sign In" primary={true} />
+            </Form>
+        );
     }
 }
 

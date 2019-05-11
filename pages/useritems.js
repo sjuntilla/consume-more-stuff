@@ -43,16 +43,16 @@ UserItems.getInitialProps = async ({ req }) => {
 };
 
 //THIS ALLOWS CLIENT TO DELETE ITEMS VIA BROWSER//
-const removedItem = id => {
-    const headers = { 'Content-Type': 'application/json' };
-    let itemData = { items: id };
-    // console.log("THIS IS THE CARD DATA", cardData)
-    fetch(`/kanban`, { method: 'DELETE', body: JSON.stringify(itemData), headers })
-        .then(res => {
-            return fetch('http://localhost:8080/api/items')
-                .then((res) => { return res.json() })
-                .then((body) => { this.setState({ items: body }) })
-        })
-}
+// removedItem = id => {
+//     const headers = { 'Content-Type': 'application/json' };
+//     let itemData = { items: id };
+//     // console.log("THIS IS THE CARD DATA", cardData)
+//     fetch(`/kanban`, { method: 'DELETE', body: JSON.stringify(itemData), headers })
+//         .then(res => {
+//             return fetch('http://localhost:8080/api/items')
+//                 .then((res) => { return res.json() })
+//                 .then((body) => { this.setState({ items: body }) })
+//         })
+// }
 
 export default UserItems;
