@@ -1,30 +1,16 @@
-import Link from "next/link";
-import Layout from "./layout";
-import fetch from "isomorphic-unfetch";
-import Register from "../register";
-import AddItem from "../itemForm";
-import Items from "../items";
-import Login from "../login";
-import { Component } from "react";
-import {
-    Grommet,
-    Anchor,
-    Box,
-    Accordion,
-    AccordionPanel,
-    DropButton,
-    Tabs,
-    Tab,
-    Layer,
-    Button,
-    FormField,
-    TextInput,
-    Select,
-    TextArea,
-    onClickOutside
-} from "grommet";
-import { Sidebar } from 'grommet-controls';
-import { dark } from "grommet/themes";
+import Link from 'next/link';
+import Layout from './layout';
+import fetch from 'isomorphic-unfetch';
+import Register from '../register';
+import AddItem from '../itemForm';
+import Items from '../items';
+import UserItems from '../useritems';
+import Index from '../index';
+import Login from '../login';
+import { Component } from 'react';
+import { Grommet, Anchor, Box, Accordion, AccordionPanel, DropButton, Tabs, Tab, Layer, Button, FormField, TextInput, Select, TextArea, onClickOutside } from 'grommet';
+import { dark } from 'grommet/themes';
+
 
 const linkStyle = {
     marginRight: 15,
