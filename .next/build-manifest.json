@@ -19,10 +19,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/register": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/useritems": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
