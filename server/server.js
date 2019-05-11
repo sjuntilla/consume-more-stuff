@@ -34,51 +34,51 @@ if (!PORT || !SESSION_SECRET || !REDIS_HOSTNAME) {
   return process.exit(1);
 }
 
-// nextApp.prepare().then(() => {
-const app = express();
+nextApp.prepare().then(() => {
+  const app = express();
 
-//server middleware
-app.use(bodyParser.json({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(decorator);
-app.use(
-  session({
-    store: new RedisStore({
-      host: "localhost",
-      port: 6379,
-      url: process.env.REDIS_HOSTNAME
-    }),
-    secret: process.env.COOKIE_SECRET,
-    resave: false,
-    saveUninitialized: false
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+  //server middleware
+  app.use(bodyParser.json({ extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(decorator);
+  app.use(
+    session({
+      store: new RedisStore({
+        host: "localhost",
+        port: 6379,
+        url: process.env.REDIS_HOSTNAME
+      }),
+      secret: process.env.COOKIE_SECRET,
+      resave: false,
+      saveUninitialized: false
+    })
   );
-  next();
-});
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+  app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
-app.use("/api", userRoutes);
-app.use("/api", itemRoutes);
+  app.use("/api", userRoutes);
+  app.use("/api", itemRoutes);
 
-//smoke test
-app.get("/api/smoke", (req, res) => {
-  res.json({ smoke: "test" });
-});
+  //smoke test
+  app.get("/api/smoke", (req, res) => {
+    res.json({ smoke: "test" });
+  });
 
-app.get("/", (req, res) => {
-  nextApp.render(req, res, "/index");
-});
+  app.get("/", (req, res) => {
+    nextApp.render(req, res, "/index");
+  });
 
-// start server
-app.listen(PORT, () => {
-  console.log(`Server stated on port: ${PORT}`);
+  // start server
+  app.listen(PORT, () => {
+    console.log(`Server stated on port: ${PORT}`);
+  });
 });
-// });
