@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5929,28 +5929,51 @@ function (_Component) {
             lineNumber: 100
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Box"], {
+          direction: "row",
+          border: {
+            color: "brand",
+            size: "large"
+          },
+          pad: "medium",
+          round: "small",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 101
           },
           __self: this
-        }, item.url), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Box"], {
+          height: "small",
+          width: "medium",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102
+            lineNumber: 107
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Image"], {
+          fit: "cover",
+          src: item.url,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108
+          },
+          __self: this
+        }))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 111
           },
           __self: this
         }, item.description), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 103
+            lineNumber: 112
           },
           __self: this
         }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 104
+            lineNumber: 113
           },
           __self: this
         }, item.category), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
@@ -5959,7 +5982,7 @@ function (_Component) {
           edit: _this2.editItem,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 105
+            lineNumber: 114
           },
           __self: this
         })));
@@ -5975,14 +5998,14 @@ function Item(props) {
     className: "buttons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
     icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["FormTrash"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 130
       },
       __self: this
     }),
@@ -5992,14 +6015,14 @@ function Item(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 129
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
     icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["Edit"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 135
       },
       __self: this
     }),
@@ -6009,7 +6032,7 @@ function Item(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 134
     },
     __self: this
   }));
@@ -6019,7 +6042,7 @@ function Item(props) {
 
 /***/ }),
 
-/***/ 7:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./pages/useritems.js ***!
   \**********************************/

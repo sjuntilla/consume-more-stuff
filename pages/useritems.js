@@ -3,7 +3,7 @@ import React from "react";
 import { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
-import { Grommet, Heading, Anchor, Text, Box, Layer, Button } from "grommet";
+import { Grommet, Heading, Anchor, Text, Box, Layer, Button, Image } from "grommet";
 import { Card } from "grommet-controls";
 import { FormTrash, Edit } from "grommet-icons";
 import { dark } from "grommet/themes";
@@ -98,7 +98,16 @@ class UserItems extends Component {
               >
                 <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
                 <Card.CardContent color="dark-1">
-                  <Text>{item.url}</Text>
+                <Box
+                  direction="row"
+                  border={{ color: "brand", size: "large" }}
+                  pad="medium"
+                  round="small"
+                >
+                  <Box height="small" width="medium">
+                    <Image fit="cover" src={item.url} />
+                  </Box>
+                </Box>
                   <Text>{item.description}</Text>
                   <Text>${item.price}</Text>
                   <Text>{item.category}</Text>                 
