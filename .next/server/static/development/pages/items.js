@@ -5186,7 +5186,14 @@ var Items = function Items(_ref) {
         lineNumber: 50
       },
       __self: this
-    }, item.category)));
+    }, item.category), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_7__["Tag"], {
+      label: item.category,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    })));
   }))));
 };
 

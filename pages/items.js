@@ -12,7 +12,7 @@ import {
   Image,
   Button
 } from "grommet";
-import { Card } from "grommet-controls";
+import { Card, Tag } from "grommet-controls";
 import { dark } from "grommet/themes";
 import { Disposer } from "bluebird";
 import { IconButton } from "grommet-controls/components";
@@ -48,6 +48,7 @@ const Items = ({ items }) => {
                 <Text>{item.description}</Text>
                 <Text>${item.price}</Text>
                 <Text>{item.category}</Text>
+                <Tag label={item.category} />
               </Card.CardContent>
             </Card>
           ))}
