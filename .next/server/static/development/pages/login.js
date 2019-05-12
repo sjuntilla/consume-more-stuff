@@ -5950,10 +5950,42 @@ function (_Component) {
         }, item.category), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
           delete: _this2.removeItem,
           id: item.id,
-          edit: _this2.editItem,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 104
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_11___default.a, {
+          href: "/edit",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
+          icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["Edit"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 106
+            },
+            __self: this
+          }),
+          label: "Edit",
+          onClick: function onClick() {
+            console.log("--->EDIT BUTTON FIRED");
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          },
+          __self: this
+        })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
+          delete: _this2.removeItem,
+          id: item.id,
+          edit: _this2.editItem,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113
           },
           __self: this
         })));
@@ -5969,14 +6001,14 @@ function Item(props) {
     className: "buttons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
     icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["FormTrash"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 129
       },
       __self: this
     }),
@@ -5986,14 +6018,14 @@ function Item(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 128
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
     icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["Edit"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 134
       },
       __self: this
     }),
@@ -6003,7 +6035,7 @@ function Item(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 133
     },
     __self: this
   }));
