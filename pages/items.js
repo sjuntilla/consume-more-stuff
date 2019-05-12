@@ -47,7 +47,6 @@ const Items = ({ items }) => {
                 </Box>
                 <Text>{item.description}</Text>
                 <Text>${item.price}</Text>
-                <Text>{item.category}</Text>
                 <Tag label={item.category} />
               </Card.CardContent>
             </Card>
