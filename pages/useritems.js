@@ -84,13 +84,14 @@ class UserItems extends Component {
                   <Text>${item.price}</Text>
                   <Text>{item.category}</Text>
                   <Item delete={this.removeItem} id={item.id} />
-                  <Button
+                  <Link href="/edit"><Button
                     icon={<Edit />}
                     label="Edit"
                     onClick={() => {
                       console.log("--->EDIT BUTTON FIRED");
+                    
                     }}
-                  />
+                  /></Link>
                 </Card.CardContent>
               </Card>
             ))}

@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/itemForm": [
+    "/edit": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/items": [
+    "/useritems": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
