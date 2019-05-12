@@ -10,24 +10,51 @@ class EditItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        itemValues: {}
+      items: [],
+      id: "",
+      name: "",
+      url: "",
+      description: "",
+      price: "",
+      category: ""
     }
-    };
-   
+  };
+
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state.itemValues);
+    console.log(this.state.items);
   }
 
   handleChange = e => {
-      e.preventDefault();
-      let itemValues = this.state.itemValues;
-      let name = e.target.name;
-      let value = e.target.value;
+    e.preventDefault();
+    let items = this.state.items;
+    let name = e.target.name;
+    let value = e.target.value;
 
-      itemValues[name] = value;
-      this.setState({itemValues})
+    items[name] = value;
+    this.setState({ items })
+  }
+
+  editItem = (id) => {
+    fetch("http://localhost:8080/api/items", {
+      method: "PUT",
+      headers: {
+        Accept: "application/json", "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: id,
+      }),
+      credentials: "include"
+    }).then(res => {
+
+    })
+      .then(res => {
+        console.log("EDITED USERITEM FROM ITEM LIST")
+        return fetch("http://localhost:8080/api/items")
+          .then((res) => { return res.json() })
+          .then((body) => { this.setState({ items: body }) })
+      })
   }
 
   render() {
@@ -35,32 +62,32 @@ class EditItem extends Component {
       <Grommet theme={dark}>
         <Layout>
           <Box pad="large">
-            <Form onSubmit={this.handleSubmit}>
-             
+            <Form onSubmit={this.editItem}>
+
               <FormField
                 onChange={this.handleChange}
-                value={this.state.itemValues["name"]}
+                value={this.state.items["name"]}
                 name="name"
                 label="Product Name"
                 required={true}
               />
               <FormField
                 onChange={this.handleChange}
-                value={this.state.itemValues["url"]}
+                value={this.state.items["url"]}
                 name="url"
                 label="URL of Product Name"
                 required={false}
               />
               <FormField
                 onChange={this.handleChange}
-                value={this.state.itemValues["description"]}
+                value={this.state.items["description"]}
                 name="description"
                 label="Product Description"
                 required={true}
               />
               <FormField
                 onChange={this.handleChange}
-                value={this.state.itemValues["price"]}
+                value={this.state.items["price"]}
                 name="price"
                 label="Product Price"
                 required={true}

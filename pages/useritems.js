@@ -58,25 +58,6 @@ class UserItems extends Component {
       })
   }
 
-  editItem = (id) => {
-    fetch("http://localhost:8080/api/items", {
-      method: "PUT",
-      headers: {
-        Accept: "application/json", "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        id: id,
-      }),
-      credentials: "include"
-    })
-      .then(res => {
-        console.log("EDITED USERITEM FROM ITEM LIST")
-        return fetch("http://localhost:8080/api/items")
-          .then((res) => { return res.json() })
-          .then((body) => { this.setState({ items: body }) })
-      })
-  }
-
 
   render() {
     const { items } = this.state;
@@ -101,17 +82,13 @@ class UserItems extends Component {
                   <Text>{item.description}</Text>
                   <Text>${item.price}</Text>
                   <Text>{item.category}</Text>
-                  <Item delete={this.removeItem} id={item.id} />
-                  <Link href="/edit"><Button
+                  <Item delete={this.removeItem} id={item.id}
+                  />
+                  <Button
                     icon={<Edit />}
                     label="Edit"
-                    onClick={() => {
-                      console.log("--->EDIT BUTTON FIRED");
-                    
-                    }}
-                  /></Link>
-                  <Item delete={this.removeItem} id={item.id}
-                    edit={this.editItem} />
+                    onClick={() => Router.push("/edit")}
+                  />
                 </Card.CardContent>
               </Card>
             ))}
@@ -129,12 +106,6 @@ function Item(props) {
         icon={<FormTrash />}
         label="Delete"
         onClick={() => props.delete(props.id)}
-      />
-      <Button
-        icon={<Edit />}
-        label="Edit"
-        onClick={() =>
-          console.log("--->EDIT BUTTON FIRED")}
       />
     </div>
   )
