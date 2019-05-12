@@ -5770,6 +5770,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var grommet_themes__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(grommet_themes__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! bluebird */ "bluebird");
 /* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_17__);
 
 
 
@@ -5779,6 +5781,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/djavancackley/Documents/devleague/consume-more-stuff/pages/useritems.js";
+
 
 
 
@@ -5859,13 +5862,13 @@ function (_Component) {
         theme: grommet_themes__WEBPACK_IMPORTED_MODULE_15__["dark"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 68
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Box"], {
@@ -5875,7 +5878,7 @@ function (_Component) {
         alignContent: "between",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 69
         },
         __self: this
       }, items.map(function (item) {
@@ -5889,39 +5892,68 @@ function (_Component) {
           key: item.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 72
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_13__["Card"].CardTitle, {
           color: "neutral-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 81
           },
           __self: this
         }, item.name), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_controls__WEBPACK_IMPORTED_MODULE_13__["Card"].CardContent, {
           color: "dark-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
-          __source: {
-            fileName: _jsxFileName,
             lineNumber: 82
           },
           __self: this
-        }, item.description), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Box"], {
+          direction: "row",
+          border: {
+            color: "brand",
+            size: "large"
+          },
+          pad: "medium",
+          round: "small",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 83
           },
           __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Box"], {
+          height: "small",
+          width: "medium",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Image"], {
+          fit: "cover",
+          src: item.url,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        }))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93
+          },
+          __self: this
+        }, item.description), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
         }, "$", item.price), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Text"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 95
           },
           __self: this
         }, item.category), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
@@ -5929,24 +5961,24 @@ function (_Component) {
           id: item.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 96
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
           icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["Edit"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 88
+              lineNumber: 99
             },
             __self: this
           }),
           label: "Edit",
           onClick: function onClick() {
-            return Router.push("/edit");
+            return next_router__WEBPACK_IMPORTED_MODULE_17___default.a.push("/edit");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87
+            lineNumber: 98
           },
           __self: this
         })));
@@ -5962,14 +5994,14 @@ function Item(props) {
     className: "buttons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 115
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_12__["Button"], {
     icon: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(grommet_icons__WEBPACK_IMPORTED_MODULE_14__["FormTrash"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 117
       },
       __self: this
     }),
@@ -5979,7 +6011,7 @@ function Item(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 116
     },
     __self: this
   }));

@@ -21,10 +21,10 @@ class EditItem extends Component {
   };
 
 
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log(this.state.items);
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   // console.log(this.state.items);
+  // }
 
   handleChange = e => {
     e.preventDefault();
@@ -37,17 +37,18 @@ class EditItem extends Component {
   }
 
   editItem = (id) => {
+    console.log("----->EDIT")
     fetch("http://localhost:8080/api/items", {
       method: "PUT",
       headers: {
         Accept: "application/json", "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        id: id,
+        id: parseInt(id)
       }),
       credentials: "include"
     }).then(res => {
-
+      console.log("------>EDIT ITEM ID!!!!!", id)
     })
       .then(res => {
         console.log("EDITED USERITEM FROM ITEM LIST")
@@ -58,11 +59,13 @@ class EditItem extends Component {
   }
 
   render() {
+    const { item } = this.state;
+
     return (
       <Grommet theme={dark}>
         <Layout>
           <Box pad="large">
-            <Form onSubmit={this.editItem}>
+            <Form>
 
               <FormField
                 onChange={this.handleChange}
@@ -101,13 +104,7 @@ class EditItem extends Component {
                 name="category"
                 required={true}
               />
-
-              <Button
-                icon={<Update />}
-                type="submit"
-                label="Update"
-                primary={true}
-              />
+              <Item edit={this.editItem} id={this.id} />
             </Form>
           </Box>
         </Layout>
@@ -115,4 +112,19 @@ class EditItem extends Component {
     );
   }
 }
+
+function Item(props) {
+  return (
+    <div className="buttons">
+      <Button
+        icon={<Update />}
+        type="submit"
+        label="Update"
+        primary={true}
+        onClick={() => props.edit(props.id)}
+      />
+    </div>
+  )
+}
+
 export default EditItem;

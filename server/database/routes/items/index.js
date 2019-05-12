@@ -57,8 +57,8 @@ router.route("/items").delete((req, res) => {
 });
 
 router.route("/items").put((req, res) => {
-  let id = parseInt(req.body.id);
-  console.log('---------->id', id)
+  // let id = parseInt(req.body.id);
+  // console.log('---------->id', id)
 
   const name = req.body.name;
   const url = req.body.url;
