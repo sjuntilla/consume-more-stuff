@@ -7419,7 +7419,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "/Users/djavancackley/Documents/devleague/consume-more-stuff/.next");
+      source_map_support_1.rewriteStacktrace(error, "/Users/sylvia/Documents/devleague/consume-more-stuff/.next");
       return error;
     }
   };

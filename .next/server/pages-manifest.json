@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/edit":"static/development/pages/edit.js","/useritems":"static/development/pages/useritems.js"}
-=======
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/login":"static/development/pages/login.js","/useritems":"static/development/pages/useritems.js"}
->>>>>>> 5b69fea51a33a0260d216237519b4cd0d322306f
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/items":"static/development/pages/items.js","/login":"static/development/pages/login.js","/register":"static/development/pages/register.js","/useritems":"static/development/pages/useritems.js","/":"static/development/pages/index.js"}

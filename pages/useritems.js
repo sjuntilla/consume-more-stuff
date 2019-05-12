@@ -98,18 +98,10 @@ class UserItems extends Component {
               >
                 <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
                 <Card.CardContent color="dark-1">
+                  <Text>{item.url}</Text>
                   <Text>{item.description}</Text>
                   <Text>${item.price}</Text>
-                  <Text>{item.category}</Text>
-                  <Item delete={this.removeItem} id={item.id} />
-                  <Link href="/edit"><Button
-                    icon={<Edit />}
-                    label="Edit"
-                    onClick={() => {
-                      console.log("--->EDIT BUTTON FIRED");
-                    
-                    }}
-                  /></Link>
+                  <Text>{item.category}</Text>                 
                   <Item delete={this.removeItem} id={item.id}
                     edit={this.editItem} />
                 </Card.CardContent>
