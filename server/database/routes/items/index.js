@@ -46,8 +46,9 @@ router.route("/items").delete((req, res) => {
   return new req.database.Item({ id })
     .where({ id })
     .destroy()
-    .then(id => {
-      return res.json({ success: true });
+    .then((id) => {
+      return res.json()
+      console.log("DELETE----->")
     })
     .catch(err => {
       console.log(err);
