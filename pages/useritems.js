@@ -58,6 +58,24 @@ class UserItems extends Component {
       })
   }
 
+  editItem = (id) => {
+    fetch("http://localhost:8080/api/items", {
+      method: "PUT",
+      headers: {
+        Accept: "application/json", "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: id,
+      }),
+      credentials: "include"
+    })
+      .then(res => {
+        console.log("EDITED USERITEM FROM ITEM LIST")
+        return fetch("http://localhost:8080/api/items")
+          .then((res) => { return res.json() })
+          .then((body) => { this.setState({ items: body }) })
+      })
+  }
 
 
   render() {

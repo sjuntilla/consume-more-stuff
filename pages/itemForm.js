@@ -58,11 +58,18 @@ class AddItem extends Component {
         <Layout>
           <Box pad="large">
             <Form onSubmit={this.handleSubmit}>
+             
               <FormField
                 onChange={this.handleChange}
                 name="name"
                 label="Product Name"
                 required={true}
+              />
+              <FormField
+                onChange={this.handleChange}
+                name="url"
+                label="URL of Product Name"
+                required={false}
               />
               <FormField
                 onChange={this.handleChange}
