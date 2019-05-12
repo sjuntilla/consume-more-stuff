@@ -16,7 +16,6 @@ import {
 import { dark } from "grommet/themes";
 import generate from "@babel/generator";
 
-
 const Index = () => {
   return (
     <Grommet theme={dark}>
@@ -42,7 +41,7 @@ const Index = () => {
               width="large"
               alignSelf="start"
             >
-              <Text color="accent-4">
+              <Text color="accent-1">
                 Lorem Khaled Ipsum is a major key to success. To be successful
                 you’ve got to work hard, to make history, simple, you’ve got to
                 make it. In life there will be road blocks but we will over come
@@ -79,26 +78,8 @@ const Index = () => {
           </Carousel>
         </Box>
       </Layout>
-      <style jsx>
-        {`
-          @import url("https://fonts.googleapis.com/css?family=Roboto");
-
-          h1 {
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-          }
-
-          body {
-            font-family: "Roboto", sans-serif;
-          }
-          ul {
-            background-color: #ddd;
-            margin: 5px;
-          }
-        `}
-      </style>
     </Grommet>
   );
-}
+};
 
 export default Index;
