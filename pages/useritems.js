@@ -90,16 +90,6 @@ class UserItems extends Component {
                       console.log("--->EDIT BUTTON FIRED");
                     }}
                   />
-<<<<<<< HEAD
-=======
-                  <Button
-                    icon={<FormTrash />}
-                    label="Delete"
-                    onClick={() => {
-                      console.log("--->DELETE BUTTON FIRED");
-                    }}
-                  />
->>>>>>> 95c716e270d49aabb2c237ca98446a2ae9910264
                 </Card.CardContent>
               </Card>
             ))}
@@ -110,7 +100,6 @@ class UserItems extends Component {
   }
 }
 
-<<<<<<< HEAD
 function Item(props) {
   return (
     <Button
@@ -121,6 +110,4 @@ function Item(props) {
   )
 }
 
-=======
->>>>>>> 95c716e270d49aabb2c237ca98446a2ae9910264
 export default UserItems;
