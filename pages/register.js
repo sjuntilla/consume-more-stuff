@@ -76,7 +76,7 @@ class Register extends Component {
     return (
       <Grommet theme={dark}>
         <Layout>
-          <Box pad="large" background="backgroundColor" width="medium">
+          <Box pad="large" background="accent-4" width="medium">
             <Form onSubmit={this.handleSubmit}>
               <FormField
                 onChange={this.handleChange}
