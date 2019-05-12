@@ -39,7 +39,6 @@ class UserItems extends Component {
 
 
   removeItem = (id) => {
-
     fetch("http://localhost:8080/api/items", {
       method: "DELETE",
       headers: {
@@ -58,6 +57,26 @@ class UserItems extends Component {
           .then((body) => { this.setState({ items: body }) })
       })
   }
+
+  editItem = (id) => {
+    fetch("http://localhost:8080/api/items", {
+      method: "PUT",
+      headers: {
+        Accept: "application/json", "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: id,
+      }),
+      credentials: "include"
+    })
+      .then(res => {
+        console.log("EDITED USERITEM FROM ITEM LIST")
+        return fetch("http://localhost:8080/api/items")
+          .then((res) => { return res.json() })
+          .then((body) => { this.setState({ items: body }) })
+      })
+  }
+
 
   render() {
     const { items } = this.state;
@@ -79,7 +98,6 @@ class UserItems extends Component {
               >
                 <Card.CardTitle color="neutral-2">{item.name}</Card.CardTitle>
                 <Card.CardContent color="dark-1">
-                  <Text>{item.url}</Text>
                   <Text>{item.description}</Text>
                   <Text>${item.price}</Text>
                   <Text>{item.category}</Text>
@@ -92,6 +110,8 @@ class UserItems extends Component {
                     
                     }}
                   /></Link>
+                  <Item delete={this.removeItem} id={item.id}
+                    edit={this.editItem} />
                 </Card.CardContent>
               </Card>
             ))}
@@ -104,11 +124,19 @@ class UserItems extends Component {
 
 function Item(props) {
   return (
-    <Button
-      icon={<FormTrash />}
-      label="Delete"
-      onClick={() => props.delete(props.id)}
-    />
+    <div className="buttons">
+      <Button
+        icon={<FormTrash />}
+        label="Delete"
+        onClick={() => props.delete(props.id)}
+      />
+      <Button
+        icon={<Edit />}
+        label="Edit"
+        onClick={() =>
+          console.log("--->EDIT BUTTON FIRED")}
+      />
+    </div>
   )
 }
 

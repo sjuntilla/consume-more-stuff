@@ -11,7 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+<<<<<<< HEAD
     "/edit": [
+=======
+    "/login": [
+>>>>>>> 5b69fea51a33a0260d216237519b4cd0d322306f
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
