@@ -39,7 +39,6 @@ class UserItems extends Component {
 
 
   removeItem = (id) => {
-
     fetch("http://localhost:8080/api/items", {
       method: "DELETE",
       headers: {
@@ -58,6 +57,8 @@ class UserItems extends Component {
           .then((body) => { this.setState({ items: body }) })
       })
   }
+
+
 
   render() {
     const { items } = this.state;
@@ -82,14 +83,8 @@ class UserItems extends Component {
                   <Text>{item.description}</Text>
                   <Text>${item.price}</Text>
                   <Text>{item.category}</Text>
-                  <Item delete={this.removeItem} id={item.id} />
-                  <Button
-                    icon={<Edit />}
-                    label="Edit"
-                    onClick={() => {
-                      console.log("--->EDIT BUTTON FIRED");
-                    }}
-                  />
+                  <Item delete={this.removeItem} id={item.id}
+                    edit={this.editItem} />
                 </Card.CardContent>
               </Card>
             ))}
@@ -102,11 +97,19 @@ class UserItems extends Component {
 
 function Item(props) {
   return (
-    <Button
-      icon={<FormTrash />}
-      label="Delete"
-      onClick={() => props.delete(props.id)}
-    />
+    <div className="buttons">
+      <Button
+        icon={<FormTrash />}
+        label="Delete"
+        onClick={() => props.delete(props.id)}
+      />
+      <Button
+        icon={<Edit />}
+        label="Edit"
+        onClick={() =>
+          console.log("--->EDIT BUTTON FIRED")}
+      />
+    </div>
   )
 }
 
