@@ -86,9 +86,19 @@ class Login extends Component {
             </Form>
           </Box>
         </Layout>
+        {/* <Greeting /> */}
       </Grommet>
     );
   }
 }
+
+
+// function Greeting(props) {
+//   const isLoggedIn = props.isLoggedIn;
+//   if(isLoggedIn) {
+//     return console.log("Welcome " + this.state.first_name)
+//   }
+//   return console.log("Login unsucessful!")
+// }
 
 export default Login;
