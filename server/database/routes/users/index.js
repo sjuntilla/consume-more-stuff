@@ -4,6 +4,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
 const next = require("next");
+const dev = process.env.NODE_DEV !== "production";
+const nextApp = next({ dev });
 
 passport.serializeUser((user, done) => {
   console.log("serializingUser", user);
@@ -156,7 +158,6 @@ router.post("/logout", (req, res) => {
         return next(err);
       } else {
         console.log("after", req.session);
-        return res.send("user logged out");
       }
     });
   }

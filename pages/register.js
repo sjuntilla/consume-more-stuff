@@ -12,10 +12,8 @@ import {
   Grommet
 } from "grommet";
 import { dark } from "grommet/themes";
-import Layout from './components/layout';
-import Router from 'next/router';
-
-
+import Layout from "./components/layout";
+import Router from "next/router";
 
 class Register extends Component {
   constructor(props) {
@@ -51,7 +49,11 @@ class Register extends Component {
     })
       .then(() => {
         console.log("added to database");
-        alert("Thank you for registering, " + this.state.first_name + "! You will now be redirected to log in with your registered email and password. :) ")
+        alert(
+          "Thank you for registering, " +
+            this.state.first_name +
+            "! You will now be redirected to log in with your registered email and password. :) "
+        );
       })
       // .then(function(response) {
       //   console.log(response);
@@ -67,8 +69,6 @@ class Register extends Component {
       [e.target.name]: e.target.value
     });
   };
-  
-  
 
   render() {
     const { layerType } = this.state;
@@ -76,7 +76,7 @@ class Register extends Component {
     return (
       <Grommet theme={dark}>
         <Layout>
-          <Box pad="large" background="neutral-4" width="medium">
+          <Box pad="large" background="accent-4" width="medium">
             <Form onSubmit={this.handleSubmit}>
               <FormField
                 onChange={this.handleChange}
@@ -109,10 +109,16 @@ class Register extends Component {
                 label="Password"
                 required={true}
               />
-              <Button onClick={() => Router.push('/login')} type="submit" label="Register" primary={true}  />
+              <Button
+                onClick={() => Router.push("/login")}
+                type="submit"
+                label="Register"
+                primary={true}
+              />
             </Form>
           </Box>
-        </Layout></Grommet>
+        </Layout>
+      </Grommet>
     );
   }
 }

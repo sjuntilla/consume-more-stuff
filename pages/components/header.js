@@ -7,12 +7,14 @@ import Items from "../items";
 import UserItems from "../useritems";
 import Index from "../index";
 import Login from "../login";
+import Logout from "../logout";
 import { Component } from "react";
 import {
   Grommet,
   Anchor,
   Box,
   Accordion,
+  Menu,
   AccordionPanel,
   DropButton,
   Tabs,
@@ -42,29 +44,9 @@ const PostLink = props => (
 const Header = () => (
   <Grommet theme={dark}>
     <Box fit="cover" pad="small">
-      {/* TABS OPTION */}
-      {/* <Tabs>
-            <Tab title="HOME" />
-            <Tab title="ALL ITEMS">
-                <Items />
-            </Tab>
-
-            <Tab title="ADD ITEM">
-                <AddItem />
-            </Tab>
-            <Tab title="LOGIN">
-                <Login />
-            </Tab>
-            <Tab title="REGISTER">
-                <Register />
-            </Tab>
-            <Tab title="USER ITEMS">
-                <UserItems />
-            </Tab>
-        </Tabs> */}
-
       <VerticalMenu
         pad="xxsmall"
+        collapsible={false}
         activeItem={{ id: "home" }}
         items={[
           {
@@ -76,6 +58,11 @@ const Header = () => (
                 id: "home",
                 label: "HOME",
                 href: "/"
+              },
+              {
+                id: "user",
+                label: "PROFILE",
+                href: "/userprofile"
               },
               {
                 id: "register",
@@ -99,6 +86,7 @@ const Header = () => (
           }
         ]}
       />
+      <Logout />
       <style jsx>
         {`
           @import url("https://fonts.googleapis.com/css?family=Roboto");
