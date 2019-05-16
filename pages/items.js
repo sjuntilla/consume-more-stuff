@@ -26,7 +26,7 @@ const Items = ({ items }) => {
     <Grommet theme={dark}>
       <Layout>
         <Tabs>
-          <Tab title="All Items">
+          <Tab title="All Items" justify="start">
             <Box direction="row" wrap="true" alignContent="around" pad="large">
               {items.map(item => (
                 <Card
@@ -37,7 +37,12 @@ const Items = ({ items }) => {
                   gap="medium"
                   margin="small"
                 >
-                  <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
+                  <Card.CardTitle color="brand">
+                    {item.name}
+                    <Text size="xsmall" pad="medium">
+                      posted by User #{item.user_id}
+                    </Text>
+                  </Card.CardTitle>
                   <Card.CardContent color="dark-1">
                     <Box
                       direction="row"

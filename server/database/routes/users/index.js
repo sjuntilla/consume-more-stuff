@@ -162,6 +162,12 @@ router.post("/logout", (req, res) => {
     });
   }
 });
+router.route("/users").get((req, res) => {
+  console.log("ERRY USER");
+  return new req.database.User().fetchAll().then(item => {
+    res.json(item);
+  });
+});
 
 //Smoke test for authentication route.
 router.get("/secret", isAuthenticated, (req, res) => {
