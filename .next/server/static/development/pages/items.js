@@ -5113,6 +5113,8 @@ var Items = function Items(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(grommet__WEBPACK_IMPORTED_MODULE_6__["Tabs"], {
+    pad: "medium",
+    justify: "start",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28

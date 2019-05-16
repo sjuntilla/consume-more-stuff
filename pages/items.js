@@ -25,7 +25,7 @@ const Items = ({ items }) => {
   return (
     <Grommet theme={dark}>
       <Layout>
-        <Tabs>
+        <Tabs pad="medium" justify="start">
           <Tab title="All Items" justify="start">
             <Box direction="row" wrap="true" alignContent="around" pad="large">
               {items.map(item => (
