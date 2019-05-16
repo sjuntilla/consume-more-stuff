@@ -86,9 +86,11 @@ class Login extends Component {
             </Form>
           </Box>
         </Layout>
+        {/* <Greeting /> */}
       </Grommet>
     );
   }
 }
+
 
 export default Login;
