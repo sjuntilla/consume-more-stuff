@@ -10,7 +10,9 @@ import {
   Box,
   Layer,
   Image,
-  Button
+  Button,
+  Tab,
+  Tabs
 } from "grommet";
 import { Card, Tag } from "grommet-controls";
 import { dark } from "grommet/themes";
@@ -23,35 +25,144 @@ const Items = ({ items }) => {
   return (
     <Grommet theme={dark}>
       <Layout>
-        <Box direction="row" wrap="true" alignContent="around" pad="large">
-          {items.map(item => (
-            <Card
-              basis="medium"
-              animation="fadeIn"
-              background="dark-1"
-              elevation="xxsmall"
-              gap="medium"
-              margin="small"
-            >
-              <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
-              <Card.CardContent color="dark-1">
-                <Box
-                  direction="row"
-                  border={{ color: "brand", size: "large" }}
-                  pad="medium"
-                  round="small"
+        <Tabs>
+          <Tab title="All Items">
+            <Box direction="row" wrap="true" alignContent="around" pad="large">
+              {items.map(item => (
+                <Card
+                  basis="medium"
+                  animation="fadeIn"
+                  background="dark-1"
+                  elevation="xxsmall"
+                  gap="medium"
+                  margin="small"
                 >
-                  <Box height="small" width="medium">
-                    <Image fit="cover" src={item.url} />
-                  </Box>
-                </Box>
-                <Text>{item.description}</Text>
-                <Text>${item.price}</Text>
-                <Tag label={item.category} />
-              </Card.CardContent>
-            </Card>
-          ))}
-        </Box>
+                  <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
+                  <Card.CardContent color="dark-1">
+                    <Box
+                      direction="row"
+                      border={{ color: "brand", size: "large" }}
+                      pad="medium"
+                      round="small"
+                    >
+                      <Box height="small" width="medium">
+                        <Image fit="cover" src={item.url} />
+                      </Box>
+                    </Box>
+                    <Text>{item.description}</Text>
+                    <Text>${item.price}</Text>
+                    <Tag label={item.category} />
+                  </Card.CardContent>
+                </Card>
+              ))}
+            </Box>
+          </Tab>
+          <Tab title="Equipment">
+            <Box direction="row" wrap="true" alignContent="around" pad="large">
+              {items.map(item => {
+                if (item.category === "equipment") {
+                  return (
+                    <Card
+                      basis="medium"
+                      animation="fadeIn"
+                      background="dark-1"
+                      elevation="xxsmall"
+                      gap="medium"
+                      margin="small"
+                    >
+                      <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
+                      <Card.CardContent color="dark-1">
+                        <Box
+                          direction="row"
+                          border={{ color: "brand", size: "large" }}
+                          pad="medium"
+                          round="small"
+                        >
+                          <Box height="small" width="medium">
+                            <Image fit="cover" src={item.url} />
+                          </Box>
+                        </Box>
+                        <Text>{item.description}</Text>
+                        <Text>${item.price}</Text>
+                        <Tag label={item.category} />
+                      </Card.CardContent>
+                    </Card>
+                  );
+                }
+              })}
+            </Box>
+          </Tab>
+          <Tab title="Wellness">
+            <Box direction="row" wrap="true" alignContent="around" pad="large">
+              {items.map(item => {
+                if (item.category === "wellness") {
+                  return (
+                    <Card
+                      basis="medium"
+                      animation="fadeIn"
+                      background="dark-1"
+                      elevation="xxsmall"
+                      gap="medium"
+                      margin="small"
+                    >
+                      <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
+                      <Card.CardContent color="dark-1">
+                        <Box
+                          direction="row"
+                          border={{ color: "brand", size: "large" }}
+                          pad="medium"
+                          round="small"
+                        >
+                          <Box height="small" width="medium">
+                            <Image fit="cover" src={item.url} />
+                          </Box>
+                        </Box>
+                        <Text>{item.description}</Text>
+                        <Text>${item.price}</Text>
+                        <Tag label={item.category} />
+                      </Card.CardContent>
+                    </Card>
+                  );
+                }
+              })}
+            </Box>
+          </Tab>
+          <Tab title="Office">
+            <Box direction="row" wrap="true" alignContent="around" pad="large">
+              {items.map(item => {
+                if (item.category === "office") {
+                  return (
+                    <Card
+                      basis="medium"
+                      animation="fadeIn"
+                      background="dark-1"
+                      elevation="xxsmall"
+                      gap="medium"
+                      margin="small"
+                    >
+                      <Card.CardTitle color="brand">{item.name}</Card.CardTitle>
+                      <Card.CardContent color="dark-1">
+                        <Box
+                          direction="row"
+                          border={{ color: "brand", size: "large" }}
+                          pad="medium"
+                          round="small"
+                        >
+                          <Box height="small" width="medium">
+                            <Image fit="cover" src={item.url} />
+                          </Box>
+                        </Box>
+                        <Text>{item.description}</Text>
+                        <Text>${item.price}</Text>
+                        <Tag label={item.category} />
+                      </Card.CardContent>
+                    </Card>
+                  );
+                }
+              })}
+            </Box>
+          </Tab>
+        </Tabs>
       </Layout>
     </Grommet>
   );
